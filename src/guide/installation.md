@@ -7,7 +7,6 @@ Choose any one of the methods below that best suit your needs.
 
 To build the `lsts` executable from source, you will first need to install Rust and Cargo.
 Follow the instructions on the [Rust installation page].
-mdBook currently requires at least Rust version 1.54.
 
 Once you have installed Rust, the following command can be used to build and install lsts:
 
