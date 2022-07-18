@@ -6,9 +6,11 @@ For those feeling particularly adventurous, it may even be possible to use as a 
 
 * Lightweight. [LSTS] is only 3K sloc of Rust code with no dependencies.
 * Fast. [Benchmarks] compare to Rust itself for compilation speed and efficiency.
+* Familiar. The [Syntax] is usually similar to Coq, ML, or Haskell.
 
 [LSTS]: guide/syntax.md
 [Benchmarks]: perf/statistics.md
+[Syntax]: guide/syntax.md
 
 ## Contributing
 

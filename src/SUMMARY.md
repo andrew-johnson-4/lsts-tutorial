@@ -5,7 +5,7 @@
 # User Guide
 
 - [Installation](guide/installation.md)
-- [Syntax](guide/syntax.md)
+- [Syntax Overview](guide/syntax.md)
 
 # Reference Guide
 
