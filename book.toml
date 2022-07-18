@@ -1,0 +1,27 @@
+[book]
+title = "LSTS Documentation"
+description = "Large Scale Type Systems Tutorial: A Categorical View of Typed Lambda Calculus"
+authors = ["Andrew Johnson"]
+language = "en"
+
+[rust]
+edition = "2018"
+
+[output.html]
+mathjax-support = true
+site-url = "/"
+git-repository-url = "https://github.com/andrew-johnson-4/lsts-tutorial"
+edit-url-template = "https://github.com/andrew-johnson-4/lsts-tutorial/{path}"
+
+[output.html.playground]
+editable = true
+line-numbers = true
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
