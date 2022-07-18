@@ -28,7 +28,7 @@ let x:Prime = 3;
 let y:Prime = 4;
 ```
 
-In the first binding of *x*, the number 3 satisfies the bounds is accepted as an inhabitant of its Type.
+In the first binding of *x*, the number 3 satisfies the bounds and is accepted as an inhabitant of its Type.
 In the second binding of *y*, the number 4 does not satisfy the primality test defined by Prime and will be rejected.
 A rejected program will typically result in an error and message if lsts is invoked from the command line.
 
@@ -39,3 +39,17 @@ This format is very useful for constructing quantified proofs or proofs by contr
 ```lsts
 forall x:Odd. x%2 == 1
 ```
+
+# Kind a type
+
+Kinds are *types for types*.
+Kinds are simple, only allowing Named kinds and possibly parameters.
+The three built-in kinds are Term, Constant, and Nil.
+New kinds do not need to be defined before they are used.
+Kinds are introduced with double-colon syntax, similar to the single-colon syntax used for types.
+
+```lsts
+1 : Second :: Unit
+```
+
+Here we say that Second is a Unit type rather than a Term type.

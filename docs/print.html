@@ -204,7 +204,7 @@ Thirdly, a Prime number is not evenly divisible by any other number greater than
 <pre><code class="language-lsts">let x:Prime = 3;
 let y:Prime = 4;
 </code></pre>
-<p>In the first binding of <em>x</em>, the number 3 satisfies the bounds is accepted as an inhabitant of its Type.
+<p>In the first binding of <em>x</em>, the number 3 satisfies the bounds and is accepted as an inhabitant of its Type.
 In the second binding of <em>y</em>, the number 4 does not satisfy the primality test defined by Prime and will be rejected.
 A rejected program will typically result in an error and message if lsts is invoked from the command line.</p>
 <p>Let bindings do not need to be inhabited.
@@ -212,6 +212,15 @@ The value can be omitted, at which point the binding becomes a supposition.
 This format is very useful for constructing quantified proofs or proofs by contradiction.</p>
 <pre><code class="language-lsts">forall x:Odd. x%2 == 1
 </code></pre>
+<h1 id="kind-a-type"><a class="header" href="#kind-a-type">Kind a type</a></h1>
+<p>Kinds are <em>types for types</em>.
+Kinds are simple, only allowing Named kinds and possibly parameters.
+The three built-in kinds are Term, Constant, and Nil.
+New kinds do not need to be defined before they are used.
+Kinds are introduced with double-colon syntax, similar to the single-colon syntax used for types.</p>
+<pre><code class="language-lsts">1 : Second :: Unit
+</code></pre>
+<p>Here we say that Second is a Unit type rather than a Term type.</p>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">Contributors</a></h1>
 <p>Here is a list of the contributors who have helped improving LSTS.</p>
 <ul>
