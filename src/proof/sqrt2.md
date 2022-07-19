@@ -28,5 +28,6 @@ By definition the square of the square root of 2 should be equal to 2.
 Therefore 2 is equal to (Pt * Pt)/(Qt * Qt).
 By the following algebraic manipulation we show that 2 must be a factor of p.
 Two is not a rational factor of p.
+Therefore the square root of 2 cannot be rational.
 
 Q.E.D.
