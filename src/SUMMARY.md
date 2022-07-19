@@ -7,6 +7,10 @@
 - [Installation](guide/installation.md)
 - [Syntax Overview](guide/syntax.md)
 
+# Proofs
+
+- [Irrationality of the Square Root of Two](proof/sqrt2.md)
+
 # Reference Guide
 
 - [Command Line Tool](cli/README.md)

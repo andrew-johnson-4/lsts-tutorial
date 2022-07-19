@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="cli/index.html"><strong aria-hidden="true">3.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli/lsts.html"><strong aria-hidden="true">3.1.</strong> lsts</a></li></ol></li><li class="chapter-item expanded "><a href="perf/statistics.html"><strong aria-hidden="true">4.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="proof/sqrt2.html"><strong aria-hidden="true">3.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="cli/index.html"><strong aria-hidden="true">4.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli/lsts.html"><strong aria-hidden="true">4.1.</strong> lsts</a></li></ol></li><li class="chapter-item expanded "><a href="perf/statistics.html"><strong aria-hidden="true">5.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -221,6 +221,31 @@ Kinds are introduced with double-colon syntax, similar to the single-colon synta
 <pre><code class="language-lsts">1 : Second :: Unit
 </code></pre>
 <p>Here we say that Second is a Unit type rather than a Term type.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="proof-of-the-irrationality-of-the-square-root-of-two"><a class="header" href="#proof-of-the-irrationality-of-the-square-root-of-two">Proof of the Irrationality of the Square Root of Two</a></h1>
+<p>Proposition: The square root of 2 is irrational.
+Proof:</p>
+<pre><code class="language-lsts">let $&quot;/&quot;(x:X, y:Y): X/Y;
+let $&quot;*&quot;(x:X, y:Y): X*Y;
+let square(x:X): X*X;
+
+type Pt; let p:Pt;
+type Qt; let q:Qt;
+let sqrt_of_two: Pt/Qt;
+square(sqrt_of_two) * square(q): Pt*Pt; //2 * q*q = p*p
+square(p) / square(sqrt_of_two): Qt*Qt; //p*p / 2 = q*q
+p / square(sqrt_of_two) : ?/();         //2 is a factor of p
+</code></pre>
+<p>We define rational division, multiplication, and square of whole numbers.
+Whole numbers are proposed at the type level, rather than at the term level.
+Any whole number may be represented as a type T.</p>
+<p>Let p be a whole number Pt.
+Let q be a whole number Qt.
+Suppose the square root of two can be represented as a rational number, having numerator Pt and denominator Qt.</p>
+<p>By definition the square of the square root of two should be equal to two.
+Therefore two is equal to (Pt<em>Pt)/(Qt</em>Qt).
+By the following algebraic manipulation we show that two must be a factor of p.
+Two is not a rational factor of p.</p>
+<p>Q.E.D.</p>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">Contributors</a></h1>
 <p>Here is a list of the contributors who have helped improving LSTS.</p>
 <ul>
