@@ -22,11 +22,11 @@ Any whole number may be represented as a type T.
 
 Let p be a whole number Pt.
 Let q be a whole number Qt.
-Suppose the square root of two can be represented as a rational number, having numerator Pt and denominator Qt.
+Suppose the square root of 2 can be represented as a rational number, having numerator Pt and denominator Qt.
 
-By definition the square of the square root of two should be equal to two.
-Therefore two is equal to (Pt*Pt)/(Qt*Qt).
-By the following algebraic manipulation we show that two must be a factor of p.
+By definition the square of the square root of 2 should be equal to 2.
+Therefore 2 is equal to (Pt * Pt)/(Qt * Qt).
+By the following algebraic manipulation we show that 2 must be a factor of p.
 Two is not a rational factor of p.
 
 Q.E.D.

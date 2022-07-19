@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="proof/sqrt2.html"><strong aria-hidden="true">3.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="cli/index.html"><strong aria-hidden="true">4.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli/lsts.html"><strong aria-hidden="true">4.1.</strong> lsts</a></li></ol></li><li class="chapter-item expanded "><a href="perf/statistics.html"><strong aria-hidden="true">5.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="proof/sqrt2.html"><strong aria-hidden="true">3.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="proof/primes.html"><strong aria-hidden="true">4.</strong> Infinitude of Primes</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="cli/index.html"><strong aria-hidden="true">5.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli/lsts.html"><strong aria-hidden="true">5.1.</strong> lsts</a></li></ol></li><li class="chapter-item expanded "><a href="perf/statistics.html"><strong aria-hidden="true">6.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -240,11 +240,26 @@ Whole numbers are proposed at the type level, rather than at the term level.
 Any whole number may be represented as a type T.</p>
 <p>Let p be a whole number Pt.
 Let q be a whole number Qt.
-Suppose the square root of two can be represented as a rational number, having numerator Pt and denominator Qt.</p>
-<p>By definition the square of the square root of two should be equal to two.
-Therefore two is equal to (Pt<em>Pt)/(Qt</em>Qt).
-By the following algebraic manipulation we show that two must be a factor of p.
+Suppose the square root of 2 can be represented as a rational number, having numerator Pt and denominator Qt.</p>
+<p>By definition the square of the square root of 2 should be equal to 2.
+Therefore 2 is equal to (Pt * Pt)/(Qt * Qt).
+By the following algebraic manipulation we show that 2 must be a factor of p.
 Two is not a rational factor of p.</p>
+<p>Q.E.D.</p>
+<div style="break-before: page; page-break-before: always;"></div><p>#Proof of the Infinitude of Prime Numbers</p>
+<p>Proposition: There is an infinite number of Prime numbers. Proof:</p>
+<pre><code class="language-lsts">let primes:Prime[];           //assume there are a finite number of primes
+let p = primes.product() + 1; //let p be the product of all primes + 1
+forall d:primes. p%d == 1;    //p mod d, forall d in primes list, is 1
+</code></pre>
+<p>Suppose that there is a finite number of Prime numbers.
+A Prime number is any Integer greater than 1, not evenly divisible by other numbers greater than 1.</p>
+<p>Let p be the product of all Prime numbers plus 1.</p>
+<p>No Prime is a factor of p.
+Therefore p is a Prime number.
+p is not in the list of Prime numbers.</p>
+<p>Our supposition that there is a finite number of Prime numbers leads to a contradiction.
+Therefore the Prime numbers must be infinite.</p>
 <p>Q.E.D.</p>
 <div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><div style="break-before: page; page-break-before: always;"></div><h1 id="contributors"><a class="header" href="#contributors">Contributors</a></h1>
 <p>Here is a list of the contributors who have helped improving LSTS.</p>

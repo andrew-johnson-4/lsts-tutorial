@@ -10,6 +10,7 @@
 # Proofs
 
 - [Irrationality of the Square Root of Two](proof/sqrt2.md)
+- [Infinitude of Primes](proof/primes.md)
 
 # Reference Guide
 
