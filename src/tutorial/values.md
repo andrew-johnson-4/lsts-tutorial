@@ -42,4 +42,10 @@ There are arithmetic operators
 1^2 + 3 * 4 / 5 - 6 % 7
 ```
 
+There are even comparison operators
+
+```lsts
+1 < 2 <= 3 == 4 != 5 > 6 >= 7
+```
+
 These operations form the basis of logical calculation in LSTS.
