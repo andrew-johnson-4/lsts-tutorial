@@ -150,7 +150,23 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="types-tutorial-index"><a class="header" href="#types-tutorial-index">Types Tutorial Index</a></h1>
+                        <h1 id="types"><a class="header" href="#types">Types</a></h1>
+<p>A Type describes a property of a Term.
+Terms are multifaceted and can be described from a variety of perspectives.
+Term can have multiple properties, so they can also have multiple Types.</p>
+<p>Each Term is associated with a singular Type Expression.
+A Type Expression represents all properties of that term, structured in Conjunctive Normal Form (CNF).
+Conjunctive Normal Form is just a way of saying that all the Ands are at the top level,
+above the Ors.</p>
+<p>Two Types can be attached to one Term.</p>
+<pre><code class="language-lsts">a: Integer + Prime
+</code></pre>
+<p>One Type can imply another Type. When this happens there is an implicit expansion of the implication to enforce CNF.</p>
+<pre><code class="language-lsts">type Aa: Bb;
+a : Aak     //                Aa + Aa =&gt; Bb
+            //rewrite as just Aa + Bb
+a : Aa + Bb
+</code></pre>
 
                     </main>
 

@@ -339,7 +339,23 @@ so we will just steal that syntax and use it here.</p>
 <p>or maps.</p>
 <pre><code class="language-lsts">{for a:Integer in s yield a =&gt; a*a}
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="types-tutorial-index"><a class="header" href="#types-tutorial-index">Types Tutorial Index</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="types"><a class="header" href="#types">Types</a></h1>
+<p>A Type describes a property of a Term.
+Terms are multifaceted and can be described from a variety of perspectives.
+Term can have multiple properties, so they can also have multiple Types.</p>
+<p>Each Term is associated with a singular Type Expression.
+A Type Expression represents all properties of that term, structured in Conjunctive Normal Form (CNF).
+Conjunctive Normal Form is just a way of saying that all the Ands are at the top level,
+above the Ors.</p>
+<p>Two Types can be attached to one Term.</p>
+<pre><code class="language-lsts">a: Integer + Prime
+</code></pre>
+<p>One Type can imply another Type. When this happens there is an implicit expansion of the implication to enforce CNF.</p>
+<pre><code class="language-lsts">type Aa: Bb;
+a : Aak     //                Aa + Aa =&gt; Bb
+            //rewrite as just Aa + Bb
+a : Aa + Bb
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="value-types"><a class="header" href="#value-types">Value Types</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="product-types"><a class="header" href="#product-types">Product Types</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="structured-types"><a class="header" href="#structured-types">Structured Types</a></h1>
