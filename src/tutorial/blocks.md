@@ -2,7 +2,7 @@
 
 Blocks group one or more statements together into a logical unit.
 The existence of block statements is to some extent an artifact
-of the development teams familiarity to programming languages
+of the development team's familiarity to programming languages
 and unfamiliarity with traditional proof assistants. All
 block statements exist to create quantified proofs of properties
 in a style familiar to programmers.
