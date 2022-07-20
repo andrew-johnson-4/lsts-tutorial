@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Syntax Overview - LSTS Documentation</title>
+        <title>Quantified Values - LSTS Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../guide/syntax.html" class="active"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded "><a href="../guide/philosophy.html"><strong aria-hidden="true">3.</strong> Design Philosophy</a></li><li class="chapter-item expanded affix "><li class="part-title">Tutorial</li><li class="chapter-item expanded "><a href="../tutorial/values.html"><strong aria-hidden="true">4.</strong> Value Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/blocks.html"><strong aria-hidden="true">5.</strong> Block Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/quantifiers.html"><strong aria-hidden="true">6.</strong> Quantified Values</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="../proof/sqrt2.html"><strong aria-hidden="true">7.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="../proof/primes.html"><strong aria-hidden="true">8.</strong> Infinitude of Primes</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="../cli/index.html"><strong aria-hidden="true">9.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cli/lsts_build.html"><strong aria-hidden="true">9.1.</strong> lsts build</a></li></ol></li><li class="chapter-item expanded "><a href="../perf/statistics.html"><strong aria-hidden="true">10.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded "><a href="../guide/philosophy.html"><strong aria-hidden="true">3.</strong> Design Philosophy</a></li><li class="chapter-item expanded affix "><li class="part-title">Tutorial</li><li class="chapter-item expanded "><a href="../tutorial/values.html"><strong aria-hidden="true">4.</strong> Value Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/blocks.html"><strong aria-hidden="true">5.</strong> Block Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/quantifiers.html" class="active"><strong aria-hidden="true">6.</strong> Quantified Values</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="../proof/sqrt2.html"><strong aria-hidden="true">7.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="../proof/primes.html"><strong aria-hidden="true">8.</strong> Infinitude of Primes</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="../cli/index.html"><strong aria-hidden="true">9.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cli/lsts_build.html"><strong aria-hidden="true">9.1.</strong> lsts build</a></li></ol></li><li class="chapter-item expanded "><a href="../perf/statistics.html"><strong aria-hidden="true">10.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -121,7 +121,7 @@
                         <a href="https://github.com/andrew-johnson-4/lsts-tutorial" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/andrew-johnson-4/lsts-tutorial/src/guide/syntax.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/andrew-johnson-4/lsts-tutorial/src/tutorial/quantifiers.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -150,52 +150,35 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="lsts-syntax"><a class="header" href="#lsts-syntax">LSTS Syntax</a></h1>
-<p>LSTS syntax is derived from Lambda Calculus.
-Extensions to the Lambda Calculus syntax are modelled after those from previous languages also derived from Lambda Calculus.
-Some of these languages include Coq, ML, and Haskell.</p>
-<h1 id="define-a-type"><a class="header" href="#define-a-type">Define a type</a></h1>
-<p>Types describe the properties of a Term.</p>
-<pre><code class="language-lsts">type Prime: Integer
-   where self &gt; 1
-   and   a:Integer. 2&gt;a || a&gt;self-1 || self%a != 0
+                        <h1 id="quantified-values"><a class="header" href="#quantified-values">Quantified Values</a></h1>
+<p>Quantified Values inhabit Quantified Types.
+This concept maps exactly to the programming concept of iterators,
+so we will just steal that syntax and use it here.</p>
+<h3 id="iterators"><a class="header" href="#iterators">Iterators</a></h3>
+<p>A naked iterator looks much like a for loop.</p>
+<pre><code class="language-lsts">for i:Integer in ls yield i+1
 </code></pre>
-<p>Here we define a Prime number.
-Firstly, a Prime number is an Integer.
-Secondly, a Prime number is greater than 1.
-Thirdly, a Prime number is not evenly divisible by any other number greater than 1.</p>
-<h1 id="bind-a-value"><a class="header" href="#bind-a-value">Bind a value</a></h1>
-<p>Let bindings attach properties to Terms.</p>
-<pre><code class="language-lsts">let x:Prime = 3;
-let y:Prime = 4;
+<h3 id="containers"><a class="header" href="#containers">Containers</a></h3>
+<p>Iterators can fill containers,</p>
+<p>like sets</p>
+<pre><code class="language-lsts">{for a:Integer in s yield a*a}
 </code></pre>
-<p>In the first binding of <em>x</em>, the number 3 satisfies the bounds and is accepted as an inhabitant of its Type.
-In the second binding of <em>y</em>, the number 4 does not satisfy the primality test defined by Prime and will be rejected.
-A rejected program will typically result in an error and message if lsts is invoked from the command line.</p>
-<p>Let bindings do not need to be inhabited.
-The value can be omitted, at which point the binding becomes a supposition.
-This format is very useful for constructing quantified proofs or proofs by contradiction.</p>
-<pre><code class="language-lsts">forall x:Odd. x%2 == 1
+<p>or lists</p>
+<pre><code class="language-lsts">[for a:Integer in s yield a*a]
 </code></pre>
-<h1 id="kind-a-type"><a class="header" href="#kind-a-type">Kind a type</a></h1>
-<p>Kinds are <em>types for types</em>.
-Kinds are simple, only allowing Named kinds and possibly parameters.
-The three built-in kinds are Term, Constant, and Nil.
-New kinds do not need to be defined before they are used.
-Kinds are introduced with double-colon syntax, similar to the single-colon syntax used for types.</p>
-<pre><code class="language-lsts">1 : Second :: Unit
+<p>or maps.</p>
+<pre><code class="language-lsts">{for a:Integer in s yield a:a*a}
 </code></pre>
-<p>Here we say that Second is a Unit type rather than a Term type.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../guide/installation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tutorial/blocks.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../guide/philosophy.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../proof/sqrt2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -205,11 +188,11 @@ Kinds are introduced with double-colon syntax, similar to the single-colon synta
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../guide/installation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tutorial/blocks.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../guide/philosophy.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../proof/sqrt2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

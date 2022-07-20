@@ -12,6 +12,7 @@
 
 - [Value Expressions](tutorial/values.md)
 - [Block Expressions](tutorial/blocks.md)
+- [Quantified Values](tutorial/quantifiers.md)
 
 # Proofs
 
