@@ -8,6 +8,10 @@
 - [Syntax Overview](guide/syntax.md)
 - [Design Philosophy](guide/philosophy.md)
 
+# Tutorial
+
+- [Value Expressions](tutorial/values.md)
+
 # Proofs
 
 - [Irrationality of the Square Root of Two](proof/sqrt2.md)
