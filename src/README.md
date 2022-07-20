@@ -8,7 +8,7 @@ For those feeling particularly adventurous, it may even be possible to use as a 
 * Fast. [Benchmarks] compare to Rust itself for compilation speed and efficiency.
 * Familiar. The [Syntax] is usually similar to Coq, ML, or Haskell.
 
-[LSTS]: guide/syntax.md
+[LSTS]: https://github.com/andrew-johnson-4/LSTS
 [Benchmarks]: perf/statistics.md
 [Syntax]: guide/syntax.md
 
