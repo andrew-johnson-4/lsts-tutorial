@@ -17,6 +17,7 @@
     - [Value Types](tutorial/value_types.md)
     - [Product Types](tutorial/product_types.md)
     - [Structured Types](tutorial/struct_types.md)
+    - [Parameterized Types](tutorial/parameterized_types.md)
     - [Type Invariants](tutorial/type_invariants.md)
     - [Dependent Types](tutorial/dependent_types.md)
 

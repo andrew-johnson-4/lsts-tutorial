@@ -1,1 +1,1 @@
-# Struct Types
+# Structured Types
