@@ -13,6 +13,12 @@
 - [Value Expressions](tutorial/values.md)
 - [Block Expressions](tutorial/blocks.md)
 - [Quantified Values](tutorial/quantifiers.md)
+- [Types](tutorial/types.md)
+    - [Value Types](tutorial/value_types.md)
+    - [Product Types](tutorial/product_types.md)
+    - [Structured Types](tutorial/struct_types.md)
+    - [Type Invariants](tutorial/type_invariants.md)
+    - [Dependent Types](tutorial/dependent_types.md)
 
 # Proofs
 
