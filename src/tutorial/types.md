@@ -2,7 +2,7 @@
 
 A Type describes a property of a Term.
 Terms are multifaceted and can be described from a variety of perspectives.
-Term can have multiple properties, so they can also have multiple Types.
+A Term can have multiple properties, so Terms can also have multiple Types.
 
 Each Term is associated with a singular Type Expression.
 A Type Expression represents all properties of that term, structured in Conjunctive Normal Form (CNF).
@@ -19,7 +19,7 @@ One Type can imply another Type. When this happens there is an implicit expansio
 
 ```lsts
 type Aa: Bb;
-a : Aak     //                Aa + Aa => Bb
+a : Aa      //                Aa + Aa => Bb
             //rewrite as just Aa + Bb
 a : Aa + Bb
 ```

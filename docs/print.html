@@ -342,7 +342,7 @@ so we will just steal that syntax and use it here.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="types"><a class="header" href="#types">Types</a></h1>
 <p>A Type describes a property of a Term.
 Terms are multifaceted and can be described from a variety of perspectives.
-Term can have multiple properties, so they can also have multiple Types.</p>
+A Term can have multiple properties, so Terms can also have multiple Types.</p>
 <p>Each Term is associated with a singular Type Expression.
 A Type Expression represents all properties of that term, structured in Conjunctive Normal Form (CNF).
 Conjunctive Normal Form is just a way of saying that all the Ands are at the top level,
@@ -352,7 +352,7 @@ above the Ors.</p>
 </code></pre>
 <p>One Type can imply another Type. When this happens there is an implicit expansion of the implication to enforce CNF.</p>
 <pre><code class="language-lsts">type Aa: Bb;
-a : Aak     //                Aa + Aa =&gt; Bb
+a : Aa      //                Aa + Aa =&gt; Bb
             //rewrite as just Aa + Bb
 a : Aa + Bb
 </code></pre>
