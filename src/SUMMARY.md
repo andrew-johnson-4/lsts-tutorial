@@ -16,7 +16,7 @@
 # Reference Guide
 
 - [Command Line Tool](cli/README.md)
-    - [lsts](cli/lsts.md)
+    - [lsts build](cli/lsts_build.md)
 - [Performance](perf/statistics.md)
 
 -----------
