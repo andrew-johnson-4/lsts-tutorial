@@ -84,7 +84,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded "><a href="guide/philosophy.html"><strong aria-hidden="true">3.</strong> Design Philosophy</a></li><li class="chapter-item expanded affix "><li class="part-title">Tutorial</li><li class="chapter-item expanded "><a href="tutorial/values.html"><strong aria-hidden="true">4.</strong> Value Expressions</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="proof/sqrt2.html"><strong aria-hidden="true">5.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="proof/primes.html"><strong aria-hidden="true">6.</strong> Infinitude of Primes</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="cli/index.html"><strong aria-hidden="true">7.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli/lsts_build.html"><strong aria-hidden="true">7.1.</strong> lsts build</a></li></ol></li><li class="chapter-item expanded "><a href="perf/statistics.html"><strong aria-hidden="true">8.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded "><a href="guide/philosophy.html"><strong aria-hidden="true">3.</strong> Design Philosophy</a></li><li class="chapter-item expanded affix "><li class="part-title">Tutorial</li><li class="chapter-item expanded "><a href="tutorial/values.html"><strong aria-hidden="true">4.</strong> Value Expressions</a></li><li class="chapter-item expanded "><a href="tutorial/blocks.html"><strong aria-hidden="true">5.</strong> Block Expressions</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="proof/sqrt2.html"><strong aria-hidden="true">6.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="proof/primes.html"><strong aria-hidden="true">7.</strong> Infinitude of Primes</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="cli/index.html"><strong aria-hidden="true">8.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli/lsts_build.html"><strong aria-hidden="true">8.1.</strong> lsts build</a></li></ol></li><li class="chapter-item expanded "><a href="perf/statistics.html"><strong aria-hidden="true">9.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="misc/contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -266,6 +266,57 @@ The definition of what these operators do is left to the programmer or maybe a p
 <pre><code class="language-lsts">1^2 + 3 * 4 / 5 - 6 % 7
 </code></pre>
 <p>These operations form the basis of logical calculation in LSTS.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="block-expressions"><a class="header" href="#block-expressions">Block Expressions</a></h1>
+<p>Blocks group one or more statements together into a logical unit.
+The existence of block statements is to some extent an artifact
+of the development teams familiarity to programming languages
+and unfamiliarity with traditional proof assistants. All
+block statements exist to create quantified proofs of properties
+in a style familiar to programmers.</p>
+<h3 id="loops"><a class="header" href="#loops">Loops</a></h3>
+<p>Loops can prove very interesting properties of language.</p>
+<p>A while loop can prove that a condition is terminal, subject to some computation.</p>
+<pre><code class="language-lsts">let more(): Boolean;
+while more() {
+   //does this ever end?
+}
+</code></pre>
+<p>For completeness' sake we have also built most traditional control-flow blocks.</p>
+<pre><code class="language-lsts">for x:Prime in primes {
+   //this is not unlike a forall statement
+}
+</code></pre>
+<pre><code class="language-lsts">loop {
+   //this is called a 1+ loop
+} while( do_continue() )
+</code></pre>
+<h3 id="if-conditionals"><a class="header" href="#if-conditionals">If Conditionals</a></h3>
+<p>Where would we be without branching conditionals?</p>
+<pre><code class="language-lsts">if a then b
+else if c then d
+else e
+</code></pre>
+<p>We also define pattern matching conditionals which unpack structured data.</p>
+<pre><code class="language-lsts">if let Some(a) = b {
+   a: Odd
+}
+</code></pre>
+<h3 id="exhaustive-pattern-matching"><a class="header" href="#exhaustive-pattern-matching">Exhaustive Pattern Matching</a></h3>
+<p>For complex value unpacking we have match blocks.</p>
+<pre><code class="language-lsts">match x {
+   EnumBranch1(y) =&gt; { y: Prime; },
+   EnumBranch2(z,w) =&gt; { z: Odd; w: Even; },
+}
+</code></pre>
+<h3 id="grouping-blocks"><a class="header" href="#grouping-blocks">Grouping Blocks</a></h3>
+<p>If you just want to group some statements together, for this we have simple brace blocks.</p>
+<pre><code class="language-lsts">{
+   let x: Odd;
+   a: Integer;
+   b: Prime;
+   x + a + b: Integer;
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="proof-of-the-irrationality-of-the-square-root-of-two"><a class="header" href="#proof-of-the-irrationality-of-the-square-root-of-two">Proof of the Irrationality of the Square Root of Two</a></h1>
 <p>Proposition: The square root of 2 is irrational.
 Proof:</p>

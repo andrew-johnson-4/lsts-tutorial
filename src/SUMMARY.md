@@ -11,6 +11,7 @@
 # Tutorial
 
 - [Value Expressions](tutorial/values.md)
+- [Block Expressions](tutorial/blocks.md)
 
 # Proofs
 

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Design Philosophy - LSTS Documentation</title>
+        <title>Block Expressions - LSTS Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded "><a href="../guide/philosophy.html" class="active"><strong aria-hidden="true">3.</strong> Design Philosophy</a></li><li class="chapter-item expanded affix "><li class="part-title">Tutorial</li><li class="chapter-item expanded "><a href="../tutorial/values.html"><strong aria-hidden="true">4.</strong> Value Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/blocks.html"><strong aria-hidden="true">5.</strong> Block Expressions</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="../proof/sqrt2.html"><strong aria-hidden="true">6.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="../proof/primes.html"><strong aria-hidden="true">7.</strong> Infinitude of Primes</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="../cli/index.html"><strong aria-hidden="true">8.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cli/lsts_build.html"><strong aria-hidden="true">8.1.</strong> lsts build</a></li></ol></li><li class="chapter-item expanded "><a href="../perf/statistics.html"><strong aria-hidden="true">9.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded "><a href="../guide/philosophy.html"><strong aria-hidden="true">3.</strong> Design Philosophy</a></li><li class="chapter-item expanded affix "><li class="part-title">Tutorial</li><li class="chapter-item expanded "><a href="../tutorial/values.html"><strong aria-hidden="true">4.</strong> Value Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/blocks.html" class="active"><strong aria-hidden="true">5.</strong> Block Expressions</a></li><li class="chapter-item expanded affix "><li class="part-title">Proofs</li><li class="chapter-item expanded "><a href="../proof/sqrt2.html"><strong aria-hidden="true">6.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="../proof/primes.html"><strong aria-hidden="true">7.</strong> Infinitude of Primes</a></li><li class="chapter-item expanded affix "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="../cli/index.html"><strong aria-hidden="true">8.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cli/lsts_build.html"><strong aria-hidden="true">8.1.</strong> lsts build</a></li></ol></li><li class="chapter-item expanded "><a href="../perf/statistics.html"><strong aria-hidden="true">9.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -121,7 +121,7 @@
                         <a href="https://github.com/andrew-johnson-4/lsts-tutorial" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/andrew-johnson-4/lsts-tutorial/src/guide/philosophy.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/andrew-johnson-4/lsts-tutorial/src/tutorial/blocks.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -150,34 +150,67 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="the-philosophy-of-yes"><a class="header" href="#the-philosophy-of-yes">The Philosophy of YES</a></h1>
-<blockquote>
-<p>If you say <em>allow</em> this. We say &quot;yes&quot;.</p>
-<p>If you say <em>disallow</em> this. We say &quot;yes&quot;.</p>
-</blockquote>
-<p>Despite our desire to be all things to all people, sometimes consequential design decisions are unavoidable.
-LSTS is meant to be a platform that others can leverage to build cool things.
-To this end we have committed to a policy of <em>configuration over code</em>.
-Configuration over code means that whenever possible we will make our design decisions configurable opt-in choices.
-LSTS is not meant to be an opinionated software.
-We want to empower our users to build cool things using any methodology that seems appropriate.</p>
-<p>Acknowledging the obvious commitments like syntax and semantics. We realize that
-few concepts will map one-to-one with our project structure. However we will go
-out of our way to ensure that there <em>exists</em> a mapping from your idea to our
-platform.</p>
-<p>Do you want different syntax? We will help you build it leveraging our codebase.</p>
-<p>Do you want slightly different inference rules? We will help you build a plugin.</p>
-<p>Your project. Our logic. Your success. Our success.</p>
+                        <h1 id="block-expressions"><a class="header" href="#block-expressions">Block Expressions</a></h1>
+<p>Blocks group one or more statements together into a logical unit.
+The existence of block statements is to some extent an artifact
+of the development teams familiarity to programming languages
+and unfamiliarity with traditional proof assistants. All
+block statements exist to create quantified proofs of properties
+in a style familiar to programmers.</p>
+<h3 id="loops"><a class="header" href="#loops">Loops</a></h3>
+<p>Loops can prove very interesting properties of language.</p>
+<p>A while loop can prove that a condition is terminal, subject to some computation.</p>
+<pre><code class="language-lsts">let more(): Boolean;
+while more() {
+   //does this ever end?
+}
+</code></pre>
+<p>For completeness' sake we have also built most traditional control-flow blocks.</p>
+<pre><code class="language-lsts">for x:Prime in primes {
+   //this is not unlike a forall statement
+}
+</code></pre>
+<pre><code class="language-lsts">loop {
+   //this is called a 1+ loop
+} while( do_continue() )
+</code></pre>
+<h3 id="if-conditionals"><a class="header" href="#if-conditionals">If Conditionals</a></h3>
+<p>Where would we be without branching conditionals?</p>
+<pre><code class="language-lsts">if a then b
+else if c then d
+else e
+</code></pre>
+<p>We also define pattern matching conditionals which unpack structured data.</p>
+<pre><code class="language-lsts">if let Some(a) = b {
+   a: Odd
+}
+</code></pre>
+<h3 id="exhaustive-pattern-matching"><a class="header" href="#exhaustive-pattern-matching">Exhaustive Pattern Matching</a></h3>
+<p>For complex value unpacking we have match blocks.</p>
+<pre><code class="language-lsts">match x {
+   EnumBranch1(y) =&gt; { y: Prime; },
+   EnumBranch2(z,w) =&gt; { z: Odd; w: Even; },
+}
+</code></pre>
+<h3 id="grouping-blocks"><a class="header" href="#grouping-blocks">Grouping Blocks</a></h3>
+<p>If you just want to group some statements together, for this we have simple brace blocks.</p>
+<pre><code class="language-lsts">{
+   let x: Odd;
+   a: Integer;
+   b: Prime;
+   x + a + b: Integer;
+}
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../guide/syntax.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../tutorial/values.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../tutorial/values.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../proof/sqrt2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -187,11 +220,11 @@ platform.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../guide/syntax.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../tutorial/values.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../tutorial/values.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../proof/sqrt2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
