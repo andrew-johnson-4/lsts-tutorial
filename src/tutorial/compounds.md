@@ -11,7 +11,7 @@ Other compound values are implicitly introduced.
 A Tuple is an extension of the English concept of "double", "triple", "quadruple", "n-tuple".
 Tuples contain a number of heterogenous values.
 A Tuple value is introduced using parentheses and comma syntax.
-Type types are also introduced using parentheses and comma syntax.
+Tuple types are also introduced using parentheses and comma syntax.
 
 ```lsts
 (1,'a',"bc",True) : (Number, Character, String, Boolean)
@@ -40,7 +40,7 @@ MyStruct { x=1, c='a', s="bc", b=True }
 ### Union Types
 
 Union Types define branched types.
-A Union value may match with one of, but not multiple of, the Unions branches.
+A Union value may match with one of, but not multiple of, the Union's branches.
 Each branch in a Union is given a tag.
 This kind of Union is sometimes called a Tagged Union for that reason.
 
@@ -62,7 +62,8 @@ SecondTag { y:8 }
 Lists have builtin syntax for their types and for their values.
 
 ```lsts
-let xs:Integer[3] = [1,2,3]
+let xs:Integer[3] = [1,2,3];
+let vs:Odd[] = [3,5,11,15,17]
 ```
 
 ### Sets

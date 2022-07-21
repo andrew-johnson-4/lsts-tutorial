@@ -330,7 +330,7 @@ Other compound values are implicitly introduced.</p>
 <p>A Tuple is an extension of the English concept of &quot;double&quot;, &quot;triple&quot;, &quot;quadruple&quot;, &quot;n-tuple&quot;.
 Tuples contain a number of heterogenous values.
 A Tuple value is introduced using parentheses and comma syntax.
-Type types are also introduced using parentheses and comma syntax.</p>
+Tuple types are also introduced using parentheses and comma syntax.</p>
 <pre><code class="language-lsts">(1,'a',&quot;bc&quot;,True) : (Number, Character, String, Boolean)
 </code></pre>
 <h3 id="named-tuples"><a class="header" href="#named-tuples">Named Tuples</a></h3>
@@ -348,7 +348,7 @@ Named tuples must declare the type of all of their contained values.</p>
 </code></pre>
 <h3 id="union-types"><a class="header" href="#union-types">Union Types</a></h3>
 <p>Union Types define branched types.
-A Union value may match with one of, but not multiple of, the Unions branches.
+A Union value may match with one of, but not multiple of, the Union's branches.
 Each branch in a Union is given a tag.
 This kind of Union is sometimes called a Tagged Union for that reason.</p>
 <pre><code class="language-lsts">type MyUnion = FirstTag { x:Integer }
@@ -361,7 +361,8 @@ This kind of Union is sometimes called a Tagged Union for that reason.</p>
 </code></pre>
 <h3 id="lists"><a class="header" href="#lists">Lists</a></h3>
 <p>Lists have builtin syntax for their types and for their values.</p>
-<pre><code class="language-lsts">let xs:Integer[3] = [1,2,3]
+<pre><code class="language-lsts">let xs:Integer[3] = [1,2,3];
+let vs:Odd[] = [3,5,11,15,17]
 </code></pre>
 <h3 id="sets"><a class="header" href="#sets">Sets</a></h3>
 <p>Sets have builtin syntax for their types and for their values.</p>
