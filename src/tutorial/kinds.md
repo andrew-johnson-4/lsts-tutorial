@@ -7,6 +7,7 @@ Terms can have multiple Types, so they can have multiple Kinds.
 Types are attached with a single colon.
 Kinds are attached with a double colon.
 There are 3 builtin Kinds: Term, Constant, and Nil.
+New kinds do not need to be defined before they are used.
 
 ```lsts
 5 : Prime :: Term;
