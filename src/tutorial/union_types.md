@@ -10,3 +10,10 @@ Multiple branches are separated with a vertical bar.
 type Boolean = True | False;
 type Option<A> = None | Some { value:A };
 ```
+
+Union types are instantiated in identical fashion to structured data.
+The difference is that instead of the type name, the tag name is used to prefix the data.
+
+```lsts
+Some { value:5 }
+```

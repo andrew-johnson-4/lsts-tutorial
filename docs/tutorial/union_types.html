@@ -159,6 +159,10 @@ Multiple branches are separated with a vertical bar.</p>
 <pre><code class="language-lsts">type Boolean = True | False;
 type Option&lt;A&gt; = None | Some { value:A };
 </code></pre>
+<p>Union types are instantiated in identical fashion to structured data.
+The difference is that instead of the type name, the tag name is used to prefix the data.</p>
+<pre><code class="language-lsts">Some { value:5 }
+</code></pre>
 
                     </main>
 
