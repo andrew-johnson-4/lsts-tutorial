@@ -21,18 +21,19 @@ The definition of Odd is as follows:
 
 ```lsts
 type Odd: Integer
-   where self%2 == 1
+   where self%2 | 1
 ```
 
 Multiple properties can be attached to the same type definition.
 
 ```lsts
 type Factor23: Integer
-   where self%2 == 0
-   and   self%3 == 0;
+   where self%2 | 0
+   and   self%3 | 0;
 ```
 
 The *self* keyword represents some value of the declared type.
+The bar syntax indicates that the preceding expression produces the following expression.
 When a value is bound by a type that has invariants, each invariant is checked as a *precondition* to satisfy that type.
 If a bound value does not satisfy its type's preconditions, then an error will occur.
 

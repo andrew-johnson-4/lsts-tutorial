@@ -21,7 +21,7 @@
     - [Union Types](tutorial/union_types.md)
     - [Parameterized Types](tutorial/parameterized_types.md)
     - [Type Invariants](tutorial/type_invariants.md)
-    - [Dependent Types](tutorial/dependent_types.md)
+    - [Constant Types](tutorial/constant_types.md)
 - [Kinds](tutorial/kinds.md)
 
 # Proofs
