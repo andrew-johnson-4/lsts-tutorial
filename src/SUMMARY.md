@@ -10,10 +10,11 @@
 
 # Tutorial
 
-- [Value Expressions](tutorial/values.md)
-- [Block Expressions](tutorial/blocks.md)
-- [Compound Values](tutorial/compounds.md)
-- [Quantified Values](tutorial/quantifiers.md)
+- [Terms](tutorial/terms.md)
+    - [Value Expressions](tutorial/values.md)
+    - [Block Expressions](tutorial/blocks.md)
+    - [Compound Values](tutorial/compounds.md)
+    - [Quantified Values](tutorial/quantifiers.md)
 - [Types](tutorial/types.md)
     - [Value Types](tutorial/value_types.md)
     - [Product Types](tutorial/product_types.md)
