@@ -37,7 +37,7 @@ When a value is bound by a type that has invariants, each invariant is checked a
 If a bound value does not satisfy its type's preconditions, then an error will occur.
 
 *Postconditions* are the dependent properties that we know about any given value.
-We may not know the exact value of a variable, however we may know some of its properties.
+We may not know the exact value of a term, however we may know some of its properties.
 When this happens, we can often use the postconditions of a type to complete a proof.
 
 In the above example of Factor23, we know that any value of that type will divide evenly into 2 and 3.
