@@ -31,5 +31,5 @@ or lists
 or maps.
 
 ```lsts
-{for a:Integer in s yield a => a*a}
+{for a:Integer in s yield a=a*a}
 ```

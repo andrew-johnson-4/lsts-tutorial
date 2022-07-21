@@ -12,6 +12,7 @@
 
 - [Value Expressions](tutorial/values.md)
 - [Block Expressions](tutorial/blocks.md)
+- [Compound Values](tutorial/compounds.md)
 - [Quantified Values](tutorial/quantifiers.md)
 - [Types](tutorial/types.md)
     - [Value Types](tutorial/value_types.md)
