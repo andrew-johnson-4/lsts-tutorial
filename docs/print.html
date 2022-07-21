@@ -476,6 +476,19 @@ The only difference is that instead of the type name, the tag name is used to pr
 <pre><code class="language-lsts">Some { value:5 }
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="parameterized-types"><a class="header" href="#parameterized-types">Parameterized Types</a></h1>
+<p>Type parameters create generic types.
+A Generic Type is a single type definition that can have multiple type signatures.
+Each type signature will have a similar, but not quite exactly the same, structure.
+Parameters can be added to any type definition to create a generic type.</p>
+<pre><code class="language-lsts">type Point2D&lt;N:Integer&gt; = { x:N, y:N }
+
+type Result&lt;OK,ERR&gt; = Ok { ok: OK }
+                    | Err { err: ERR };
+</code></pre>
+<p>Type parameters can also be added to any parameterized type in its constructor.
+This creates a very strict enforcement of the type's parameter bounds.</p>
+<pre><code class="language-lsts">Ok&lt;Odd,String&gt; { ok: 1 }
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="type-invariants"><a class="header" href="#type-invariants">Type Invariants</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dependent-types"><a class="header" href="#dependent-types">Dependent Types</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kinds"><a class="header" href="#kinds">Kinds</a></h1>
