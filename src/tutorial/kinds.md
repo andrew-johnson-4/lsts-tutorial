@@ -12,4 +12,5 @@ There are 3 builtin Kinds: Term, Constant, and Nil.
 5 : Prime :: Term;
 2 : Second :: Unit;
 1 : [1] :: Constant;
+3 : [3] + Integer + Second :: Constant + Term + Unit;
 ```
