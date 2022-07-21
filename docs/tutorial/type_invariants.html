@@ -151,6 +151,42 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="type-invariants"><a class="header" href="#type-invariants">Type Invariants</a></h1>
+<p>Type invariants carry a lot of the weight of proofs in practice.
+Type invariants are inherently dependently typed.
+A Dependent Type describes a subset of the values of a Total Type.</p>
+<p>A Total Type describes <em>all values that can be represented</em>.
+UnsignedInteger32 would a Total Type.
+UnsignedInteger32 can represent all 32-bit unsigned integers.</p>
+<p>By comparison, a dependent type, or implicitly any type with invariants, would not be Total.
+Odd numbers are a subset of all Integers.
+Odd numbers might be represented as Integers, but not all Integers are Odd.</p>
+<pre><code class="language-lsts">987654321 : Odd + Integer
+</code></pre>
+<p>Type Invariants are dependent properties that are attached to a type definition.
+The definition of Odd is as follows:</p>
+<pre><code class="language-lsts">type Odd: Integer
+   where self%2 == 1
+</code></pre>
+<p>Multiple properties can be attached to the same type definition.</p>
+<pre><code class="language-lsts">type Factor23: Integer
+   where self%2 == 0
+   and   self%3 == 0;
+</code></pre>
+<p>The <em>self</em> keyword represents some value of the declared type.
+When a value is bound by a type that has invariants, each invariant is checked as a <em>precondition</em> to satisfy that type.
+If a bound value does not satisfy its type's preconditions, then an error will occur.</p>
+<p><em>Postconditions</em> are the dependent properties that we know about any given value.
+We may not know the exact value of a variable, however we may know some of its properties.
+When this happens, we can often use the postconditions of a type to complete a proof.</p>
+<p>In the above example of Factor23, we know that any value of that type will divide evenly into 2 and 3.
+This can be used as part of a proof, or in a program it can be used for constant folding.</p>
+<pre><code class="language-lsts">let x:Factor23;
+if x%2 == 0 then {
+   //yes, always this branch
+} else {
+   //no, never this branch
+}
+</code></pre>
 
                     </main>
 
