@@ -463,6 +463,14 @@ struct Point4D&lt;N:Number&gt; = { x:N, y:N, z:N, w:N };
 <pre><code class="language-lsts">Point2D&lt;Prime&gt; { x:7, y:17 }
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="union-types-1"><a class="header" href="#union-types-1">Union Types</a></h1>
+<p>Union Types define multiple branches of possible structured data.
+Each branch must also be annotated with a tag.
+For this reason Union Types are also called Tagged Unions.
+Each branch of a Union Type is declared with a tag and its structured data.
+Multiple branches are separated with a vertical bar.</p>
+<pre><code class="language-lsts">type Boolean = True | False;
+type Option&lt;A&gt; = None | Some { value:A };
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="parameterized-types"><a class="header" href="#parameterized-types">Parameterized Types</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="type-invariants"><a class="header" href="#type-invariants">Type Invariants</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="dependent-types"><a class="header" href="#dependent-types">Dependent Types</a></h1>
