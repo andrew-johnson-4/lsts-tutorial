@@ -32,7 +32,10 @@
 # Reference Guide
 
 - [Command Line Tool](cli/README.md)
+    - [lsts parse](cli/lsts_parse.md)
+    - [lsts check](cli/lsts_check.md)
     - [lsts build](cli/lsts_build.md)
+    - [lsts run](cli/lsts_run.md)
 - [Performance](perf/statistics.md)
 
 -----------
