@@ -6,7 +6,6 @@
 
 - [Installation](guide/installation.md)
 - [Syntax Overview](guide/syntax.md)
-- [Design Philosophy](guide/philosophy.md)
 
 # Tutorial
 
