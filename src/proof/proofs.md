@@ -1,6 +1,6 @@
 # Proofs
 
-LSTS is a theorem prover. Here are some existing Proofs.
+LSTS is a theorem prover. LSTS may also be a programming language.
 
 LSTS proofs are built on something called the Curry-Howard Equivalence.
 The equivalence states and demonstrates that programs are proofs and that proofs are programs.
