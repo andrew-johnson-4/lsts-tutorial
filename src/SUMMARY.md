@@ -31,12 +31,16 @@
     - [lsts check](cli/lsts_check.md)
     - [lsts build](cli/lsts_build.md)
     - [lsts run](cli/lsts_run.md)
+
+# Quantitative Information
+
 - [Performance](perf/statistics.md)
 
-# Proofs
+# Examples
 
-- [Irrationality of the Square Root of Two](proof/sqrt2.md)
-- [Infinitude of Primes](proof/primes.md)
+- [Proofs](proof/proofs.md)
+    - [Irrationality of the Square Root of Two](proof/sqrt2.md)
+    - [Infinitude of Primes](proof/primes.md)
 
 -----------
 
