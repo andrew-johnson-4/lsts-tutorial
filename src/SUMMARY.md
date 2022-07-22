@@ -24,11 +24,6 @@
     - [Constant Types](tutorial/constant_types.md)
 - [Kinds](tutorial/kinds.md)
 
-# Proofs
-
-- [Irrationality of the Square Root of Two](proof/sqrt2.md)
-- [Infinitude of Primes](proof/primes.md)
-
 # Reference Guide
 
 - [Command Line Tool](cli/README.md)
@@ -37,6 +32,11 @@
     - [lsts build](cli/lsts_build.md)
     - [lsts run](cli/lsts_run.md)
 - [Performance](perf/statistics.md)
+
+# Proofs
+
+- [Irrationality of the Square Root of Two](proof/sqrt2.md)
+- [Infinitude of Primes](proof/primes.md)
 
 -----------
 
