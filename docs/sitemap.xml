@@ -2,114 +2,114 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial</loc>
-        <lastmod>2022-07-24T19:19:04.397Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.875Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/cli</loc>
-        <lastmod>2022-07-24T19:19:04.417Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.899Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/print</loc>
-        <lastmod>2022-07-24T19:19:04.426Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.908Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/cli/lsts_build</loc>
-        <lastmod>2022-07-24T19:19:04.420Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.903Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/cli/lsts_check</loc>
-        <lastmod>2022-07-24T19:19:04.419Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.902Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/cli/lsts_parse</loc>
-        <lastmod>2022-07-24T19:19:04.418Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.901Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/cli/lsts_run</loc>
-        <lastmod>2022-07-24T19:19:04.421Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.903Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/guide/installation</loc>
-        <lastmod>2022-07-24T19:19:04.399Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.878Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/guide/syntax</loc>
-        <lastmod>2022-07-24T19:19:04.400Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.879Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/misc/contributors</loc>
-        <lastmod>2022-07-24T19:19:04.423Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.905Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/perf/statistics</loc>
-        <lastmod>2022-07-24T19:19:04.422Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.904Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/proof/primes</loc>
-        <lastmod>2022-07-24T19:19:04.416Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.898Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/proof/proofs</loc>
-        <lastmod>2022-07-24T19:19:04.414Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.895Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/proof/sqrt2</loc>
-        <lastmod>2022-07-24T19:19:04.415Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.897Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/proof/trivial</loc>
-        <lastmod>2022-07-24T19:19:04.414Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.896Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/blocks</loc>
-        <lastmod>2022-07-24T19:19:04.403Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.883Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/compounds</loc>
-        <lastmod>2022-07-24T19:19:04.404Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.885Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/constant_types</loc>
-        <lastmod>2022-07-24T19:19:04.412Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.892Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/kinds</loc>
-        <lastmod>2022-07-24T19:19:04.413Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.893Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/parameterized_types</loc>
-        <lastmod>2022-07-24T19:19:04.410Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.890Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/quantifiers</loc>
-        <lastmod>2022-07-24T19:19:04.405Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.886Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/struct_types</loc>
-        <lastmod>2022-07-24T19:19:04.408Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.888Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/terms</loc>
-        <lastmod>2022-07-24T19:19:04.401Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.880Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/type_invariants</loc>
-        <lastmod>2022-07-24T19:19:04.411Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.891Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/types</loc>
-        <lastmod>2022-07-24T19:19:04.406Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.887Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/union_types</loc>
-        <lastmod>2022-07-24T19:19:04.409Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.889Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/value_types</loc>
-        <lastmod>2022-07-24T19:19:04.407Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.888Z</lastmod>
     </url>
     <url>
         <loc>https://andrew-johnson-4.github.io/lsts-tutorial/tutorial/values</loc>
-        <lastmod>2022-07-24T19:19:04.402Z</lastmod>
+        <lastmod>2022-07-24T19:22:25.881Z</lastmod>
     </url>
 </urlset>
