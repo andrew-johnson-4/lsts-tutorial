@@ -26,6 +26,7 @@
 # Examples
 
 - [Proofs](proof/proofs.md)
+    - [Trivial Proofs](proof/trivial.md)
     - [Irrationality of the Square Root of Two](proof/sqrt2.md)
     - [Infinitude of Primes](proof/primes.md)
 
