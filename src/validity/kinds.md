@@ -1,4 +1,4 @@
-#Kinded Proofs
+# Kinded Proofs
 
 Kinds allow the program to setup a "cleanroom" environment for the type system.
 The canonical example of polykinding is for the Unit kind.
@@ -10,7 +10,7 @@ All units that are not base units can be written as a compound of base units.
 Examples of base units are *Seconds* or *Metres*.
 Examples of non-base units are *Joules* or *Teslas*.
 
-In LSTS it is convenient to mark base units as **normal**.
+In LSTS it is convenient to mark base units as *normal*.
 A normal Type can be preferred during type conversion.
 For example, if a unit of Speed is multiplied by a unit of Time, it will result in a unit of Distance.
 When we look closer at these units we see that Speed is a unit of Distance over Time.
