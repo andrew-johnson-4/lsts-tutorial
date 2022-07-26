@@ -3,7 +3,7 @@
 Kinds allow the program to setup a "cleanroom" environment for the type system.
 The canonical example of polykinding is for the Unit kind.
 
-The International System of Units defines a unit as a number combined with a Unit.
+The International System of Units defines a unit as a Number combined with a Unit.
 In LSTS this can be modelled as the number being a Term and the unit being a Unit.
 The SI system additionally defines several units as "base units".
 All units that are not base units can be written as a compound of base units.
