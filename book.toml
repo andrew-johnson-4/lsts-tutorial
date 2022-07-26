@@ -9,7 +9,7 @@ edition = "2018"
 
 [output.html]
 mathjax-support = true
-site-url = "/"
+site-url = "https://andrew-johnson-4.github.io/lsts-tutorial/"
 git-repository-url = "https://github.com/andrew-johnson-4/lsts-tutorial"
 edit-url-template = "https://github.com/andrew-johnson-4/lsts-tutorial/{path}"
 
