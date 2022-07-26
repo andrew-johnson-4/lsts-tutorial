@@ -38,6 +38,7 @@
     - [lsts build](cli/lsts_build.md)
     - [lsts run](cli/lsts_run.md)
 - [Soundness](validity/soundness.md)
+    - [Kinded Proofs](validity/kinds.md)
 
 # Quantitative Information
 
