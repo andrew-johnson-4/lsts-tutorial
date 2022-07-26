@@ -37,6 +37,7 @@
     - [lsts check](cli/lsts_check.md)
     - [lsts build](cli/lsts_build.md)
     - [lsts run](cli/lsts_run.md)
+- [Soundness](validity/soundness.md)
 
 # Quantitative Information
 
