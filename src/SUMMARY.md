@@ -39,6 +39,7 @@
     - [lsts run](cli/lsts_run.md)
 - [Soundness](validity/soundness.md)
     - [Kinded Proofs](validity/kinds.md)
+    - [Normal Kinds](validity/normal_kinds.md)
 
 # Quantitative Information
 

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Value Types - LSTS Documentation</title>
+        <title>Normal Kinds - LSTS Documentation</title>
 
 
         <!-- Custom HTML head -->
@@ -94,7 +94,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tutorial</li><li class="chapter-item expanded "><a href="../tutorial/terms.html"><strong aria-hidden="true">3.</strong> Terms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorial/values.html"><strong aria-hidden="true">3.1.</strong> Value Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/blocks.html"><strong aria-hidden="true">3.2.</strong> Block Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/compounds.html"><strong aria-hidden="true">3.3.</strong> Compound Values</a></li><li class="chapter-item expanded "><a href="../tutorial/quantifiers.html"><strong aria-hidden="true">3.4.</strong> Quantified Values</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorial/types.html"><strong aria-hidden="true">4.</strong> Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorial/value_types.html" class="active"><strong aria-hidden="true">4.1.</strong> Value Types</a></li><li class="chapter-item expanded "><a href="../tutorial/struct_types.html"><strong aria-hidden="true">4.2.</strong> Structured Types</a></li><li class="chapter-item expanded "><a href="../tutorial/union_types.html"><strong aria-hidden="true">4.3.</strong> Union Types</a></li><li class="chapter-item expanded "><a href="../tutorial/parameterized_types.html"><strong aria-hidden="true">4.4.</strong> Parameterized Types</a></li><li class="chapter-item expanded "><a href="../tutorial/type_invariants.html"><strong aria-hidden="true">4.5.</strong> Type Invariants</a></li><li class="chapter-item expanded "><a href="../tutorial/constant_types.html"><strong aria-hidden="true">4.6.</strong> Constant Types</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorial/kinds.html"><strong aria-hidden="true">5.</strong> Kinds</a></li><li class="chapter-item expanded affix "><li class="part-title">Examples</li><li class="chapter-item expanded "><a href="../proof/proofs.html"><strong aria-hidden="true">6.</strong> Proofs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../proof/trivial.html"><strong aria-hidden="true">6.1.</strong> Trivial Proofs</a></li><li class="chapter-item expanded "><a href="../proof/sqrt2.html"><strong aria-hidden="true">6.2.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="../proof/primes.html"><strong aria-hidden="true">6.3.</strong> Infinitude of Primes</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="../cli/index.html"><strong aria-hidden="true">7.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cli/lsts_parse.html"><strong aria-hidden="true">7.1.</strong> lsts parse</a></li><li class="chapter-item expanded "><a href="../cli/lsts_check.html"><strong aria-hidden="true">7.2.</strong> lsts check</a></li><li class="chapter-item expanded "><a href="../cli/lsts_build.html"><strong aria-hidden="true">7.3.</strong> lsts build</a></li><li class="chapter-item expanded "><a href="../cli/lsts_run.html"><strong aria-hidden="true">7.4.</strong> lsts run</a></li></ol></li><li class="chapter-item expanded "><a href="../validity/soundness.html"><strong aria-hidden="true">8.</strong> Soundness</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../validity/kinds.html"><strong aria-hidden="true">8.1.</strong> Kinded Proofs</a></li><li class="chapter-item expanded "><a href="../validity/normal_kinds.html"><strong aria-hidden="true">8.2.</strong> Normal Kinds</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Quantitative Information</li><li class="chapter-item expanded "><a href="../perf/statistics.html"><strong aria-hidden="true">9.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="../guide/installation.html"><strong aria-hidden="true">1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../guide/syntax.html"><strong aria-hidden="true">2.</strong> Syntax Overview</a></li><li class="chapter-item expanded affix "><li class="part-title">Tutorial</li><li class="chapter-item expanded "><a href="../tutorial/terms.html"><strong aria-hidden="true">3.</strong> Terms</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorial/values.html"><strong aria-hidden="true">3.1.</strong> Value Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/blocks.html"><strong aria-hidden="true">3.2.</strong> Block Expressions</a></li><li class="chapter-item expanded "><a href="../tutorial/compounds.html"><strong aria-hidden="true">3.3.</strong> Compound Values</a></li><li class="chapter-item expanded "><a href="../tutorial/quantifiers.html"><strong aria-hidden="true">3.4.</strong> Quantified Values</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorial/types.html"><strong aria-hidden="true">4.</strong> Types</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorial/value_types.html"><strong aria-hidden="true">4.1.</strong> Value Types</a></li><li class="chapter-item expanded "><a href="../tutorial/struct_types.html"><strong aria-hidden="true">4.2.</strong> Structured Types</a></li><li class="chapter-item expanded "><a href="../tutorial/union_types.html"><strong aria-hidden="true">4.3.</strong> Union Types</a></li><li class="chapter-item expanded "><a href="../tutorial/parameterized_types.html"><strong aria-hidden="true">4.4.</strong> Parameterized Types</a></li><li class="chapter-item expanded "><a href="../tutorial/type_invariants.html"><strong aria-hidden="true">4.5.</strong> Type Invariants</a></li><li class="chapter-item expanded "><a href="../tutorial/constant_types.html"><strong aria-hidden="true">4.6.</strong> Constant Types</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorial/kinds.html"><strong aria-hidden="true">5.</strong> Kinds</a></li><li class="chapter-item expanded affix "><li class="part-title">Examples</li><li class="chapter-item expanded "><a href="../proof/proofs.html"><strong aria-hidden="true">6.</strong> Proofs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../proof/trivial.html"><strong aria-hidden="true">6.1.</strong> Trivial Proofs</a></li><li class="chapter-item expanded "><a href="../proof/sqrt2.html"><strong aria-hidden="true">6.2.</strong> Irrationality of the Square Root of Two</a></li><li class="chapter-item expanded "><a href="../proof/primes.html"><strong aria-hidden="true">6.3.</strong> Infinitude of Primes</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Reference Guide</li><li class="chapter-item expanded "><a href="../cli/index.html"><strong aria-hidden="true">7.</strong> Command Line Tool</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../cli/lsts_parse.html"><strong aria-hidden="true">7.1.</strong> lsts parse</a></li><li class="chapter-item expanded "><a href="../cli/lsts_check.html"><strong aria-hidden="true">7.2.</strong> lsts check</a></li><li class="chapter-item expanded "><a href="../cli/lsts_build.html"><strong aria-hidden="true">7.3.</strong> lsts build</a></li><li class="chapter-item expanded "><a href="../cli/lsts_run.html"><strong aria-hidden="true">7.4.</strong> lsts run</a></li></ol></li><li class="chapter-item expanded "><a href="../validity/soundness.html"><strong aria-hidden="true">8.</strong> Soundness</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../validity/kinds.html"><strong aria-hidden="true">8.1.</strong> Kinded Proofs</a></li><li class="chapter-item expanded "><a href="../validity/normal_kinds.html" class="active"><strong aria-hidden="true">8.2.</strong> Normal Kinds</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Quantitative Information</li><li class="chapter-item expanded "><a href="../perf/statistics.html"><strong aria-hidden="true">9.</strong> Performance</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../misc/contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -132,7 +132,7 @@
                         <a href="https://github.com/andrew-johnson-4/lsts-tutorial" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        <a href="https://github.com/andrew-johnson-4/lsts-tutorial/src/tutorial/value_types.md" title="Suggest an edit" aria-label="Suggest an edit">
+                        <a href="https://github.com/andrew-johnson-4/lsts-tutorial/src/validity/normal_kinds.md" title="Suggest an edit" aria-label="Suggest an edit">
                             <i id="git-edit-button" class="fa fa-edit"></i>
                         </a>
 
@@ -161,31 +161,43 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="value-types"><a class="header" href="#value-types">Value Types</a></h1>
-<p>Value types are defined by a regular expression that matches a subset of <em>value characters</em>.
-Value characters are defined in the LSTS lexer as character ranges associated with values.
-In this fashion LSTS does not really define any builtin value types.
-All value types are defined by the user or by a prelude that is loaded by the user.</p>
-<pre><code class="language-lsts">type Number;
-type Integer   : Number = /^[0-9][_0-9]*([eE][_0-9]+)?$/;
-type Real      : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?$/;
-type Complex   : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?([+][0-9][_.0-9]*([eE][-]?[_0-9]+)?[i])?$/;
+                        <h1 id="normal-kinds"><a class="header" href="#normal-kinds">Normal Kinds</a></h1>
+<p>We have mentioned that types can be marked as normal.
+When any Type is marked as normal, the entire Kind that it belongs to is marked as normal.
+The kind Term can never be marked as normal.
+Attempting to mark a Term Type as normal will result in an error.</p>
+<p>Normal kinds are very useful during typecasting.
+For most typecasting, the cast must be direct.</p>
+<pre><code class="language-lsts">let a : Real;
+let b : Integer = a as Integer;
 </code></pre>
-<p>As you can see in the above code section, numerical types can be associated with a definitive regular expression.
-If that regular expression matches with a value, then the type will be associated.
-One caveat is that only the first match will associate its type.
-Here the number 34 will be assigned only the type Integer because that is the first match.
-If you want for 34 to be a Real number then you should write it as 34.0 so that the Integer regular expression fails to match.</p>
+<p>For normal kinds, typecasting will search for a viable path that will satisfy the cast.
+Normal typecasting has two phases: the Into-Normal phase, and the Out-Of-Normal phase.</p>
+<p>During the Into-Normal phase, the compiler will try to normalize the type.
+Multiple casts may be necessary to accomplish this transformation.</p>
+<pre><code class="language-lsts">let mph: Mile / Hour;
+let mps: Metre / Second = mph as Meter / Second;
+</code></pre>
+<p>In the above example, the compiler must typecast both Miles to Metres and Hours to Seconds.
+Note also that the Hours to Seconds cast is on the denominator.
+When a Unit cast is on the denominator, the constant conversion factor must be inverted.
+A well implemented prelude will take this into account.</p>
+<p>During the Out-Of-Normal phase, the compiler will try to take the normalized type and convert it into the annotated type.
+This process works mostly identical to the Into-Normal phase, only with a different target.
+When Into-Normal and Out-of-Normal phases are connected, multi-step casting can be inferred for fairly complex targets.</p>
+<pre><code class="language-lsts">let mph: Mile / Hour;
+let kmpm: Kilo&lt;Metre&gt; / Minute = mph as Kilo&lt;Metre&gt; / Minute;
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../tutorial/types.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../validity/kinds.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../tutorial/struct_types.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../perf/statistics.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -195,11 +207,11 @@ If you want for 34 to be a Real number then you should write it as 34.0 so that 
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../tutorial/types.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../validity/kinds.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../tutorial/struct_types.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../perf/statistics.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
