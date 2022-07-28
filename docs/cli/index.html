@@ -166,7 +166,11 @@
 The program processes files ending with the <em>.tlc</em> file extension.
 <em>.tlc</em> stands for Typed Lambda Calculus.
 To find a list of available commands, type <em>lsts help</em>.</p>
-<pre><code class="language-lsts">lsts build preludes/number_theory.tlc proof/infinitude_of_primes.tlc
+<pre><code class="language-lsts">lsts help
+     parse [filenames] -- parse files but nothing more
+     check [filenames] -- parse and typecheck files
+     build [filenames] -- compile provided files as a program
+     run   [filenames] -- execute provided files as a program
 </code></pre>
 
                     </main>

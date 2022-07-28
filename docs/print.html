@@ -616,35 +616,39 @@ Therefore the Prime numbers must be infinite.</p>
 The program processes files ending with the <em>.tlc</em> file extension.
 <em>.tlc</em> stands for Typed Lambda Calculus.
 To find a list of available commands, type <em>lsts help</em>.</p>
-<pre><code class="language-lsts">lsts build preludes/number_theory.tlc proof/infinitude_of_primes.tlc
+<pre><code class="language-lsts">lsts help
+     parse [filenames] -- parse files but nothing more
+     check [filenames] -- parse and typecheck files
+     build [filenames] -- compile provided files as a program
+     run   [filenames] -- execute provided files as a program
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-parse-documentation"><a class="header" href="#lsts-parse-documentation">lsts parse Documentation</a></h1>
 <pre><code class="language-lsts">lsts help
      parse [filenames] -- parse files but nothing more
      check [filenames] -- parse and typecheck files
      build [filenames] -- compile provided files as a program
-     run   [filenames] -- execute provides files as a program
+     run   [filenames] -- execute provided files as a program
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-check-documentation"><a class="header" href="#lsts-check-documentation">lsts check Documentation</a></h1>
 <pre><code class="language-lsts">lsts help
      parse [filenames] -- parse files but nothing more
      check [filenames] -- parse and typecheck files
      build [filenames] -- compile provided files as a program
-     run   [filenames] -- execute provides files as a program
+     run   [filenames] -- execute provided files as a program
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-build-documentation"><a class="header" href="#lsts-build-documentation">lsts build Documentation</a></h1>
 <pre><code class="language-lsts">lsts help
      parse [filenames] -- parse files but nothing more
      check [filenames] -- parse and typecheck files
      build [filenames] -- compile provided files as a program
-     run   [filenames] -- execute provides files as a program
+     run   [filenames] -- execute provided files as a program
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-run-documentation"><a class="header" href="#lsts-run-documentation">lsts run Documentation</a></h1>
 <pre><code class="language-lsts">lsts help
      parse [filenames] -- parse files but nothing more
      check [filenames] -- parse and typecheck files
      build [filenames] -- compile provided files as a program
-     run   [filenames] -- execute provides files as a program
+     run   [filenames] -- execute provided files as a program
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="soundness-guarantees"><a class="header" href="#soundness-guarantees">Soundness Guarantees</a></h1>
 <p>Surprisingly, or maybe not to some, LSTS does not provide the same level of soundness guarantees enjoyed by other systems.
