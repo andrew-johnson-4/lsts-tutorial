@@ -20,4 +20,4 @@ It is only within this normal form that we can discover that Speed * Time = Dist
 
 If you want to work within a Kind and only within that Kind then you should use Kind Projection.
 A compound Type *x: Real + Second* can be narrowed into a Unit with double colon syntax:
-*x :: Unit*. This will leave us with only the type Second, stripping the variable of its other associated Types.
+*x :: Unit*. This will leave the term with only the type Second, stripping the variable of its other associated Types.
