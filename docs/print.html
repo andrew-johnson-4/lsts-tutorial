@@ -565,6 +565,18 @@ Valued Types are sometimes called Data Types.
 Data Types are singular.</p>
 <p>This preface is all we need to explain before even getting started to talk about unification.
 Unification is the beating heart of LSTS and it is very important that we get it right.</p>
+<p>Before unification we must satisfy some preconditions.</p>
+<pre><code class="language-lsts">let apply_preconditions( left_type: Type, right_type: Type ) {
+    expand_subtypes( left_type );               //rewrite Type with implied types explictly included
+    expand_subtypes( right_type );              //A + A =&gt; B will be rewritten as A + B
+
+    reduce_constant_expressions( left_type );   //Constant types will be evaluated and normalized
+    reduce_constant_expressions( right_type );  //Constants may not become a Value, but they will be normal
+
+    normalize( left_type );                     //Types will be converted into CNF
+    normalize( right_type );                    //Products and Ratios will be reduced and ordered
+}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kinds"><a class="header" href="#kinds">Kinds</a></h1>
 <p>Kinds are <em>types for types</em>.
 Kinds are simple, having a name and potentially some parameters.
