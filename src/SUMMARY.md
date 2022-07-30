@@ -21,6 +21,7 @@
     - [Parameterized Types](tutorial/parameterized_types.md)
     - [Type Invariants](tutorial/type_invariants.md)
     - [Constant Types](tutorial/constant_types.md)
+    - [Type Unification](tutorial/unification.md)
 - [Kinds](tutorial/kinds.md)
     - [Normal Kinds](tutorial/normal_kinds.md)
 
