@@ -35,6 +35,8 @@ Data Types are singular.
 This preface is all we need to explain before even getting started to talk about unification.
 Unification is the beating heart of LSTS and it is very important that we get it right.
 
+### Unification, as implemented
+
 Before unification we must satisfy some preconditions.
 
 ```lsts
