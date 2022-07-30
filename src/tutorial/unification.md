@@ -39,13 +39,19 @@ Before unification we must satisfy some preconditions.
 
 ```lsts
 let apply_preconditions( left_type: Type, right_type: Type ) {
-    expand_subtypes( left_type );               //rewrite Type with implied types explictly included
-    expand_subtypes( right_type );              //A + A => B will be rewritten as A + B
+    //rewrite Types with implied types explictly included
+    //A + A => B will be rewritten as A + B
+    expand_subtypes( left_type );               
+    expand_subtypes( right_type );
 
-    reduce_constant_expressions( left_type );   //Constant types will be evaluated and normalized
-    reduce_constant_expressions( right_type );  //Constants may not become a Value, but they will be normal
+    //Constant types will be evaluated and normalized
+    //Constants may not become a Value, but they will be normal
+    reduce_constant_expressions( left_type );
+    reduce_constant_expressions( right_type ); 
 
-    normalize( left_type );                     //Types will be converted into CNF
-    normalize( right_type );                    //Products and Ratios will be reduced and ordered
+    //Types will be converted into CNF
+    //Products and Ratios will be reduced and ordered
+    normalize( left_type ); 
+    normalize( right_type );
 }
 ```
