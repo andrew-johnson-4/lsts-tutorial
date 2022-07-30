@@ -79,6 +79,6 @@ let ss:Set<Integer> = {1, 2, 2, 3}
 Maps have builtin syntax for their types and for their values.
 
 ```lsts
-let ms:Map<Integer,Prime> = { 1:2, 2:3, 3:5, 4:7 }
+let ms:Map<Integer,Prime> = { 1=2, 2=3, 3=5, 4=7 }
 ```
 
