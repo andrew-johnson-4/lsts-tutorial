@@ -76,6 +76,12 @@ let apply_preconditions( left_type: Type, right_type: Type ) {
     //Products and Ratios will be reduced and ordered
     normalize( left_type ); 
     normalize( right_type );
+
+    //Assert that all preconditions are satisfied
+    //Check that Type is in CNF
+    //Check that Normal Kinds and Data Types are singular
+    assert_preconditions( left_type );
+    assert_preconditions( right_type );
 }
 ```
 
