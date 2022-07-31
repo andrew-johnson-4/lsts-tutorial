@@ -42,7 +42,7 @@ First let's look at the structure of a Type before we start moving anything arou
 ```lsts
 type Type =
      Any
-   | Ident(String,Type[])
+   | Named(String,Type[])
    | And(Type)
    | Arrow(Type,Type)
    | Tuple(Type[])

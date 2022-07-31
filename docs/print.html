@@ -569,7 +569,7 @@ Unification is the beating heart of LSTS and it is very important that we get it
 <p>First let's look at the structure of a Type before we start moving anything around.</p>
 <pre><code class="language-lsts">type Type =
      Any
-   | Ident(String,Type[])
+   | Named(String,Type[])
    | And(Type)
    | Arrow(Type,Type)
    | Tuple(Type[])
