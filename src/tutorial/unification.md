@@ -61,7 +61,7 @@ However, before we can start unification we must satisfy some preconditions.
 The following function gets called before any unification.
 
 ```lsts
-let apply_preconditions( left_type: Type, right_type: Type ) {
+let apply_preconditions( left_type: Type, right_type: Type ) = {
     //rewrite Types with implied types explictly included
     //A + A => B will be rewritten as A + B
     expand_subtypes( left_type );               

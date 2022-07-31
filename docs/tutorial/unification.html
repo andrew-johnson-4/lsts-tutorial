@@ -210,7 +210,7 @@ Product is order-insenstive.</p>
 <p>Unification is represented as the binary arrow operator: A =&gt; B.
 However, before we can start unification we must satisfy some preconditions.
 The following function gets called before any unification.</p>
-<pre><code class="language-lsts">let apply_preconditions( left_type: Type, right_type: Type ) {
+<pre><code class="language-lsts">let apply_preconditions( left_type: Type, right_type: Type ) = {
     //rewrite Types with implied types explictly included
     //A + A =&gt; B will be rewritten as A + B
     expand_subtypes( left_type );               
