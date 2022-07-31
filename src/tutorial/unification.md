@@ -37,7 +37,28 @@ Unification is the beating heart of LSTS and it is very important that we get it
 
 ### Unification, as implemented
 
-Before unification we must satisfy some preconditions.
+First let's look at the structure of a Type before we start moving anything around.
+
+```lsts
+type Type =
+     Any
+   | Ident(String,Type[])
+   | And(Type)
+   | Arrow(Type,Type)
+   | Tuple(Type[])
+   | Product(Type[])
+   | Ratio(Type,Type)
+   | Constant(Term)
+```
+
+Bottom is represented as the empty conjunctive.
+Tuple is order-sensitive.
+Nil is represented as the empty tuple.
+Product is order-insenstive.
+
+Unification is represented as the binary arrow operator: A => B.
+However, before we can start unification we must satisfy some preconditions.
+The following function gets called before any unification.
 
 ```lsts
 let apply_preconditions( left_type: Type, right_type: Type ) {
@@ -58,21 +79,3 @@ let apply_preconditions( left_type: Type, right_type: Type ) {
 }
 ```
 
-Next let's look at the structure of a Type before we start moving anything around.
-
-```lsts
-type Type =
-     Any
-   | Ident(String,Type[])
-   | And(Type)
-   | Arrow(Type,Type)
-   | Tuple(Type[])
-   | Product(Type[])
-   | Ratio(Type,Type)
-   | Constant(Term)
-```
-
-Bottom is represented as the empty conjunctive.
-Tuple is order-sensitive.
-Nil is represented as the empty tuple.
-Product is order-insenstive.

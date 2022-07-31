@@ -192,7 +192,24 @@ Data Types are singular.</p>
 <p>This preface is all we need to explain before even getting started to talk about unification.
 Unification is the beating heart of LSTS and it is very important that we get it right.</p>
 <h3 id="unification-as-implemented"><a class="header" href="#unification-as-implemented">Unification, as implemented</a></h3>
-<p>Before unification we must satisfy some preconditions.</p>
+<p>First let's look at the structure of a Type before we start moving anything around.</p>
+<pre><code class="language-lsts">type Type =
+     Any
+   | Ident(String,Type[])
+   | And(Type)
+   | Arrow(Type,Type)
+   | Tuple(Type[])
+   | Product(Type[])
+   | Ratio(Type,Type)
+   | Constant(Term)
+</code></pre>
+<p>Bottom is represented as the empty conjunctive.
+Tuple is order-sensitive.
+Nil is represented as the empty tuple.
+Product is order-insenstive.</p>
+<p>Unification is represented as the binary arrow operator: A =&gt; B.
+However, before we can start unification we must satisfy some preconditions.
+The following function gets called before any unification.</p>
 <pre><code class="language-lsts">let apply_preconditions( left_type: Type, right_type: Type ) {
     //rewrite Types with implied types explictly included
     //A + A =&gt; B will be rewritten as A + B
@@ -210,21 +227,6 @@ Unification is the beating heart of LSTS and it is very important that we get it
     normalize( right_type );
 }
 </code></pre>
-<p>Next let's look at the structure of a Type before we start moving anything around.</p>
-<pre><code class="language-lsts">type Type =
-     Any
-   | Ident(String,Type[])
-   | And(Type)
-   | Arrow(Type,Type)
-   | Tuple(Type[])
-   | Product(Type[])
-   | Ratio(Type,Type)
-   | Constant(Term)
-</code></pre>
-<p>Bottom is represented as the empty conjunctive.
-Tuple is order-sensitive.
-Nil is represented as the empty tuple.
-Product is order-insenstive.</p>
 
                     </main>
 
