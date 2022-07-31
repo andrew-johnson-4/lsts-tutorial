@@ -175,8 +175,25 @@ let $"=>"(left_type: Type, right_type: Type) -> Type {
       },
 
       //Everything else is a mixed bag
-      ...
-
+      (Named(lv,lps), Named(rv,rps)) if lv==rv && lps.length==rps.length => {
+         Named(lv, [for (lp,rp) in zip(lps,rps) yield (lp => rp)])
+      }
+      (Arrow(pl,bl), Arrow(pr,br)) => {
+         Arrow(pl => pr, bl => br)
+      },
+      (Product(la), Product(ra)) if la.length==ra.length => {
+         Product([for (lt,rt) in zip(la,ra) yield (lt => rt)]
+      },
+      (Tuple(la), Tuple(ra)) if la.length==ra.length => {
+         Tuple([for (lt,rt) in zip(la,ra) yield (lt => rt)]
+      },
+      (Constant(lt), Constant(rt)) => {
+         if lt == rt {
+            Constant(lt)
+         } else {
+            raise TypeError("Constant Types are not equal")
+         }
+      }
    }
 }
 ```

@@ -321,8 +321,25 @@ How each case is treated has an outsized effect on the rest of our codebases.</p
       },
 
       //Everything else is a mixed bag
-      ...
-
+      (Named(lv,lps), Named(rv,rps)) if lv==rv &amp;&amp; lps.length==rps.length =&gt; {
+         Named(lv, [for (lp,rp) in zip(lps,rps) yield (lp =&gt; rp)])
+      }
+      (Arrow(pl,bl), Arrow(pr,br)) =&gt; {
+         Arrow(pl =&gt; pr, bl =&gt; br)
+      },
+      (Product(la), Product(ra)) if la.length==ra.length =&gt; {
+         Product([for (lt,rt) in zip(la,ra) yield (lt =&gt; rt)]
+      },
+      (Tuple(la), Tuple(ra)) if la.length==ra.length =&gt; {
+         Tuple([for (lt,rt) in zip(la,ra) yield (lt =&gt; rt)]
+      },
+      (Constant(lt), Constant(rt)) =&gt; {
+         if lt == rt {
+            Constant(lt)
+         } else {
+            raise TypeError(&quot;Constant Types are not equal&quot;)
+         }
+      }
    }
 }
 </code></pre>
