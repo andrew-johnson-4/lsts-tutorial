@@ -85,3 +85,46 @@ let apply_preconditions( left_type: Type, right_type: Type ) = {
 }
 ```
 
+The actual unification function can be very fragile in some cases.
+How each case is treated has an outsized effect on the rest of our codebases.
+
+```lsts
+let $"=>"(left_type: Type, right_type: Type) -> Type {
+   match (left_type, right_type) {
+
+      //the bottom type implies nothing
+      (And(lts), _) if lts.len()==0 => { raise TypeError("") },
+
+      //any type implies Any type
+      (l, Any) => { l },
+
+      //type variables get substituted for their greatest-common-denominator
+      (Named(lv,lps), rt) if lv.is_uppercase => {
+         if lv in substitutions {
+            substitutions[lv] = gcd(substitutions[lv], rt)
+         } else {
+            substitutions[lv] = rt
+         };
+         substitutions[lv]
+      },
+      (lt, Named(rv,rps)) if rv.is_uppercase => {
+         if rv in substitutions {
+            substitutions[rv] = gcd(lt, substitutions[rv])
+         } else {
+            substitutions[rv] = lt
+         };
+         substitutions[rv]
+      },
+
+      //And Unification has highest precedence
+      ...
+
+      //Ratio Types have next precedence
+      ...
+
+      //Everything else is a mixed bag
+      ...
+
+   }
+}
+```

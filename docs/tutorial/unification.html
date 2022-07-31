@@ -233,6 +233,47 @@ The following function gets called before any unification.</p>
     assert_preconditions( right_type );
 }
 </code></pre>
+<p>The actual unification function can be very fragile in some cases.
+How each case is treated has an outsized effect on the rest of our codebases.</p>
+<pre><code class="language-lsts">let $&quot;=&gt;&quot;(left_type: Type, right_type: Type) -&gt; Type {
+   match (left_type, right_type) {
+
+      //the bottom type implies nothing
+      (And(lts), _) if lts.len()==0 =&gt; { raise TypeError(&quot;&quot;) },
+
+      //any type implies Any type
+      (l, Any) =&gt; { l },
+
+      //type variables get substituted for their greatest-common-denominator
+      (Named(lv,lps), rt) if lv.is_uppercase =&gt; {
+         if lv in substitutions {
+            substitutions[lv] = gcd(substitutions[lv], rt)
+         } else {
+            substitutions[lv] = rt
+         };
+         substitutions[lv]
+      },
+      (lt, Named(rv,rps)) if rv.is_uppercase =&gt; {
+         if rv in substitutions {
+            substitutions[rv] = gcd(lt, substitutions[rv])
+         } else {
+            substitutions[rv] = lt
+         };
+         substitutions[rv]
+      },
+
+      //And Unification has highest precedence
+      ...
+
+      //Ratio Types have next precedence
+      ...
+
+      //Everything else is a mixed bag
+      ...
+
+   }
+}
+</code></pre>
 
                     </main>
 
