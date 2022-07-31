@@ -93,7 +93,7 @@ let $"=>"(left_type: Type, right_type: Type) -> Type {
    match (left_type, right_type) {
 
       //the bottom type implies nothing
-      (And(lts), _) if lts.len()==0 => { raise TypeError("") },
+      (And(lts), _) if lts.length==0 => { raise TypeError("Bottom implies nothing") },
 
       //any type implies Any type
       (l, Any) => { l },
@@ -117,7 +117,54 @@ let $"=>"(left_type: Type, right_type: Type) -> Type {
       },
 
       //And Unification has highest precedence
-      ...
+      (_, And(rts) as rt) if rts.length==0 => { rt },
+      (And(lts) as lt, And(rts)) => {
+         let mts = [];
+         for rt in rts {
+            match lt => rt {
+               And(tts) => { mts.append(tts); },
+               tt => { mts.push(tt); },
+            }
+         }
+         mts.sort(); mts.dedup();
+         if mts.length==0 { raise TypeError("nothing implies Bottom") }
+         else if mts.length==1 { mts[0] }
+         else { And(mts) }
+      },
+      (And(lts), rt) => {
+         let mts = [];
+         for ltt in lts {
+            //it is OK if everything doesn't unify
+            //it is not OK if nothing unifies
+            if let Ok(nt) = try {ltt => rt} {
+               match nt {
+                  And(tts) => { mts.append(tts); },
+                  tt => { mts.push(tt); },
+               }
+            }
+         }
+         mts.sort(); mts.dedup();
+         if mts.length==0 { raise TypeError("nothing implies Bottom") }
+         else if mts.length==1 { mts[0] }
+         else { And(mts) }
+      },
+      (lt, And(rts)) => {
+         let mts = [];
+         for rt in rts {
+            if let Ok(nt) = try {lt => rt} {
+               match nt {
+                  And(tts) => { mts.append(tts); },
+                  tt => { mts.push(tt); },
+               }
+            } else {
+               raise TypeError("Implicit Narrowing of And Types is not permitted on the right")
+            }
+         }
+         mts.sort(); mts.dedup();
+         if mts.length==0 { raise TypeError("nothing implies Bottom") }
+         else if mts.length==1 { mts[0] }
+         else { And(mts) }
+      }
 
       //Ratio Types have next precedence
       ...

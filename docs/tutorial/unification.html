@@ -239,7 +239,7 @@ How each case is treated has an outsized effect on the rest of our codebases.</p
    match (left_type, right_type) {
 
       //the bottom type implies nothing
-      (And(lts), _) if lts.len()==0 =&gt; { raise TypeError(&quot;&quot;) },
+      (And(lts), _) if lts.length==0 =&gt; { raise TypeError(&quot;Bottom implies nothing&quot;) },
 
       //any type implies Any type
       (l, Any) =&gt; { l },
@@ -263,7 +263,54 @@ How each case is treated has an outsized effect on the rest of our codebases.</p
       },
 
       //And Unification has highest precedence
-      ...
+      (_, And(rts) as rt) if rts.length==0 =&gt; { rt },
+      (And(lts) as lt, And(rts)) =&gt; {
+         let mts = [];
+         for rt in rts {
+            match lt =&gt; rt {
+               And(tts) =&gt; { mts.append(tts); },
+               tt =&gt; { mts.push(tt); },
+            }
+         }
+         mts.sort(); mts.dedup();
+         if mts.length==0 { raise TypeError(&quot;nothing implies Bottom&quot;) }
+         else if mts.length==1 { mts[0] }
+         else { And(mts) }
+      },
+      (And(lts), rt) =&gt; {
+         let mts = [];
+         for ltt in lts {
+            //it is OK if everything doesn't unify
+            //it is not OK if nothing unifies
+            if let Ok(nt) = try {ltt =&gt; rt} {
+               match nt {
+                  And(tts) =&gt; { mts.append(tts); },
+                  tt =&gt; { mts.push(tt); },
+               }
+            }
+         }
+         mts.sort(); mts.dedup();
+         if mts.length==0 { raise TypeError(&quot;nothing implies Bottom&quot;) }
+         else if mts.length==1 { mts[0] }
+         else { And(mts) }
+      },
+      (lt, And(rts)) =&gt; {
+         let mts = [];
+         for rt in rts {
+            if let Ok(nt) = try {lt =&gt; rt} {
+               match nt {
+                  And(tts) =&gt; { mts.append(tts); },
+                  tt =&gt; { mts.push(tt); },
+               }
+            } else {
+               raise TypeError(&quot;Implicit Narrowing of And Types is not permitted on the right&quot;)
+            }
+         }
+         mts.sort(); mts.dedup();
+         if mts.length==0 { raise TypeError(&quot;nothing implies Bottom&quot;) }
+         else if mts.length==1 { mts[0] }
+         else { And(mts) }
+      }
 
       //Ratio Types have next precedence
       ...
