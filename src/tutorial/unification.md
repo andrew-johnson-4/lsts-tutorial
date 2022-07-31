@@ -167,7 +167,12 @@ let $"=>"(left_type: Type, right_type: Type) -> Type {
       }
 
       //Ratio Types have next precedence
-      ...
+      (Ratio(nl,dl), Ratio(nr,dr)) => {
+         Ratio(nl => nr, dl => dr)
+      },
+      (lt, Ratio(nr,Tuple(dr))) if dr.length==0 => {
+         lt => nr
+      },
 
       //Everything else is a mixed bag
       ...

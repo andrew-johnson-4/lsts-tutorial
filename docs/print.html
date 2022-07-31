@@ -687,7 +687,12 @@ How each case is treated has an outsized effect on the rest of our codebases.</p
       }
 
       //Ratio Types have next precedence
-      ...
+      (Ratio(nl,dl), Ratio(nr,dr)) =&gt; {
+         Ratio(nl =&gt; nr, dl =&gt; dr)
+      },
+      (lt, Ratio(nr,Tuple(dr))) if dr.length==0 =&gt; {
+         lt =&gt; nr
+      },
 
       //Everything else is a mixed bag
       ...
