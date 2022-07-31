@@ -584,6 +584,21 @@ Unification is the beating heart of LSTS and it is very important that we get it
     normalize( right_type );
 }
 </code></pre>
+<p>Next let's look at the structure of a Type before we start moving anything around.</p>
+<pre><code class="language-lsts">type Type =
+     Any
+   | Ident(String,Type[])
+   | And(Type)
+   | Arrow(Type,Type)
+   | Tuple(Type[])
+   | Product(Type[])
+   | Ratio(Type,Type)
+   | Constant(Term)
+</code></pre>
+<p>Bottom is represented as the empty conjunctive.
+Tuple is order-sensitive.
+Nil is represented as the empty tuple.
+Product is order-insenstive.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="kinds"><a class="header" href="#kinds">Kinds</a></h1>
 <p>Kinds are <em>types for types</em>.
 Kinds are simple, having a name and potentially some parameters.

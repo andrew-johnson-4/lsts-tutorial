@@ -57,3 +57,22 @@ let apply_preconditions( left_type: Type, right_type: Type ) {
     normalize( right_type );
 }
 ```
+
+Next let's look at the structure of a Type before we start moving anything around.
+
+```lsts
+type Type =
+     Any
+   | Ident(String,Type[])
+   | And(Type)
+   | Arrow(Type,Type)
+   | Tuple(Type[])
+   | Product(Type[])
+   | Ratio(Type,Type)
+   | Constant(Term)
+```
+
+Bottom is represented as the empty conjunctive.
+Tuple is order-sensitive.
+Nil is represented as the empty tuple.
+Product is order-insenstive.
