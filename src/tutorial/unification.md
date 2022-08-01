@@ -89,7 +89,7 @@ The actual unification function can be very fragile in some cases.
 How each case is treated has an outsized effect on the rest of our codebases.
 
 ```lsts
-let $"=>"(left_type: Type, right_type: Type) -> Type {
+let $"=>"(left_type: Type, right_type: Type): Type {
    match (left_type, right_type) {
 
       //the bottom type implies nothing

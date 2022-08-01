@@ -235,7 +235,7 @@ The following function gets called before any unification.</p>
 </code></pre>
 <p>The actual unification function can be very fragile in some cases.
 How each case is treated has an outsized effect on the rest of our codebases.</p>
-<pre><code class="language-lsts">let $&quot;=&gt;&quot;(left_type: Type, right_type: Type) -&gt; Type {
+<pre><code class="language-lsts">let $&quot;=&gt;&quot;(left_type: Type, right_type: Type): Type {
    match (left_type, right_type) {
 
       //the bottom type implies nothing
