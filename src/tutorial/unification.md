@@ -43,7 +43,7 @@ First let's look at the structure of a Type before we start moving anything arou
 type Type =
      Any
    | Named(String,Type[])
-   | And(Type)
+   | And(Type[])
    | Arrow(Type,Type)
    | Tuple(Type[])
    | Product(Type[])

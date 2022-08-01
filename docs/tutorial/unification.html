@@ -196,7 +196,7 @@ Unification is the beating heart of LSTS and it is very important that we get it
 <pre><code class="language-lsts">type Type =
      Any
    | Named(String,Type[])
-   | And(Type)
+   | And(Type[])
    | Arrow(Type,Type)
    | Tuple(Type[])
    | Product(Type[])
