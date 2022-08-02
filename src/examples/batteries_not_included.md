@@ -13,7 +13,7 @@ An if statement has three arguments.
 One argument for the Boolean branching condition.
 Two arguments for each conditional branch.
 The if statement returns the value of one of the branches.
-For this reason all branches and the return type are parameterized.
+All branches and the return type are parameterized.
 The shared parameter will become the greatest-common-denominator of both branches.
 
 ```lsts
