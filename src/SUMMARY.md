@@ -29,6 +29,7 @@
 
 - [Programs](examples/examples.md)
     - [Right Triangles](examples/right_triangles.md)
+    - [Jump Control Flow](examples/goto_statement_considered_harmful.md)
 - [Proofs](proof/proofs.md)
     - [Trivial Proofs](proof/trivial.md)
     - [Irrationality of the Square Root of Two](proof/sqrt2.md)
