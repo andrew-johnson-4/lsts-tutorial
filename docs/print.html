@@ -835,6 +835,13 @@ LSTS is still purely functional, though it may not seem so.</p>
 <pre><code class="language-lsts">fn what_error(x: Integer) {
    raise TheError(&quot;Where is my type signature...&quot;)
 }
+
+fn catch_error() {
+   match try { what_error(3) } {
+      Ok(()) =&gt; { print(&quot;OK&quot;) }
+      Error(TheError(msg)) =&gt; { print(msg) }
+   }
+}
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="proofs"><a class="header" href="#proofs">Proofs</a></h1>
 <p>LSTS is a theorem prover. LSTS may also be a programming language.</p>

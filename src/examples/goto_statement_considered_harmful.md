@@ -33,4 +33,11 @@ LSTS is still purely functional, though it may not seem so.
 fn what_error(x: Integer) {
    raise TheError("Where is my type signature...")
 }
+
+fn catch_error() {
+   match try { what_error(3) } {
+      Ok(()) => { print("OK") }
+      Error(TheError(msg)) => { print(msg) }
+   }
+}
 ```
