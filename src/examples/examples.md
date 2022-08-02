@@ -19,5 +19,6 @@ Here are some backends that LSTS can target:
 
 - [HVM](https://github.com/Kindelia/HVM)
    - lazy
+   - massively parallel
    - compiled or interpreted
    - compilation outputs platform binary or WASM
