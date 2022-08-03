@@ -24,6 +24,7 @@
     - [Type Unification](tutorial/unification.md)
 - [Kinds](tutorial/kinds.md)
     - [Normal Kinds](tutorial/normal_kinds.md)
+    - [Operations on Kinds](tutorial/operations_on_kinds.md)
 
 # Examples
 
