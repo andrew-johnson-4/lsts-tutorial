@@ -1,7 +1,7 @@
 # Operations on Kinds
 
 Sometimes we need to manipulate Kinds or check their properties.
-For this we have several operations that work on types.
+For this we have several operations that work on Kinds.
 The definition for Kinds is very simple.
 Kinds can be Nil, Named, or multiple Named.
 
