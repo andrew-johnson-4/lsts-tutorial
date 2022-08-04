@@ -22,3 +22,24 @@ Here are some backends that LSTS can target:
    - massively parallel
    - compiled or interpreted
    - compilation outputs platform binary or WASM
+
+### Code Playground
+
+<label for="lang">Choose a language to run:</label>
+<select name="lang" id="lang">
+  <option value="HVM">HVM</option>
+</select>
+
+<input type="text" id="args" name="args" value="Command Line Arguments">
+```HVM
+// Creates a tree with `2^n` elements
+(Gen 0) = (Leaf 1)
+(Gen n) = (Node (Gen(- n 1)) (Gen(- n 1)))
+
+// Adds all elements of a tree
+(Sum (Leaf x))   = x
+(Sum (Node a b)) = (+ (Sum a) (Sum b))
+
+// Performs 2^n additions in parallel
+(Main n) = (Sum (Gen n))
+```
