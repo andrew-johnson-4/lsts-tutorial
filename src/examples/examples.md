@@ -30,6 +30,7 @@ Here are some backends that LSTS can target:
   <option value="HVM">HVM</option>
 </select>
 <input type="text" id="args" name="args" value="10">
+<button type="button" id="run">Run</button>
 
 ```HVM
 // Creates a tree with `2^n` elements
