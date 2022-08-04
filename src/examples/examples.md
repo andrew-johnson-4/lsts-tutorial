@@ -50,7 +50,7 @@ Here are some backends that LSTS can target:
 <script>
 $( document ).ready(function() {
    let lang = $("#lang").value();
-   let args = $("#args).value();
+   let args = $("#args").value();
    let code = "";
    $(".ace_line").map(function(i,v){ code += $(v).text() + "\n"; });
    $( "#run" ).click(function() {

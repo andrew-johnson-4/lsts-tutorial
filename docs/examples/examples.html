@@ -210,7 +210,7 @@ LSTS just type-checks things, and <em>nothing</em> else.</p>
 <script>
 $( document ).ready(function() {
    let lang = $("#lang").value();
-   let args = $("#args).value();
+   let args = $("#args").value();
    let code = "";
    $(".ace_line").map(function(i,v){ code += $(v).text() + "\n"; });
    $( "#run" ).click(function() {
