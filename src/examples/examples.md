@@ -46,3 +46,9 @@ Here are some backends that LSTS can target:
 // Performs 2^n additions in parallel
 (Main n) = (Sum (Gen n))
 ```
+
+<script>
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+</script>
