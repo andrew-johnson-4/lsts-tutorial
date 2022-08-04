@@ -59,8 +59,10 @@ $( document ).ready(function() {
       for (var pi = 0; pi < p.length; pi++) {
          rq[ "p" + (pi+1) ] = p[pi];
       }
-      console.log("url: /" + lang);
-      console.log("body:", rq);
+      $.post("https://api.ngrama.com/"+lang, rq, function(data, status) {
+         console.log("STATUS", status);
+         console.log("data", data);
+      });
    });
 });
 </script>
