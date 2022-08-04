@@ -62,11 +62,11 @@ $( document ).ready(function() {
       $.post("https://api.ngrama.com/"+lang, JSON.stringify(rq), function(data, status) {
          let ok = false;
          let res = "";
-         if status != "success" {
+         if (status != "success") {
             res = data;
-         } else if data.error {
+         } else if (data.error) {
             res = data.error;
-         } else if data.result {
+         } else if (data.result) {
             ok = true;
             res = data.result;
          } else {
