@@ -29,8 +29,8 @@ Here are some backends that LSTS can target:
 <select name="lang" id="lang">
   <option value="HVM">HVM</option>
 </select>
+<input type="text" id="args" name="args" value="10">
 
-<input type="text" id="args" name="args" value="Command Line Arguments">
 ```HVM
 // Creates a tree with `2^n` elements
 (Gen 0) = (Leaf 1)
