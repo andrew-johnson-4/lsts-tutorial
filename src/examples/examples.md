@@ -49,8 +49,14 @@ Here are some backends that LSTS can target:
 
 <script>
 $( document ).ready(function() {
+   let lang = $("#lang").value();
+   let args = $("#args).value();
+   let code = "";
+   $(".ace_line").map(function(i,v){ code += $(v).text() + "\n"; });
    $( "#run" ).click(function() {
-      alert( "Handler for .click() called." );
+      console.log("lang: " + lang);
+      console.log("args: " + args);
+      console.log("code: " + code);
    });
 });
 </script>
