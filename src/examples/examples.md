@@ -49,6 +49,8 @@ Here are some backends that LSTS can target:
 
 <script>
 $( document ).ready(function() {
-    console.log( "ready!" );
+   $( "#run" ).click(function() {
+      alert( "Handler for .click() called." );
+   });
 });
 </script>
