@@ -27,7 +27,7 @@ Here are some backends that LSTS can target:
 
 <label for="lang">Choose a language to run:</label>
 <select name="lang" id="lang">
-  <option value="HVM">HVM</option>
+  <option value="hvm">HVM</option>
 </select>
 <label for="args">Arguments:</label>
 <input type="text" id="args" name="args" value="10">
@@ -54,9 +54,13 @@ $( document ).ready(function() {
       let args = $("#args").val();
       let code = "";
       $(".ace_line").map(function(i,v){ code += $(v).text() + "\n"; });
-      console.log("lang: " + lang);
-      console.log("args: " + args);
-      console.log("code: " + code);
+      let rq = { "source":code };
+      const p = args.split(" ");
+      for (var pi = 0; pi < p.length; pi++) {
+         rq[ "p" + (pi+1) ] = p[pi];
+      }
+      console.log("url: /" + lang);
+      console.log("body:", rq);
    });
 });
 </script>
