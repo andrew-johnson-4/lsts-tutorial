@@ -220,8 +220,23 @@ $( document ).ready(function() {
          rq[ "p" + (pi+1) ] = p[pi];
       }
       $.post("https://api.ngrama.com/"+lang, JSON.stringify(rq), function(data, status) {
-         console.log("STATUS", status);
-         console.log("data", data);
+         let ok = false;
+         let res = if status != "success" {
+            data
+         } else if data.error {
+            data.error
+         } else if data.result {
+            ok = true;
+            data.result
+         } else {
+            "Unknown Error" 
+         };
+         $("#run_output").text(res);
+         if ok {
+            $("#run_output").css({"background-color": "#9be9a8"});
+         } else {
+            $("#run_output").css({"background-color": "#ffcccc"});
+         }
       });
    });
 });
