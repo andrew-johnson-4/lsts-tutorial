@@ -862,15 +862,16 @@ $( document ).ready(function() {
       }
       $.post("https://api.ngrama.com/"+lang, JSON.stringify(rq), function(data, status) {
          let ok = false;
-         let res = if status != "success" {
-            data
+         let res = "";
+         if status != "success" {
+            res = data;
          } else if data.error {
-            data.error
+            res = data.error;
          } else if data.result {
             ok = true;
-            data.result
+            res = data.result;
          } else {
-            "Unknown Error" 
+            res = "Unknown Error";
          };
          $("#run_output").text(res);
          if ok {
