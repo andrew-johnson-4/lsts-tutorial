@@ -32,7 +32,7 @@ Here are some backends that LSTS can target:
 <label for="args">Arguments:</label>
 <input type="text" id="args" name="args" value="10">
 <button type="button" id="run">Run</button>
-<div id="run_output></div>
+<div id="run_output"></div>
 
 ```HVM,editable
 // Creates a tree with `2^n` elements
