@@ -1,6 +1,6 @@
 # Jump as a Control Flow primitive
 
-It may suprise some to find out that LSTS has non-functional control flow operators.
+It may surprise some to find out that LSTS has non-functional control flow operators.
 Namely, *return* and *raise* both potentially cause stack unwinding to occur.
 We can account for this control flow in a functional program by using Monads.
 However, it still doesn't *feel* functional.

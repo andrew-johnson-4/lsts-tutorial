@@ -22,7 +22,7 @@ Here is the LSTS code.
 ```
 
 LSTS takes more characters to write the same program.
-However, I think seeing LSTS for the first time would be easier to read.
+However, seeing each code for the first time, LSTS would maybe be easier to read.
 This is how list comprehensions compare for these two languages.
 
 The output for both programs should be [(6,8,10)].
