@@ -25,7 +25,7 @@ This code snippet can be read as
 3. show that there exists a concluding result: Conclusion&lt;A,B,C&gt;
 
 There is a strong relation between proofs and programs.
-This is a very convenient relationship between proof objects and simple function declarations.
+This is a very direct relationship between proof objects and simple function declarations.
 
 Just to note, LSTS is not quite as expressive as some other proof assistants.
 There is still much work to be done.
