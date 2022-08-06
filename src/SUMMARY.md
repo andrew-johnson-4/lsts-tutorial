@@ -36,6 +36,7 @@
     - [Trivial Proofs](proof/trivial.md)
     - [Irrationality of the Square Root of Two](proof/sqrt2.md)
     - [Infinitude of Primes](proof/primes.md)
+    - [Strictly Verified Proofs](proof/strict_mode.md)
 
 # Reference Guide
 
