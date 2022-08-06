@@ -1033,8 +1033,12 @@ The first step for writing a strict proof is to declare the assumptions and the 
 The arguments to the function become the assumptions.
 The return value of the function becomes the conclusion.
 Simple, no?</p>
-<pre><code class="language-lsts">let some_proof&lt;A:Integer,B:Odd,C:Prime&gt;(assumption1: Property1&lt;A,B&gt;, assumption2: Property2&lt;C&gt;): Conclusion&lt;A,B,C&gt; = {
-   //Here we will prove the conclusion, starting from the assumptions
+<pre><code class="language-lsts">let some_proof &lt;A:Integer,B:Odd,C:Prime&gt; (
+   assumption1: Property1&lt;A,B&gt;,
+   assumption2: Property2&lt;C&gt; ):
+   Conclusion&lt;A,B,C&gt; = {
+   //Here we will derive the conclusion
+   //starting from the assumptions
 }
 </code></pre>
 <p>This code snippet can be read as</p>

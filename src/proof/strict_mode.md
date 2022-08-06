@@ -10,8 +10,12 @@ The return value of the function becomes the conclusion.
 Simple, no?
 
 ```lsts
-let some_proof<A:Integer,B:Odd,C:Prime>(assumption1: Property1<A,B>, assumption2: Property2<C>): Conclusion<A,B,C> = {
-   //Here we will prove the conclusion, starting from the assumptions
+let some_proof <A:Integer,B:Odd,C:Prime> (
+   assumption1: Property1<A,B>,
+   assumption2: Property2<C> ):
+   Conclusion<A,B,C> = {
+   //Here we will derive the conclusion
+   //starting from the assumptions
 }
 ```
 
