@@ -22,7 +22,7 @@ This code snippet can be read as
 
 1. for all quantified variables in the assumptions: A, B, C
 2. assume the given properties: Property1&lt;A,B&gt;, Property2&lt;C&gt;
-3. showing that there exists a concluding result: Conclusion&lt;A,B,C&gt;
+3. show that there exists a concluding result: Conclusion&lt;A,B,C&gt;
 
 There is a strong relation between proofs and programs.
 This is a very convenient relationship between proof objects and simple function declarations.
