@@ -169,8 +169,7 @@ For those so inclined, it is also possible to verify the entirety of the proof i
 The first step for writing a strict proof is to declare the assumptions and the conclusion.</p>
 <p>The <em>Assumptions and Conclusion</em> method of starting a proof fits conveniently into the form of a function definition.
 The arguments to the function become the assumptions.
-The return value of the function becomes the conclusion.
-Simple, no?</p>
+The return value of the function becomes the conclusion.</p>
 <pre><code class="language-lsts">let some_proof &lt;A:Integer,B:Odd,C:Prime&gt; (
    assumption1: Property1&lt;A,B&gt;,
    assumption2: Property2&lt;C&gt; ):
@@ -185,8 +184,8 @@ Simple, no?</p>
 <li>assume the given properties: Property1&lt;A,B&gt;, Property2&lt;C&gt;</li>
 <li>showing that there exists a concluding result: Conclusion&lt;A,B,C&gt;</li>
 </ol>
-<p>See? There really is a strong relation between proofs and programs.
-Is this not a convenient relationship between proof objects and simple function declarations?</p>
+<p>There is a strong relation between proofs and programs.
+This is a very convenient relationship between proof objects and simple function declarations.</p>
 <p>Just to note, LSTS is not quite as expressive as some other proof assistants.
 There is still much work to be done.
 However, we feel confident that these missing features can be accomodated for within the LSTS system of reasoning.</p>

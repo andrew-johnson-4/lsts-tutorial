@@ -7,7 +7,6 @@ The first step for writing a strict proof is to declare the assumptions and the 
 The *Assumptions and Conclusion* method of starting a proof fits conveniently into the form of a function definition.
 The arguments to the function become the assumptions.
 The return value of the function becomes the conclusion.
-Simple, no?
 
 ```lsts
 let some_proof <A:Integer,B:Odd,C:Prime> (
@@ -25,8 +24,8 @@ This code snippet can be read as
 2. assume the given properties: Property1&lt;A,B&gt;, Property2&lt;C&gt;
 3. showing that there exists a concluding result: Conclusion&lt;A,B,C&gt;
 
-See? There really is a strong relation between proofs and programs.
-Is this not a convenient relationship between proof objects and simple function declarations?
+There is a strong relation between proofs and programs.
+This is a very convenient relationship between proof objects and simple function declarations.
 
 Just to note, LSTS is not quite as expressive as some other proof assistants.
 There is still much work to be done.
