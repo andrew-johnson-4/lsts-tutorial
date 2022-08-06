@@ -22,8 +22,8 @@ let some_proof <A:Integer,B:Odd,C:Prime> (
 This code snippet can be read as
 
 1. for all quantified variables in the assumptions: A, B, C
-2. assume the given properties: Property1<A,B>, Property2<C>
-3. showing that there exists a concluding result: Conclusion<A,B,C>
+2. assume the given properties: Property1&lt;A,B&gt;, Property2&lt;C&gt;
+3. showing that there exists a concluding result: Conclusion&lt;A,B,C&gt;
 
 See? There really is a strong relation between proofs and programs.
 Is this not a convenient relationship between proof objects and simple function declarations?
