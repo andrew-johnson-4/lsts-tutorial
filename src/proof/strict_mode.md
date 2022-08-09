@@ -31,7 +31,7 @@ Just to note, LSTS is not quite as expressive as some other proof assistants.
 There is still much work to be done.
 However, we feel confident that these missing features can be accomodated for within the LSTS system of reasoning.
 
-### Proof Verification
+### Proof Objects
 
 In strict mode, LSTS will also produce a *proof object*.
 A proof object is a program that, when run, will attempt to reduce all logical statements made in the LSTS program.
