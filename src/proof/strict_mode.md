@@ -1,6 +1,6 @@
 # Strict Proof Verification
 
-It is straight-forwarard to write a mixed proof verifying some aspects of the proof and leaving the rest to plain English for the reader.
+It is straight-forward to write a mixed proof verifying some aspects of the proof and leaving the rest to plain English for the reader.
 For those so inclined, it is also possible to verify the entirety of the proof in LSTS.
 The first step for writing a strict proof is to declare the assumptions and the conclusion.
 
