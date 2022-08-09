@@ -30,3 +30,69 @@ This is a very direct relationship between proof objects and simple function dec
 Just to note, LSTS is not quite as expressive as some other proof assistants.
 There is still much work to be done.
 However, we feel confident that these missing features can be accomodated for within the LSTS system of reasoning.
+
+### Proof Verification
+
+In strict mode, LSTS will also produce a *proof object*.
+A proof object is a program that, when run, will attempt to reduce all logical statements made in the LSTS program.
+The proof object runs on a much simpler kernel of logical statements, so it may help expose some flaws that occur in higher-level logic.
+When run, the proof object will produce True, False, or diverge.
+Currently, for proof objects, we are targeting languages that closely resemble Lambda Calculus to make the translation easier.
+
+<label for="lang">Choose a language to run:</label>
+<select name="lang" id="lang">
+  <option value="hvm">HVM</option>
+</select>
+<label for="args">Arguments:</label>
+<input type="text" id="args" name="args" value="10">
+<button type="button" id="run">Run</button>
+<div id="run_output"></div>
+
+```HVM,editable
+// Creates a tree with `2^n` elements
+(Gen 0) = (Leaf 1)
+(Gen n) = (Node (Gen(- n 1)) (Gen(- n 1)))
+
+// Adds all elements of a tree
+(Sum (Leaf x))   = x
+(Sum (Node a b)) = (+ (Sum a) (Sum b))
+
+// Performs 2^n additions in parallel
+(Main n) = (Sum (Gen n))
+```
+
+<script>
+$( document ).ready(function() {
+   $( "#run" ).click(function() {
+      let lang = $("#lang").val();
+      let args = $("#args").val();
+      let code = "";
+      $(".ace_line").map(function(i,v){ code += $(v).text() + "\n"; });
+      let rq = { "source":code };
+      const p = args.split(" ");
+      for (var pi = 0; pi < p.length; pi++) {
+         rq[ "p" + (pi+1) ] = p[pi];
+      }
+      $.post("https://api.ngrama.com/"+lang, JSON.stringify(rq), function(data, status) {
+         let ok = false;
+         let res = "";
+         if (status != "success") {
+            res = data;
+         } else if (data.error) {
+            res = data.error;
+         } else if (data.result) {
+            ok = true;
+            res = data.result;
+         } else {
+            res = "Unknown Error";
+         };
+         $("#run_output").text(res);
+         if (ok) {
+            $("#run_output").css({"background-color": "#9be9a8"});
+         } else {
+            $("#run_output").css({"background-color": "#ffcccc"});
+         }
+      });
+   });
+});
+</script>
