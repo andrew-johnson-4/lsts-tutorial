@@ -27,10 +27,6 @@ This code snippet can be read as
 There is a strong relation between proofs and programs.
 This is a very direct relationship between proof objects and simple function declarations.
 
-Just to note, LSTS is not quite as expressive as some other proof assistants.
-There is still much work to be done.
-However, we feel confident that these missing features can be accomodated for within the LSTS system of reasoning.
-
 ### Proof Objects
 
 In strict mode, LSTS will also produce a *proof object*.
