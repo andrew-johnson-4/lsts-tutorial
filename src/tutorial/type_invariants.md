@@ -5,7 +5,7 @@ Type invariants are inherently dependently typed.
 A Dependent Type describes a subset of the values of a Total Type.
 
 A Total Type describes *all values that can be represented*.
-UnsignedInteger32 would a Total Type.
+UnsignedInteger32 would be a Total Type.
 UnsignedInteger32 can represent all 32-bit unsigned integers.
 
 By comparison, a dependent type, or implicitly any type with invariants, would not be Total.
