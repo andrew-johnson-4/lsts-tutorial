@@ -62,7 +62,7 @@ The following function gets called before any unification.
 
 ```lsts
 let apply_preconditions( left_type: Type, right_type: Type ) = {
-    //rewrite Types with implied types explictly included
+    //rewrite Types with implied types explicitly included
     //A + A => B will be rewritten as A + B
     expand_subtypes( left_type );               
     expand_subtypes( right_type );
