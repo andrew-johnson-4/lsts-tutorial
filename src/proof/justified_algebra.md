@@ -13,10 +13,10 @@ By default arbitrary algebra is permitted.
 [if a%2==0 then 1 else 2]\[a%2|1] : [if 1==0 then 1 else 2] : [2]
 ```
 
-In strict mode, the algebraic substitution operator *\* is only permitted when the rule applied appears in an attached invariant.
+In strict mode, the algebraic substitution operator *\\* is only permitted when the rule applied appears in an attached invariant.
 
 ```lsts
-(x:Odd) \ [a%2|1]
+(x:Odd) \ [self%2|1]
 ```
 
 This restriction is necessary to construct sound proof objects.

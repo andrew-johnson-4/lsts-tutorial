@@ -1117,8 +1117,8 @@ In strict mode, algebraic manipulation must be <em>justified</em>.</p>
 <p>By default arbitrary algebra is permitted.</p>
 <pre><code class="language-lsts">[if a%2==0 then 1 else 2]\[a%2|1] : [if 1==0 then 1 else 2] : [2]
 </code></pre>
-<p>In strict mode, the algebraic substitution operator ** is only permitted when the rule applied appears in an attached invariant.</p>
-<pre><code class="language-lsts">(x:Odd) \ [a%2|1]
+<p>In strict mode, the algebraic substitution operator <em>\</em> is only permitted when the rule applied appears in an attached invariant.</p>
+<pre><code class="language-lsts">(x:Odd) \ [self%2|1]
 </code></pre>
 <p>This restriction is necessary to construct sound proof objects.
 Without the restriction, it would be easy to jump to arbitrary conclusions.</p>
