@@ -175,9 +175,9 @@ forall x:X. x + g(x) == x^2
 <p>In the Assumptions and Conclusions method of proof verification, the skolem function goes in the assumptions.
 This is equivalent to saying &quot;forall universal quantifiers, there exists a skolem function&quot;.</p>
 <pre><code class="language-lsts">let some_proof &lt;A:Integer,B:Odd,C:Prime&gt; (
-   assumption1: Property1&lt;A,B&gt;,
-   skolem1: A =&gt; Integer ):
+   assumption1: Property1&lt;A,B&gt;):
    Conclusion&lt;A,B,C&gt; = {
+   let skolem1: A =&gt; Integer;
    //Here we will derive the conclusion
    //starting from the assumptions
 }

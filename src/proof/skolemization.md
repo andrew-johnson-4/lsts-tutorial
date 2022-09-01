@@ -19,9 +19,9 @@ This is equivalent to saying "forall universal quantifiers, there exists a skole
 
 ```lsts
 let some_proof <A:Integer,B:Odd,C:Prime> (
-   assumption1: Property1<A,B>,
-   skolem1: A => Integer ):
+   assumption1: Property1<A,B>):
    Conclusion<A,B,C> = {
+   let skolem1: A => Integer;
    //Here we will derive the conclusion
    //starting from the assumptions
 }
