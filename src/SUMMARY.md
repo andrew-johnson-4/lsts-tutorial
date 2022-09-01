@@ -38,6 +38,7 @@
     - [Infinitude of Primes](proof/primes.md)
     - [Strictly Verified Proofs](proof/strict_mode.md)
     - [Justified Algebraic Manipulation](proof/justified_algebra.md)
+    - [Skolemization](proof/skolemization.md)
 
 # Reference Guide
 
