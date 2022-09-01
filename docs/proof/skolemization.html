@@ -172,6 +172,16 @@ This helps simplify our type system by eliminating existential quantifiers.</p>
 <pre><code class="language-lsts">let g: X =&gt; X;
 forall x:X. x + g(x) == x^2
 </code></pre>
+<p>In the Assumptions and Conclusions method of proof verification, the skolem function goes in the assumptions.
+This is equivalent to saying &quot;forall universal quantifiers, there exists a skolem function&quot;.</p>
+<pre><code class="language-lsts">let some_proof &lt;A:Integer,B:Odd,C:Prime&gt; (
+   assumption1: Property1&lt;A,B&gt;,
+   skolem1: A =&gt; Integer ):
+   Conclusion&lt;A,B,C&gt; = {
+   //Here we will derive the conclusion
+   //starting from the assumptions
+}
+</code></pre>
 
                     </main>
 
