@@ -15,7 +15,7 @@ forall x:X. x + g(x) == x^2
 ```
 
 In the Assumptions and Conclusions method of proof verification, the skolem function goes after the assumptions.
-This is equivalent to saying "forall universal quantifiers, there exists a skolem function".
+This is equivalent to saying "forall universal quantifiers and some assumptions, there exists a skolem function".
 
 ```lsts
 let some_proof <A:Integer,B:Odd,C:Prime> (
