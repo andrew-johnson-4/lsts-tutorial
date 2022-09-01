@@ -21,7 +21,7 @@ This is equivalent to saying "forall universal quantifiers and some assumptions,
 let some_proof <A:Integer,B:Odd,C:Prime> (
    assumption1: Property1<A,B>):
    Conclusion<A,B,C> = {
-   let skolem1: (A,B,C) => Integer;
+   let skolem1: (A,B,C) -> Integer;
    //Here we will derive the conclusion
    //starting from the assumptions
 }

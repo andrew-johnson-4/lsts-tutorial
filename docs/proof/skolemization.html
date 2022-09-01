@@ -177,7 +177,7 @@ This is equivalent to saying &quot;forall universal quantifiers and some assumpt
 <pre><code class="language-lsts">let some_proof &lt;A:Integer,B:Odd,C:Prime&gt; (
    assumption1: Property1&lt;A,B&gt;):
    Conclusion&lt;A,B,C&gt; = {
-   let skolem1: (A,B,C) =&gt; Integer;
+   let skolem1: (A,B,C) -&gt; Integer;
    //Here we will derive the conclusion
    //starting from the assumptions
 }
