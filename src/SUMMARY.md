@@ -39,6 +39,7 @@
     - [Strictly Verified Proofs](proof/strict_mode.md)
     - [Justified Algebraic Manipulation](proof/justified_algebra.md)
     - [Skolemization](proof/skolemization.md)
+    - [Most General Unifier](proof/most_general_unifier.md)
 
 # Reference Guide
 
