@@ -40,6 +40,7 @@
     - [Justified Algebraic Manipulation](proof/justified_algebra.md)
     - [Skolemization](proof/skolemization.md)
     - [Most General Unifier](proof/most_general_unifier.md)
+    - [Implication Unifier](proof/implication_unifier.md)
 
 # Reference Guide
 
