@@ -52,3 +52,9 @@ A nested plural type expression, intersected with another type expression, will 
 {Aa + Bb}*Cc | Aa*Cc = Aa*Cc
 {Aa + Bb}/Cc | Aa/Cc = Aa/Cc
 ```
+
+There are several special cases.
+
+```lsts
+A/() | A = A
+```
