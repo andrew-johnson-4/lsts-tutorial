@@ -35,18 +35,18 @@ Data Types are singular.
 This preface is all we need to explain before even getting started to talk about unification.
 Unification is the beating heart of LSTS and it is very important that we get it right.
 
-### Unification vs Most General Unifier
+### Implication vs Most General Unifier
 
-Unification naturally has a direction, of that which is to potentially change somehow.
+Implication naturally has a direction, of that which is to potentially change somehow
+and therefore must be satisfied by what already exists on the other side.
 If nothing can change then we are checking for exact equality.
-If only one side can change, then this creates an inequality, which is satisfied by implication.
 If both sides can change, then the result is the Most General Unifier.
-This is why there are two unification operations: implication and MGU.
+This is why there are three unification operations: implication, MGU, and structural equality.
 
-| Unification       | lhs can change | lhs cannot change   |
-| ----------------- | -------------- | ------------------- |
-| rhs can change    | MGU            | lhs => rhs          |
-| rhs cannot change | rhs => lhs     | structural equality |
+| A x B           | B can change | B cannot change     |
+| --------------- | ------------ | ------------------- |
+| A can change    | MGU          | B => A              |
+| A cannot change | A => B       | structural equality |
 
 ### Unification, as implemented
 
