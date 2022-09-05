@@ -43,10 +43,10 @@ If nothing can change then we are checking for exact equality.
 If both sides can change, then the result is the Most General Unifier.
 This is why there are three unification operations: implication, MGU, and structural equality.
 
-| A x B           | B can change | B cannot change     |
+| A x B           | A can narrow | A cannot narrow     |
 | --------------- | ------------ | ------------------- |
-| A can change    | MGU          | B => A              |
-| A cannot change | A => B       | structural equality |
+| B can narrow    | MGU          | B => A              |
+| B cannot narrow | A => B       | structural equality |
 
 ### Unification, as implemented
 

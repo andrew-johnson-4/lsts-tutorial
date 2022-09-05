@@ -199,9 +199,9 @@ and therefore must be satisfied by what already exists on the other side.
 If nothing can change then we are checking for exact equality.
 If both sides can change, then the result is the Most General Unifier.
 This is why there are three unification operations: implication, MGU, and structural equality.</p>
-<div class="table-wrapper"><table><thead><tr><th>A x B</th><th>B can change</th><th>B cannot change</th></tr></thead><tbody>
-<tr><td>A can change</td><td>MGU</td><td>B =&gt; A</td></tr>
-<tr><td>A cannot change</td><td>A =&gt; B</td><td>structural equality</td></tr>
+<div class="table-wrapper"><table><thead><tr><th>A x B</th><th>A can narrow</th><th>A cannot narrow</th></tr></thead><tbody>
+<tr><td>B can narrow</td><td>MGU</td><td>B =&gt; A</td></tr>
+<tr><td>B cannot narrow</td><td>A =&gt; B</td><td>structural equality</td></tr>
 </tbody></table>
 </div>
 <h3 id="unification-as-implemented"><a class="header" href="#unification-as-implemented">Unification, as implemented</a></h3>
