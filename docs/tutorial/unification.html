@@ -193,6 +193,17 @@ Valued Types are sometimes called Data Types.
 Data Types are singular.</p>
 <p>This preface is all we need to explain before even getting started to talk about unification.
 Unification is the beating heart of LSTS and it is very important that we get it right.</p>
+<h3 id="unification-vs-most-general-unifier"><a class="header" href="#unification-vs-most-general-unifier">Unification vs Most General Unifier</a></h3>
+<p>Unification naturally has a direction, of that which is to potentially change somehow.
+If nothing can change then we are checking for exact equality.
+If only one side can change, then this creates an inequality, which is satisfied by implication.
+If both sides can change, then the result is the Most General Unifier.
+This is why there are two unification operations: implication and MGU.</p>
+<div class="table-wrapper"><table><thead><tr><th>Unification</th><th>lhs can change</th><th>lhs cannot change</th></tr></thead><tbody>
+<tr><td>rhs can change</td><td>MGU</td><td>lhs =&gt; rhs</td></tr>
+<tr><td>rhs cannot change</td><td>rhs =&gt; lhs</td><td>structural equality</td></tr>
+</tbody></table>
+</div>
 <h3 id="unification-as-implemented"><a class="header" href="#unification-as-implemented">Unification, as implemented</a></h3>
 <p>First let's look at the structure of a Type before we start moving anything around.</p>
 <pre><code class="language-lsts">type Type =
