@@ -30,3 +30,16 @@ Aa*Bb | Aa*Bb = Aa*Bb
 Aa/Bb | Aa/Bb = Aa/Bb
 [1] | [1] = [1]
 ```
+
+A plural type expression, intersected with another type expression, will yield its intersection.
+
+```lsts
+? + A | ? = ?
+? + A | A = A
+Aa + Bb | Aa = Aa
+Aa -> Bb + Cc | Aa -> Bb = Aa -> Bb
+(Aa,Bb) + Cc | (Aa,Bb) = (Aa,Bb)
+Aa*Bb + Cc | Aa*Bb = Aa*Bb
+Aa/Bb + Cc | Aa/Bb = Aa/Bb
+[1] + [x] | [1] = [1]
+```

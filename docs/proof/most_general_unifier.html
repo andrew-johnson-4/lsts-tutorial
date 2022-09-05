@@ -187,6 +187,16 @@ Aa*Bb | Aa*Bb = Aa*Bb
 Aa/Bb | Aa/Bb = Aa/Bb
 [1] | [1] = [1]
 </code></pre>
+<p>A plural type expression, intersected with another type expression, will yield its intersection.</p>
+<pre><code class="language-lsts">? + A | ? = ?
+? + A | A = A
+Aa + Bb | Aa = Aa
+Aa -&gt; Bb + Cc | Aa -&gt; Bb = Aa -&gt; Bb
+(Aa,Bb) + Cc | (Aa,Bb) = (Aa,Bb)
+Aa*Bb + Cc | Aa*Bb = Aa*Bb
+Aa/Bb + Cc | Aa/Bb = Aa/Bb
+[1] + [x] | [1] = [1]
+</code></pre>
 
                     </main>
 
