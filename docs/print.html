@@ -1177,14 +1177,20 @@ Aa/Bb | Aa/Bb = Aa/Bb
 [1] | [1] = [1]
 </code></pre>
 <p>A plural type expression, intersected with another type expression, will yield its intersection.</p>
-<pre><code class="language-lsts">? + A | ? = ?
-? + A | A = A
+<pre><code class="language-lsts">? + Aa | ? = ?
 Aa + Bb | Aa = Aa
 Aa -&gt; Bb + Cc | Aa -&gt; Bb = Aa -&gt; Bb
 (Aa,Bb) + Cc | (Aa,Bb) = (Aa,Bb)
 Aa*Bb + Cc | Aa*Bb = Aa*Bb
 Aa/Bb + Cc | Aa/Bb = Aa/Bb
 [1] + [x] | [1] = [1]
+</code></pre>
+<p>A nested plural type expression, intersected with another type expression, will yield its nested intersection.</p>
+<pre><code class="language-lsts">{? + Aa} -&gt; Aa | ? -&gt; Aa = ? -&gt; Aa
+{? + Aa} -&gt; Aa | Aa -&gt; Aa = Aa -&gt; Aa
+({Aa + Bb},Cc) | (Aa,Cc) = (Aa,Cc)
+{Aa + Bb}*Cc | Aa*Cc = Aa*Cc
+{Aa + Bb}/Cc | Aa/Cc = Aa/Cc
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-command-line-interface"><a class="header" href="#lsts-command-line-interface">lsts Command Line Interface</a></h1>
 <p>LSTS is distributed as a Command Line tool.

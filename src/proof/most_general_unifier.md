@@ -34,12 +34,21 @@ Aa/Bb | Aa/Bb = Aa/Bb
 A plural type expression, intersected with another type expression, will yield its intersection.
 
 ```lsts
-? + A | ? = ?
-? + A | A = A
+? + Aa | ? = ?
 Aa + Bb | Aa = Aa
 Aa -> Bb + Cc | Aa -> Bb = Aa -> Bb
 (Aa,Bb) + Cc | (Aa,Bb) = (Aa,Bb)
 Aa*Bb + Cc | Aa*Bb = Aa*Bb
 Aa/Bb + Cc | Aa/Bb = Aa/Bb
 [1] + [x] | [1] = [1]
+```
+
+A nested plural type expression, intersected with another type expression, will yield its nested intersection.
+
+```lsts
+{? + Aa} -> Aa | ? -> Aa = ? -> Aa
+{? + Aa} -> Aa | Aa -> Aa = Aa -> Aa
+({Aa + Bb},Cc) | (Aa,Cc) = (Aa,Cc)
+{Aa + Bb}*Cc | Aa*Cc = Aa*Cc
+{Aa + Bb}/Cc | Aa/Cc = Aa/Cc
 ```
