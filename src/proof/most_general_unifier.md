@@ -14,3 +14,19 @@ Every statement that appears in branch1's version of T must also appear in branc
 New information should not be introduced in between these branches.
 The best result of unification here will always be the MGU of branch1 and branch2.
 This MGU result then goes on to become the return type of the if statement.
+
+# MGUs by example
+
+A type expression, intersected with itself, will always yield itself, and its full self.
+
+```lsts
+? | ? = ?
+A | A = A
+Aa | Aa = Aa
+Aa + Bb | AA + Bb = AA + Bb
+Aa -> Bb | Aa -> Bb = Aa -> Bb
+(Aa,Bb) | (Aa,Bb) = (Aa,Bb)
+Aa*Bb | Aa*Bb = Aa*Bb
+Aa/Bb | Aa/Bb = Aa/Bb
+[1] | [1] = [1]
+```
