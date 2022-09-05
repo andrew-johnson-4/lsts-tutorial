@@ -15,7 +15,7 @@ New information should not be introduced in between these branches.
 The best result of unification here will always be the MGU of branch1 and branch2.
 This MGU result then goes on to become the return type of the if statement.
 
-# MGUs by example
+### MGUs by example
 
 A type expression, intersected with itself, will always yield itself, and its full self.
 
