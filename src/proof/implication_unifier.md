@@ -25,3 +25,12 @@ There are several special cases.
 A/() => A = A
 A => A/() = A
 ```
+
+Any failure to unify in a compound type yields the bottom type.
+
+```lsts
+Aa -> Aa => Aa -> Bb = {}
+(Aa,Bb) => (Aa,Cc) = {}
+Aa*Bb => Aa*Cc = {}
+Aa/Bb => Aa/Cc = {}
+```

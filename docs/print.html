@@ -1195,6 +1195,12 @@ Aa/Bb + Cc | Aa/Bb = Aa/Bb
 <p>There are several special cases.</p>
 <pre><code class="language-lsts">A/() | A = A
 </code></pre>
+<p>Any failure to unify in a compound type yields the bottom type.</p>
+<pre><code class="language-lsts">Aa -&gt; Aa | Aa -&gt; Bb = {}
+(Aa,Bb) | (Aa,Cc) = {}
+Aa*Bb | Aa*Cc = {}
+Aa/Bb | Aa/Cc = {}
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="implication-unifier"><a class="header" href="#implication-unifier">Implication Unifier</a></h1>
 <p>The Implication Unifier of two type expressions is a directed intersection of their statements.
 Implication is similar to Most General Unifier with the added constraint that information can only flow from left to right.</p>
@@ -1213,6 +1219,12 @@ Aa/Bb =&gt; Aa/Bb = Aa/Bb
 <p>There are several special cases.</p>
 <pre><code class="language-lsts">A/() =&gt; A = A
 A =&gt; A/() = A
+</code></pre>
+<p>Any failure to unify in a compound type yields the bottom type.</p>
+<pre><code class="language-lsts">Aa -&gt; Aa =&gt; Aa -&gt; Bb = {}
+(Aa,Bb) =&gt; (Aa,Cc) = {}
+Aa*Bb =&gt; Aa*Cc = {}
+Aa/Bb =&gt; Aa/Cc = {}
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-command-line-interface"><a class="header" href="#lsts-command-line-interface">lsts Command Line Interface</a></h1>
 <p>LSTS is distributed as a Command Line tool.

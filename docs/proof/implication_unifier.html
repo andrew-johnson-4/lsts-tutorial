@@ -182,6 +182,12 @@ Aa/Bb =&gt; Aa/Bb = Aa/Bb
 <pre><code class="language-lsts">A/() =&gt; A = A
 A =&gt; A/() = A
 </code></pre>
+<p>Any failure to unify in a compound type yields the bottom type.</p>
+<pre><code class="language-lsts">Aa -&gt; Aa =&gt; Aa -&gt; Bb = {}
+(Aa,Bb) =&gt; (Aa,Cc) = {}
+Aa*Bb =&gt; Aa*Cc = {}
+Aa/Bb =&gt; Aa/Cc = {}
+</code></pre>
 
                     </main>
 

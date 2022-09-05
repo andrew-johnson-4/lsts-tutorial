@@ -206,6 +206,12 @@ Aa/Bb + Cc | Aa/Bb = Aa/Bb
 <p>There are several special cases.</p>
 <pre><code class="language-lsts">A/() | A = A
 </code></pre>
+<p>Any failure to unify in a compound type yields the bottom type.</p>
+<pre><code class="language-lsts">Aa -&gt; Aa | Aa -&gt; Bb = {}
+(Aa,Bb) | (Aa,Cc) = {}
+Aa*Bb | Aa*Cc = {}
+Aa/Bb | Aa/Cc = {}
+</code></pre>
 
                     </main>
 
