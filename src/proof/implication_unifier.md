@@ -19,6 +19,15 @@ Aa/Bb => Aa/Bb = Aa/Bb
 [1] => [1] = [1]
 ```
 
+The left-hand-side can narrow to unify. The right-hand-side cannot narrow.
+
+```lsts
+Aa + Bb => Aa = Aa
+Aa + Bb => Bb = Bb
+Aa => Aa + Bb = {}
+Bb => Aa + Bb = {}
+```
+
 There are several special cases.
 
 ```lsts
