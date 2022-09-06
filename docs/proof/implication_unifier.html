@@ -208,6 +208,15 @@ A =&gt; A/() = A
 Aa*Bb =&gt; Aa*Cc = {}
 Aa/Bb =&gt; Aa/Cc = {}
 </code></pre>
+<p>Parameter Unification yields the Most General Unifier of all substitutions.
+Parameters are invariant with respect to arrow types etc.</p>
+<pre><code class="language-lsts">(Aa,Aa) -&gt; Aa | (X,X) -&gt; X = (Aa,Aa) -&gt; Aa
+(Aa,Bb) -&gt; Cc | (X,X) -&gt; X = {}
+({Aa+Bb},{Aa+Bb}) -&gt; {Aa+Bb+Cc} | (X,X) -&gt; X = ({Aa+Bb},{Aa+Bb}) -&gt; {Aa+Bb}
+({Aa+Bb},{Aa+Bb}) -&gt; {Aa+Bb+Cc} | (X,X) -&gt; X = ({Aa+Bb},{Aa+Bb}) -&gt; {Aa+Bb}
+({Aa+Bb},{Aa+Cc}) -&gt; {Aa+Bb+Cc} | (X,X) -&gt; X = (Aa,Aa) -&gt; Aa
+({Aa+Bb},{Aa+Cc}) -&gt; {Bb+Cc} | (X,X) -&gt; X = {}
+</code></pre>
 
                     </main>
 

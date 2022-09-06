@@ -60,3 +60,15 @@ Aa -> Aa => Aa -> Bb = {}
 Aa*Bb => Aa*Cc = {}
 Aa/Bb => Aa/Cc = {}
 ```
+
+Parameter Unification yields the Most General Unifier of all substitutions.
+Parameters are invariant with respect to arrow types etc.
+
+```lsts
+(Aa,Aa) -> Aa | (X,X) -> X = (Aa,Aa) -> Aa
+(Aa,Bb) -> Cc | (X,X) -> X = {}
+({Aa+Bb},{Aa+Bb}) -> {Aa+Bb+Cc} | (X,X) -> X = ({Aa+Bb},{Aa+Bb}) -> {Aa+Bb}
+({Aa+Bb},{Aa+Bb}) -> {Aa+Bb+Cc} | (X,X) -> X = ({Aa+Bb},{Aa+Bb}) -> {Aa+Bb}
+({Aa+Bb},{Aa+Cc}) -> {Aa+Bb+Cc} | (X,X) -> X = (Aa,Aa) -> Aa
+({Aa+Bb},{Aa+Cc}) -> {Bb+Cc} | (X,X) -> X = {}
+```
