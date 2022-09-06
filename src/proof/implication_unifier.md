@@ -33,9 +33,9 @@ Aa + Bb => Aa + Bb + Cc = {}
 Components of compound types can narrow also.
 
 ```lsts
-{Aa + Bb} -> Aa => Aa -> Aa = Aa -> Aa
+{Aa + Bb} -> Aa => Aa -> Aa = {}
 Aa -> {Aa + Bb} => Aa -> Aa = Aa -> Aa
-Aa -> Aa => {Aa + Bb} -> Aa = {}
+Aa -> Aa => {Aa + Bb} -> Aa = Aa -> Aa
 Aa -> Aa => Aa -> {Aa + Bb} = {}
 ({Aa + Bb},Aa) => (Aa,Aa) => (Aa,Aa)
 (Aa,Aa) => ({Aa + Bb},Aa) => {}
