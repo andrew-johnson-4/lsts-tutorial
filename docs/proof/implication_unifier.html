@@ -181,8 +181,10 @@ Aa/Bb =&gt; Aa/Bb = Aa/Bb
 <p>The left-hand-side can narrow to unify. The right-hand-side cannot narrow.</p>
 <pre><code class="language-lsts">Aa + Bb =&gt; Aa = Aa
 Aa + Bb =&gt; Bb = Bb
+Aa + Bb + Cc =&gt; Aa + Bb = Aa + Bb
 Aa =&gt; Aa + Bb = {}
 Bb =&gt; Aa + Bb = {}
+Aa + Bb =&gt; Aa + Bb + Cc = {}
 </code></pre>
 <p>There are several special cases.</p>
 <pre><code class="language-lsts">A/() =&gt; A = A

@@ -24,8 +24,10 @@ The left-hand-side can narrow to unify. The right-hand-side cannot narrow.
 ```lsts
 Aa + Bb => Aa = Aa
 Aa + Bb => Bb = Bb
+Aa + Bb + Cc => Aa + Bb = Aa + Bb
 Aa => Aa + Bb = {}
 Bb => Aa + Bb = {}
+Aa + Bb => Aa + Bb + Cc = {}
 ```
 
 There are several special cases.
