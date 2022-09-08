@@ -1,4 +1,4 @@
-# lsts run Documentation
+## lsts run Documentation
 
 ```lsts
 lsts help

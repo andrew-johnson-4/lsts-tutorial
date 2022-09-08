@@ -160,7 +160,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+                        <h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
 <p><strong>lsts</strong> is a proof assistant and sometimes a programming language.
 LSTS is designed for assisted reasoning in mathematical proofs.
 For those feeling particularly adventurous, it may even be possible to use as a programming language.</p>
@@ -169,7 +169,7 @@ For those feeling particularly adventurous, it may even be possible to use as a 
 <li>Fast. <a href="perf/statistics.html">Benchmarks</a> compare to Rust itself for compilation speed and efficiency.</li>
 <li>Familiar. The <a href="guide/syntax.html">Syntax</a> is usually similar to Coq, ML, or Haskell.</li>
 </ul>
-<h2 id="intended-audience"><a class="header" href="#intended-audience">Intended Audience</a></h2>
+<h3 id="intended-audience"><a class="header" href="#intended-audience">Intended Audience</a></h3>
 <p>This tutorial and reference has been compiled for people who have significant mathematical or programming experience and are looking to try something new.
 LSTS is anything but average.
 There are still huge pieces of functionality missing from LSTS.
@@ -177,20 +177,20 @@ There are also huge pieces of functionality that are already outperforming compa
 Hopefully this guide will help you find something inspiring.
 Soon this guide will help you also find something useful.
 You can help us improve more quickly by <a href="https://github.com/andrew-johnson-4/LSTS/issues">suggesting improvements or asking questions</a>.</p>
-<h2 id="contributing"><a class="header" href="#contributing">Contributing</a></h2>
+<h3 id="contributing"><a class="header" href="#contributing">Contributing</a></h3>
 <p>LSTS is free and open source. You can find the source code on
 <a href="https://github.com/andrew-johnson-4/LSTS">GitHub</a> and issues and feature requests can be posted on
 the <a href="https://github.com/andrew-johnson-4/LSTS/issues">GitHub issue tracker</a>. LSTS relies on the community to fix bugs and
 add features: if you would like to contribute, please read
 the <a href="https://github.com/andrew-johnson-4/LSTS/blob/main/CODE_OF_CONDUCT.md">Code of Conduct</a> guide and consider opening
 a <a href="https://github.com/andrew-johnson-4/LSTS/pulls">pull request</a>.</p>
-<h2 id="license"><a class="header" href="#license">License</a></h2>
+<h3 id="license"><a class="header" href="#license">License</a></h3>
 <p>The LSTS source and documentation are released under
 the <a href="https://github.com/andrew-johnson-4/LSTS/blob/main/LICENSE">MIT License</a>.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">Installation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="installation"><a class="header" href="#installation">Installation</a></h2>
 <p>There are multiple ways to install the lsts CLI tool.
 Choose any one of the methods below that best suit your needs.</p>
-<h2 id="build-from-source-using-rust"><a class="header" href="#build-from-source-using-rust">Build from source using Rust</a></h2>
+<h3 id="build-from-source-using-rust"><a class="header" href="#build-from-source-using-rust">Build from source using Rust</a></h3>
 <p>To build the <code>lsts</code> executable from source, you will first need to install Rust and Cargo.
 Follow the instructions on the <a href="https://www.rust-lang.org/tools/install">Rust installation page</a>.</p>
 <p>Once you have installed Rust, the following command can be used to build and install lsts:</p>
@@ -205,11 +205,11 @@ If you need the latest version you can build the git version of lsts yourself.</
 </code></pre>
 <p>Again, make sure to add the Cargo bin directory to your <code>PATH</code>.</p>
 <p>If you are interested in making modifications to lsts itself, check out the <a href="https://github.com/andrew-johnson-4/LSTS/blob/master/CONTRIBUTING.md">Contributing Guide</a> for more information.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-syntax"><a class="header" href="#lsts-syntax">LSTS Syntax</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="lsts-syntax"><a class="header" href="#lsts-syntax">LSTS Syntax</a></h2>
 <p>LSTS syntax is derived from Lambda Calculus.
 Extensions to the Lambda Calculus syntax are modelled after those from previous languages also derived from Lambda Calculus.
 Some of these languages include Coq, ML, and Haskell.</p>
-<h1 id="define-a-type"><a class="header" href="#define-a-type">Define a type</a></h1>
+<h3 id="define-a-type"><a class="header" href="#define-a-type">Define a type</a></h3>
 <p>Types describe the properties of a Term.</p>
 <pre><code class="language-lsts">type Prime: Integer
    where self &gt; 1
@@ -219,7 +219,7 @@ Some of these languages include Coq, ML, and Haskell.</p>
 Firstly, a Prime number is an Integer.
 Secondly, a Prime number is greater than 1.
 Thirdly, a Prime number is not evenly divisible by any other number greater than 1.</p>
-<h1 id="bind-a-value"><a class="header" href="#bind-a-value">Bind a value</a></h1>
+<h3 id="bind-a-value"><a class="header" href="#bind-a-value">Bind a value</a></h3>
 <p>Let bindings attach properties to Terms.</p>
 <pre><code class="language-lsts">let x:Prime = 3;
 let y:Prime = 4;
@@ -232,7 +232,7 @@ The value can be omitted, at which point the binding becomes a supposition.
 This format is very useful for constructing quantified proofs or proofs by contradiction.</p>
 <pre><code class="language-lsts">forall x:Odd. x%2 == 1
 </code></pre>
-<h1 id="kind-a-type"><a class="header" href="#kind-a-type">Kind a type</a></h1>
+<h3 id="kind-a-type"><a class="header" href="#kind-a-type">Kind a type</a></h3>
 <p>Kinds are <em>types for types</em>.
 Kinds are simple, only allowing Named kinds and possibly parameters.
 The three built-in kinds are Term, Constant, and Nil.
@@ -241,7 +241,7 @@ Kinds are introduced with double-colon syntax, similar to the single-colon synta
 <pre><code class="language-lsts">1 : Second :: Unit
 </code></pre>
 <p>Here we say that Second is a Unit type rather than a Term type.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="terms"><a class="header" href="#terms">Terms</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="terms"><a class="header" href="#terms">Terms</a></h2>
 <p>Terms inhabit Types.
 Terms are also called Values.
 A Value has a finite representation.
@@ -266,7 +266,7 @@ When run as a program, these values will be represented as 1s and 0s.</p>
 
 {1=2, 3=4, 5=6, 7=8}: Map&lt;Integer,Integer&gt;;
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="value-expressions"><a class="header" href="#value-expressions">Value Expressions</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="value-expressions"><a class="header" href="#value-expressions">Value Expressions</a></h2>
 <p>Values are existential proofs that a type bound can be satisfied.
 The expression &quot;1 is an Integer&quot; proves that integers exist.
 We refer to this important relationship as <em>inhabitance</em>.
@@ -296,7 +296,7 @@ The definition of what these operators do is left to the programmer or maybe a p
 <pre><code class="language-lsts">1 &lt; 2 &lt;= 3 == 4 != 5 &gt; 6 &gt;= 7
 </code></pre>
 <p>These operations form the basis of logical calculation in LSTS.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="block-expressions"><a class="header" href="#block-expressions">Block Expressions</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="block-expressions"><a class="header" href="#block-expressions">Block Expressions</a></h2>
 <p>Blocks group one or more statements together into a logical unit.
 The existence of block statements is to some extent an artifact
 of the development team's familiarity to programming languages
@@ -347,7 +347,7 @@ else e
    x + a + b: Integer;
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="compound-values"><a class="header" href="#compound-values">Compound Values</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="compound-values"><a class="header" href="#compound-values">Compound Values</a></h2>
 <p>A compound value is made up of smaller parts.
 Some compounds contain heterogenous components.
 Some compounds contain homogenous components.
@@ -399,7 +399,7 @@ let vs:Odd[] = [3,5,11,15,17]
 <p>Maps have builtin syntax for their types and for their values.</p>
 <pre><code class="language-lsts">let ms:Map&lt;Integer,Prime&gt; = { 1=2, 2=3, 3=5, 4=7 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="quantified-values"><a class="header" href="#quantified-values">Quantified Values</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="quantified-values"><a class="header" href="#quantified-values">Quantified Values</a></h2>
 <p>Quantified Values inhabit Quantified Types.
 This concept maps exactly to the programming concept of iterators,
 so we will just steal that syntax and use it here.</p>
@@ -418,7 +418,7 @@ so we will just steal that syntax and use it here.</p>
 <p>or maps.</p>
 <pre><code class="language-lsts">{for a:Integer in s yield a=a*a}
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="types"><a class="header" href="#types">Types</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="types"><a class="header" href="#types">Types</a></h2>
 <p>A Type describes a property of a Term.
 Terms are multifaceted and can be described from a variety of perspectives.
 A Term can have multiple properties, so Terms can also have multiple Types.</p>
@@ -435,7 +435,7 @@ a : Aa      //                Aa + Aa =&gt; Bb
             //rewrite as just Aa + Bb
 a : Aa + Bb
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="value-types"><a class="header" href="#value-types">Value Types</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="value-types"><a class="header" href="#value-types">Value Types</a></h2>
 <p>Value types are defined by a regular expression that matches a subset of <em>value characters</em>.
 Value characters are defined in the LSTS lexer as character ranges associated with values.
 In this fashion LSTS does not really define any builtin value types.
@@ -450,7 +450,7 @@ If that regular expression matches with a value, then the type will be associate
 One caveat is that only the first match will associate its type.
 Here the number 34 will be assigned only the type Integer because that is the first match.
 If you want for 34 to be a Real number then you should write it as 34.0 so that the Integer regular expression fails to match.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="structured-types"><a class="header" href="#structured-types">Structured Types</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="structured-types"><a class="header" href="#structured-types">Structured Types</a></h2>
 <p>Structured types are also referred to as Named Tuples.
 A structured type is a named type with optional parameters.
 An example of a structured type would be the concept of a Point in N-dimensional space.</p>
@@ -464,7 +464,7 @@ struct Point4D&lt;N:Number&gt; = { x:N, y:N, z:N, w:N };
 <p>If you want to provide a more explicit parameter bound, then you can annotate the parameters on the constructor.</p>
 <pre><code class="language-lsts">Point2D&lt;Prime&gt; { x:7, y:17 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="union-types-1"><a class="header" href="#union-types-1">Union Types</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="union-types-1"><a class="header" href="#union-types-1">Union Types</a></h2>
 <p>Union Types define multiple branches of possible structured data.
 Each branch must also be annotated with a tag.
 For this reason Union Types are also called Tagged Unions.
@@ -477,7 +477,7 @@ type Option&lt;A&gt; = None | Some { value:A };
 The only difference is that instead of the type name, the tag name is used to prefix the data.</p>
 <pre><code class="language-lsts">Some { value:5 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="parameterized-types"><a class="header" href="#parameterized-types">Parameterized Types</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="parameterized-types"><a class="header" href="#parameterized-types">Parameterized Types</a></h2>
 <p>Type parameters create generic types.
 A Generic Type is a single type definition that can have multiple type signatures.
 Each type signature will have a similar, but not quite exactly the same, structure.
@@ -491,7 +491,7 @@ type Result&lt;OK,ERR&gt; = Ok { ok: OK }
 This creates a very strict enforcement of the type's parameter bounds.</p>
 <pre><code class="language-lsts">Ok&lt;Odd,String&gt; { ok: 1 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="type-invariants"><a class="header" href="#type-invariants">Type Invariants</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="type-invariants"><a class="header" href="#type-invariants">Type Invariants</a></h2>
 <p>Type invariants carry a lot of the weight of proofs in practice.
 Type invariants are inherently dependently typed.
 A Dependent Type describes a subset of the values of a Total Type.</p>
@@ -529,7 +529,7 @@ if x%2 == 0 then {
    //no, never this branch
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="constant-types"><a class="header" href="#constant-types">Constant Types</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="constant-types"><a class="header" href="#constant-types">Constant Types</a></h2>
 <p>Constant Types have their own Kind.
 Constants are very important in most programs because they validate the invariant properties of types.
 All Constants are either Integer or Boolean values.
@@ -545,7 +545,7 @@ There are also some builtin functions for manipulation of Constant values.</p>
 <pre><code class="language-lsts">let x:Odd;
 x % 2 : [1]
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="type-unification"><a class="header" href="#type-unification">Type Unification</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="type-unification"><a class="header" href="#type-unification">Type Unification</a></h2>
 <p>Unification is the process of testing whether one type implies another.
 Sometimes unification is written as A &lt;: B, which is called subsumption.
 For our use we tend towards arrow notation A =&gt; B which is called implication.
@@ -738,7 +738,7 @@ How each case is treated has an outsized effect on the rest of our codebases.</p
    }
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="kinds"><a class="header" href="#kinds">Kinds</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="kinds"><a class="header" href="#kinds">Kinds</a></h2>
 <p>Kinds are <em>types for types</em>.
 Kinds are simple, having a name and potentially some parameters.
 Types have exactly one Kind.
@@ -752,7 +752,7 @@ New kinds do not need to be defined before they are used.</p>
 1 : [1] :: Constant;
 3 : [3] + Integer + Second :: Constant + Term + Unit;
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="normal-kinds"><a class="header" href="#normal-kinds">Normal Kinds</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="normal-kinds"><a class="header" href="#normal-kinds">Normal Kinds</a></h2>
 <p>We have mentioned that types can be marked as normal.
 When any Type is marked as normal, the entire Kind that it belongs to is marked as normal.
 The kind Term can never be marked as normal.
@@ -779,7 +779,7 @@ When Into-Normal and Out-of-Normal phases are connected, multi-step casting can 
 <pre><code class="language-lsts">let mph: Mile / Hour;
 let kmpm: Kilo&lt;Metre&gt; / Minute = mph as Kilo&lt;Metre&gt; / Minute;
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="operations-on-kinds"><a class="header" href="#operations-on-kinds">Operations on Kinds</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="operations-on-kinds"><a class="header" href="#operations-on-kinds">Operations on Kinds</a></h2>
 <p>Sometimes we need to manipulate Kinds or check their properties.
 For this we have several operations that work on Kinds.
 The definition for Kinds is very simple.
@@ -815,7 +815,7 @@ If a first Kind contains all of the second Kind, then the first implies the seco
    }
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="example-programs"><a class="header" href="#example-programs">Example Programs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="example-programs"><a class="header" href="#example-programs">Example Programs</a></h2>
 <p>LSTS is also a programming language so you can use it to calculate and discover answers to questions.
 More than just existential proofs, programs can be used to compute.
 That is why we call it Computer Science.</p>
@@ -894,7 +894,7 @@ $( document ).ready(function() {
    });
 });
 </script>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="finding-right-triangles"><a class="header" href="#finding-right-triangles">Finding Right Triangles</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="finding-right-triangles"><a class="header" href="#finding-right-triangles">Finding Right Triangles</a></h2>
 <p>Haskell has great list comprehensions.
 Iterators in LSTS are not that bad either.
 One great example of list comprehensions comes from a popular <a href="http://learnyouahaskell.com/starting-out#texas-ranges">Haskell Tutorial</a>.
@@ -913,7 +913,7 @@ In this example, Haskell is used to find all right triangles with a perimeter of
 However, seeing each code for the first time, LSTS would maybe be easier to read.
 This is how list comprehensions compare for these two languages.</p>
 <p>The output for both programs should be [(6,8,10)].</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="jump-as-a-control-flow-primitive"><a class="header" href="#jump-as-a-control-flow-primitive">Jump as a Control Flow primitive</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="jump-as-a-control-flow-primitive"><a class="header" href="#jump-as-a-control-flow-primitive">Jump as a Control Flow primitive</a></h2>
 <p>It may surprise some to find out that LSTS has non-functional control flow operators.
 Namely, <em>return</em> and <em>raise</em> both potentially cause stack unwinding to occur.
 We can account for this control flow in a functional program by using Monads.
@@ -947,7 +947,7 @@ fn catch_error() {
    }
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="batteries-not-included"><a class="header" href="#batteries-not-included">Batteries Not Included</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="batteries-not-included"><a class="header" href="#batteries-not-included">Batteries Not Included</a></h2>
 <p>The title of this example is a pun on the Python motto &quot;batteries included&quot;.
 LSTS is a type-checker.
 LSTS does <em>nothing</em> else.</p>
@@ -974,7 +974,7 @@ To denote this special relation, we mark the type as Constant by adding the <em>
 type constant Integer: Number = /^[0-9][_0-9]*([eE][_0-9]+)?$/;
 type          Real   : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?$/;
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="proofs"><a class="header" href="#proofs">Proofs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="proofs"><a class="header" href="#proofs">Proofs</a></h2>
 <p>LSTS is a theorem prover. LSTS may also be a programming language.</p>
 <p>LSTS proofs are built on something called the Curry-Howard Equivalence.
 The equivalence states and demonstrates that programs are proofs and that proofs are programs.
@@ -984,7 +984,7 @@ Likewise, most proofs do not intend to be programs.</p>
 <p>LSTS is built for this Equivalence.
 Programs that look like just code, may actually be intended as a proof.
 Following are some examples of how we can make use of LSTS and the Curry-Howard Equivalence to write better programs and more easily certify proofs.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="trivial-proofs"><a class="header" href="#trivial-proofs">Trivial Proofs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="trivial-proofs"><a class="header" href="#trivial-proofs">Trivial Proofs</a></h2>
 <p>Some proofs are so simple that just stating the goal is enough for our system to infer the validity of the proof.
 Most commonly this happens with value manipulation where constant folding will infer that a statement is true without any further work from the programmer.</p>
 <pre><code class="language-lsts">forall x:Integer. x + 0 == x;
@@ -994,7 +994,7 @@ forall x:Integer, y:Integer. x + y == y + x;
 forall x:Integer, y:Integer, z:Integer. x + y + z == z + y + x;
 </code></pre>
 <p>Q.E.D.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="proof-of-the-irrationality-of-the-square-root-of-two"><a class="header" href="#proof-of-the-irrationality-of-the-square-root-of-two">Proof of the Irrationality of the Square Root of Two</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="proof-of-the-irrationality-of-the-square-root-of-two"><a class="header" href="#proof-of-the-irrationality-of-the-square-root-of-two">Proof of the Irrationality of the Square Root of Two</a></h2>
 <p>Proposition: The square root of 2 is irrational.
 Proof:</p>
 <pre><code class="language-lsts">let $&quot;/&quot;(x:X, y:Y): X/Y;
@@ -1021,7 +1021,7 @@ By the following algebraic manipulation we show that 2 must be a factor of p.
 (Pt * Pt)/(Qt * Qt) is not a factor of p.
 Therefore the square root of 2 cannot be rational.</p>
 <p>Q.E.D.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="proof-of-the-infinitude-of-prime-numbers"><a class="header" href="#proof-of-the-infinitude-of-prime-numbers">Proof of the Infinitude of Prime Numbers</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="proof-of-the-infinitude-of-prime-numbers"><a class="header" href="#proof-of-the-infinitude-of-prime-numbers">Proof of the Infinitude of Prime Numbers</a></h2>
 <p>Proposition: There is an infinite number of Prime numbers. Proof:</p>
 <pre><code class="language-lsts">let primes:Prime[];
 let p = primes.product() + 1;
@@ -1036,7 +1036,7 @@ p is not in the list of Prime numbers.</p>
 <p>Our supposition that there is a finite number of Prime numbers leads to a contradiction.
 Therefore the Prime numbers must be infinite.</p>
 <p>Q.E.D.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="strict-proof-verification"><a class="header" href="#strict-proof-verification">Strict Proof Verification</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="strict-proof-verification"><a class="header" href="#strict-proof-verification">Strict Proof Verification</a></h2>
 <p>It is straight-forward to write a mixed proof verifying some aspects of the proof and leaving the rest to plain English for the reader.
 For those so inclined, it is also possible to verify the entirety of the proof in LSTS.
 The first step for writing a strict proof is to declare the assumptions and the conclusion.</p>
@@ -1119,7 +1119,7 @@ $( document ).ready(function() {
    });
 });
 </script>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="justified-algebraic-manipulation"><a class="header" href="#justified-algebraic-manipulation">Justified Algebraic Manipulation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="justified-algebraic-manipulation"><a class="header" href="#justified-algebraic-manipulation">Justified Algebraic Manipulation</a></h2>
 <p>When algebra is used to manipulate constants, it comes with a cost.
 By default, any algebraic manipulation is permitted.
 This means that arbitrary jumps towards proof objectives are permitted.
@@ -1133,7 +1133,7 @@ In strict mode, algebraic manipulation must be <em>justified</em>.</p>
 </code></pre>
 <p>This restriction is necessary to construct sound proof objects.
 Without the restriction, it would be easy to jump to arbitrary conclusions.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="skolemization-in-proofs"><a class="header" href="#skolemization-in-proofs">Skolemization in Proofs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="skolemization-in-proofs"><a class="header" href="#skolemization-in-proofs">Skolemization in Proofs</a></h2>
 <p>Skolemization is, rougly speaking, the practice of writing existential quantifiers as arrow types.
 This helps simplify our type system by eliminating existential quantifiers.</p>
 <pre><code class="language-lsts">forall x:X. exists y:X. x + y == x^2
@@ -1152,7 +1152,7 @@ This is equivalent to saying &quot;forall universal quantifiers and some assumpt
    //starting from the assumptions
 }
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="most-general-unifier"><a class="header" href="#most-general-unifier">Most General Unifier</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="most-general-unifier"><a class="header" href="#most-general-unifier">Most General Unifier</a></h2>
 <p>The Most General Unifier of two type expressions is an intersection of their statements.
 The MGU is sort of like a Least Common Denominator for logical expressions.
 MGU is used to unify type variables that appear in multiple places.</p>
@@ -1201,7 +1201,7 @@ Aa/Bb + Cc | Aa/Bb = Aa/Bb
 Aa*Bb | Aa*Cc = {}
 Aa/Bb | Aa/Cc = {}
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="implication-unifier"><a class="header" href="#implication-unifier">Implication Unifier</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="implication-unifier"><a class="header" href="#implication-unifier">Implication Unifier</a></h2>
 <p>The Implication Unifier of two type expressions is a directed intersection of their statements.
 Implication is similar to Most General Unifier with the added constraint that information can only flow from left to right.</p>
 <h3 id="implication-by-example"><a class="header" href="#implication-by-example">Implication by example</a></h3>
@@ -1254,7 +1254,7 @@ Parameters are invariant with respect to arrow types etc.</p>
 ({Aa+Bb},{Aa+Cc}) -&gt; {Aa+Bb+Cc} | (X,X) -&gt; X = (Aa,Aa) -&gt; Aa
 ({Aa+Bb},{Aa+Cc}) -&gt; {Bb+Cc} | (X,X) -&gt; X = {}
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-command-line-interface"><a class="header" href="#lsts-command-line-interface">lsts Command Line Interface</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="lsts-command-line-interface"><a class="header" href="#lsts-command-line-interface">lsts Command Line Interface</a></h2>
 <p>LSTS is distributed as a Command Line tool.
 The program processes files ending with the <em>.tlc</em> file extension.
 <em>.tlc</em> stands for Typed Lambda Calculus.
@@ -1265,35 +1265,35 @@ To find a list of available commands, type <em>lsts help</em>.</p>
      build [filenames] -- compile provided files as a program
      run   [filenames] -- execute provided files as a program
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-parse-documentation"><a class="header" href="#lsts-parse-documentation">lsts parse Documentation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="lsts-parse-documentation"><a class="header" href="#lsts-parse-documentation">lsts parse Documentation</a></h2>
 <pre><code class="language-lsts">lsts help
      parse [filenames] -- parse files but nothing more
      check [filenames] -- parse and typecheck files
      build [filenames] -- compile provided files as a program
      run   [filenames] -- execute provided files as a program
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-check-documentation"><a class="header" href="#lsts-check-documentation">lsts check Documentation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="lsts-check-documentation"><a class="header" href="#lsts-check-documentation">lsts check Documentation</a></h2>
 <pre><code class="language-lsts">lsts help
      parse [filenames] -- parse files but nothing more
      check [filenames] -- parse and typecheck files
      build [filenames] -- compile provided files as a program
      run   [filenames] -- execute provided files as a program
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-build-documentation"><a class="header" href="#lsts-build-documentation">lsts build Documentation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="lsts-build-documentation"><a class="header" href="#lsts-build-documentation">lsts build Documentation</a></h2>
 <pre><code class="language-lsts">lsts help
      parse [filenames] -- parse files but nothing more
      check [filenames] -- parse and typecheck files
      build [filenames] -- compile provided files as a program
      run   [filenames] -- execute provided files as a program
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="lsts-run-documentation"><a class="header" href="#lsts-run-documentation">lsts run Documentation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="lsts-run-documentation"><a class="header" href="#lsts-run-documentation">lsts run Documentation</a></h2>
 <pre><code class="language-lsts">lsts help
      parse [filenames] -- parse files but nothing more
      check [filenames] -- parse and typecheck files
      build [filenames] -- compile provided files as a program
      run   [filenames] -- execute provided files as a program
 </code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="soundness-guarantees"><a class="header" href="#soundness-guarantees">Soundness Guarantees</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="soundness-guarantees"><a class="header" href="#soundness-guarantees">Soundness Guarantees</a></h2>
 <p>Surprisingly, or maybe not to some, LSTS does not provide the same level of soundness guarantees enjoyed by other systems.
 Hopefully this problem is temporary.
 Currently there is no constructive proof of the logical soundness of the type system.
@@ -1320,7 +1320,7 @@ The contradiction here, or in an even more contrived contradiction, is not trivi
 It may need some help in seeing the contradiction.
 This is what extended proofs are for.
 There is no end-all for squashing contradictions here.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="kinded-proofs"><a class="header" href="#kinded-proofs">Kinded Proofs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="kinded-proofs"><a class="header" href="#kinded-proofs">Kinded Proofs</a></h2>
 <p>Kinds allow the program to setup a &quot;cleanroom&quot; environment for the type system.
 The canonical example of polykinding is for the Unit kind.</p>
 <p>The International System of Units defines a unit as a Number combined with a Unit.
@@ -1338,7 +1338,7 @@ It is only within this normal form that we can discover that Speed * Time = Dist
 <p>If you want to work within a Kind and only within that Kind then you should use Kind Projection.
 A compound Type <em>x: Real + Second</em> can be narrowed into a Unit with double colon syntax:
 <em>x :: Unit</em>. This will leave the term with only the type Second, stripping the variable of its other associated Types.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="benchmark-statistics"><a class="header" href="#benchmark-statistics">Benchmark Statistics</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h2 id="benchmark-statistics"><a class="header" href="#benchmark-statistics">Benchmark Statistics</a></h2>
 <div class="table-wrapper"><table><thead><tr><th>benchmark</th><th>time</th></tr></thead><tbody>
 <tr><td>big file 10k loc</td><td>22.937 ms</td></tr>
 </tbody></table>

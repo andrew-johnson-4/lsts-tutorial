@@ -1,4 +1,4 @@
-# Trivial Proofs
+## Trivial Proofs
 
 Some proofs are so simple that just stating the goal is enough for our system to infer the validity of the proof.
 Most commonly this happens with value manipulation where constant folding will infer that a statement is true without any further work from the programmer.

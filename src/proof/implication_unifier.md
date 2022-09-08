@@ -1,4 +1,4 @@
-# Implication Unifier
+## Implication Unifier
 
 The Implication Unifier of two type expressions is a directed intersection of their statements.
 Implication is similar to Most General Unifier with the added constraint that information can only flow from left to right.

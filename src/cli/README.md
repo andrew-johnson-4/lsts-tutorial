@@ -1,4 +1,4 @@
-# lsts Command Line Interface
+## lsts Command Line Interface
 
 LSTS is distributed as a Command Line tool.
 The program processes files ending with the *.tlc* file extension.

@@ -1,4 +1,4 @@
-# Skolemization in Proofs
+## Skolemization in Proofs
 
 Skolemization is, rougly speaking, the practice of writing existential quantifiers as arrow types.
 This helps simplify our type system by eliminating existential quantifiers.

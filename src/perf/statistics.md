@@ -1,4 +1,4 @@
-# Benchmark Statistics
+## Benchmark Statistics
 
 | benchmark        | time                          |
 | ---------------- | ----------------------------- |

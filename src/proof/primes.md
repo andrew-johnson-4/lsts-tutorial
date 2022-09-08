@@ -1,4 +1,4 @@
-# Proof of the Infinitude of Prime Numbers
+## Proof of the Infinitude of Prime Numbers
 
 Proposition: There is an infinite number of Prime numbers. Proof:
 

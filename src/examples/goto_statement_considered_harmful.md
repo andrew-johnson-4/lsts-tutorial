@@ -1,4 +1,4 @@
-# Jump as a Control Flow primitive
+## Jump as a Control Flow primitive
 
 It may surprise some to find out that LSTS has non-functional control flow operators.
 Namely, *return* and *raise* both potentially cause stack unwinding to occur.

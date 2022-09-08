@@ -1,4 +1,4 @@
-# Justified Algebraic Manipulation
+## Justified Algebraic Manipulation
 
 When algebra is used to manipulate constants, it comes with a cost.
 By default, any algebraic manipulation is permitted.

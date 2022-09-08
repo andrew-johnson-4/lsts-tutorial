@@ -1,4 +1,4 @@
-# Compound Values
+## Compound Values
 
 A compound value is made up of smaller parts.
 Some compounds contain heterogenous components.

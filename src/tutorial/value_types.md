@@ -1,4 +1,4 @@
-# Value Types
+## Value Types
 
 Value types are defined by a regular expression that matches a subset of *value characters*.
 Value characters are defined in the LSTS lexer as character ranges associated with values.

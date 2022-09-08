@@ -1,4 +1,4 @@
-# Terms
+## Terms
 
 Terms inhabit Types.
 Terms are also called Values.

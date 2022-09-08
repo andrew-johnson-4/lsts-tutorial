@@ -1,4 +1,4 @@
-# Parameterized Types
+## Parameterized Types
 
 Type parameters create generic types.
 A Generic Type is a single type definition that can have multiple type signatures.

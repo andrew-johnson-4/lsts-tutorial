@@ -1,4 +1,4 @@
-# Type Invariants
+## Type Invariants
 
 Type invariants carry a lot of the weight of proofs in practice.
 Type invariants are inherently dependently typed.

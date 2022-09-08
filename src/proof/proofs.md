@@ -1,4 +1,4 @@
-# Proofs
+## Proofs
 
 LSTS is a theorem prover. LSTS may also be a programming language.
 

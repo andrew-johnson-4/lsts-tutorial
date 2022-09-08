@@ -1,4 +1,4 @@
-# Batteries Not Included
+## Batteries Not Included
 
 The title of this example is a pun on the Python motto "batteries included".
 LSTS is a type-checker.

@@ -1,4 +1,4 @@
-# Kinded Proofs
+## Kinded Proofs
 
 Kinds allow the program to setup a "cleanroom" environment for the type system.
 The canonical example of polykinding is for the Unit kind.

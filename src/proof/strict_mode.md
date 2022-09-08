@@ -1,4 +1,4 @@
-# Strict Proof Verification
+## Strict Proof Verification
 
 It is straight-forward to write a mixed proof verifying some aspects of the proof and leaving the rest to plain English for the reader.
 For those so inclined, it is also possible to verify the entirety of the proof in LSTS.

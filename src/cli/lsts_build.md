@@ -1,4 +1,4 @@
-# lsts build Documentation
+## lsts build Documentation
 
 ```lsts
 lsts help

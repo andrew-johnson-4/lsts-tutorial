@@ -1,4 +1,4 @@
-# Types
+## Types
 
 A Type describes a property of a Term.
 Terms are multifaceted and can be described from a variety of perspectives.

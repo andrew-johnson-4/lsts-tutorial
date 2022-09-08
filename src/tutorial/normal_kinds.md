@@ -1,4 +1,4 @@
-# Normal Kinds
+## Normal Kinds
 
 We have mentioned that types can be marked as normal.
 When any Type is marked as normal, the entire Kind that it belongs to is marked as normal.

@@ -1,4 +1,4 @@
-# Soundness Guarantees
+## Soundness Guarantees
 
 Surprisingly, or maybe not to some, LSTS does not provide the same level of soundness guarantees enjoyed by other systems.
 Hopefully this problem is temporary.

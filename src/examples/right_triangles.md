@@ -1,4 +1,4 @@
-# Finding Right Triangles
+## Finding Right Triangles
 
 Haskell has great list comprehensions.
 Iterators in LSTS are not that bad either.

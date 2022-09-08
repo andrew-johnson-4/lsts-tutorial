@@ -1,4 +1,4 @@
-# Structured Types
+## Structured Types
 
 Structured types are also referred to as Named Tuples.
 A structured type is a named type with optional parameters.

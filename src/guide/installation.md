@@ -1,9 +1,9 @@
-# Installation
+## Installation
 
 There are multiple ways to install the lsts CLI tool.
 Choose any one of the methods below that best suit your needs.
 
-## Build from source using Rust
+### Build from source using Rust
 
 To build the `lsts` executable from source, you will first need to install Rust and Cargo.
 Follow the instructions on the [Rust installation page].

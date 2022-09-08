@@ -1,4 +1,4 @@
-# Value Expressions
+## Value Expressions
 
 Values are existential proofs that a type bound can be satisfied.
 The expression "1 is an Integer" proves that integers exist.

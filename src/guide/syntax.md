@@ -1,10 +1,10 @@
-# LSTS Syntax
+## LSTS Syntax
 
 LSTS syntax is derived from Lambda Calculus.
 Extensions to the Lambda Calculus syntax are modelled after those from previous languages also derived from Lambda Calculus.
 Some of these languages include Coq, ML, and Haskell.
 
-# Define a type
+### Define a type
 
 Types describe the properties of a Term.
 
@@ -19,7 +19,7 @@ Firstly, a Prime number is an Integer.
 Secondly, a Prime number is greater than 1.
 Thirdly, a Prime number is not evenly divisible by any other number greater than 1.
 
-# Bind a value
+### Bind a value
 
 Let bindings attach properties to Terms.
 
@@ -40,7 +40,7 @@ This format is very useful for constructing quantified proofs or proofs by contr
 forall x:Odd. x%2 == 1
 ```
 
-# Kind a type
+### Kind a type
 
 Kinds are *types for types*.
 Kinds are simple, only allowing Named kinds and possibly parameters.

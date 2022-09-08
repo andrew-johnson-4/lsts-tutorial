@@ -1,4 +1,4 @@
-# Most General Unifier
+## Most General Unifier
 
 The Most General Unifier of two type expressions is an intersection of their statements.
 The MGU is sort of like a Least Common Denominator for logical expressions.

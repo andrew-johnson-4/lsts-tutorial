@@ -1,4 +1,4 @@
-# Kinds
+## Kinds
 
 Kinds are *types for types*.
 Kinds are simple, having a name and potentially some parameters.

@@ -1,4 +1,4 @@
-# Constant Types
+## Constant Types
 
 Constant Types have their own Kind.
 Constants are very important in most programs because they validate the invariant properties of types.

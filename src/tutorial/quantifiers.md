@@ -1,4 +1,4 @@
-# Quantified Values
+## Quantified Values
 
 Quantified Values inhabit Quantified Types.
 This concept maps exactly to the programming concept of iterators,

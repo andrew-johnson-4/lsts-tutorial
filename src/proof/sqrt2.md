@@ -1,4 +1,4 @@
-# Proof of the Irrationality of the Square Root of Two
+## Proof of the Irrationality of the Square Root of Two
 
 Proposition: The square root of 2 is irrational.
 Proof:

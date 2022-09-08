@@ -1,4 +1,4 @@
-# Union Types
+## Union Types
 
 Union Types define multiple branches of possible structured data.
 Each branch must also be annotated with a tag.

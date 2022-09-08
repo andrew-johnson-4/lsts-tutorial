@@ -1,4 +1,4 @@
-# Type Unification
+## Type Unification
 
 Unification is the process of testing whether one type implies another.
 Sometimes unification is written as A <: B, which is called subsumption.

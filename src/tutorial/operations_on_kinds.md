@@ -1,4 +1,4 @@
-# Operations on Kinds
+## Operations on Kinds
 
 Sometimes we need to manipulate Kinds or check their properties.
 For this we have several operations that work on Kinds.
