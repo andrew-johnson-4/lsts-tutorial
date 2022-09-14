@@ -14,6 +14,7 @@
     - [Block Expressions](tutorial/blocks.md)
     - [Compound Values](tutorial/compounds.md)
     - [Quantified Values](tutorial/quantifiers.md)
+    - [Fallible Arrows](tutorial/fallible_arrows.md)
 - [Types](tutorial/types.md)
     - [Value Types](tutorial/value_types.md)
     - [Structured Types](tutorial/struct_types.md)
