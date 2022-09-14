@@ -444,6 +444,14 @@ if let Some(x) = t {
    f(x)
 };
 </code></pre>
+<p>Let bindings can also be marked fallible.
+An example of a fallible function is division.
+Any number divided by zero is undefined.
+There is no result, the result is just undefined.
+Below we define this type signature for LSTS.</p>
+<pre><code class="language-lsts">let $&quot;/&quot;(n: Number, d: Number): Number
+    where fails if d == 0;
+</code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h2 id="types"><a class="header" href="#types">Types</a></h2>
 <p>A Type describes a property of a Term.
 Terms are multifaceted and can be described from a variety of perspectives.

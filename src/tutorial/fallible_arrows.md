@@ -28,3 +28,14 @@ if let Some(x) = t {
    f(x)
 };
 ```
+
+Let bindings can also be marked fallible.
+An example of a fallible function is division.
+Any number divided by zero is undefined.
+There is no result, the result is just undefined.
+Below we define this type signature for LSTS.
+
+```lsts
+let $"/"(n: Number, d: Number): Number
+    where fails if d == 0;
+```
