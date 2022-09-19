@@ -177,6 +177,28 @@ type Result&lt;OK,ERR&gt; = Ok { ok: OK }
 This creates a very strict enforcement of the type's parameter bounds.</p>
 <pre><code class="language-lsts">Ok&lt;Odd,String&gt; { ok: 1 }
 </code></pre>
+<h3 id="unification-of-type-parameters"><a class="header" href="#unification-of-type-parameters">Unification of Type Parameters</a></h3>
+<p>Unification of Type Parameters is broken into two logical steps: unification and substitution.
+Unification checks that two type expressions are compatible and records any substitutions that are required.
+Substitution unifies all required substitutions, then replaces them in the type expression.
+This distinction holds for both regular type parameters and variables in Constant types.</p>
+<p>By example</p>
+<pre><code class="language-lsts">Integer =&gt; X = X where X=Integer
+X =&gt; Integer = {}
+</code></pre>
+<pre><code class="language-lsts">[1] =&gt; [x] = [x] where [x|1]
+[x] =&gt; [1] = {}
+</code></pre>
+<p>When a variable appears in multiple places in a type expression, it will be substituted multiple times.
+These substitutions must unify with each other under the rules of the Most General Unifier.</p>
+<p>By example</p>
+<pre><code class="language-lsts">MGU( Integer, Number ) = Number
+MGU( Integer, Boolean ) = {}
+</code></pre>
+<p>or in Constants</p>
+<pre><code class="language-lsts">MGU( [1], [self%2==1] ) = [self%2==1]
+MGU( [1], [2] ) = {}
+</code></pre>
 
                     </main>
 
