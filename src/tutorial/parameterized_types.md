@@ -48,8 +48,6 @@ MGU( Integer, Number ) = Number
 MGU( Integer, Boolean ) = {}
 ```
 
-or in Constants
-
 ```lsts
 MGU( [1], [self%2==1] ) = [self%2==1]
 MGU( [1], [2] ) = {}
