@@ -1,7 +1,7 @@
 ## Rules Based Logic
 
 Proofs in LSTS are built by connecting type definitions to quantified statements.
-Types can be considered logic at rest.
+Types are logic at rest.
 Quantifed Statements are logic in motion.
 A Type knows what it is.
 A Statement shows what it is.
