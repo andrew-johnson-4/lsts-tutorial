@@ -34,6 +34,7 @@
     - [Jump Control Flow](examples/goto_statement_considered_harmful.md)
     - [Batteries Not Included](examples/batteries_not_included.md)
 - [Proofs](proof/proofs.md)
+    - [Rules Based Logic](proof/rules.md)
     - [Trivial Proofs](proof/trivial.md)
     - [Irrationality of the Square Root of Two](proof/sqrt2.md)
     - [Infinitude of Primes](proof/primes.md)
