@@ -2,7 +2,7 @@
 
 Proofs in LSTS are built by connecting type definitions to quantified statements.
 Types can be considered logic at rest.
-Quantifed Statements then by contrast, are logic in motion.
+Quantifed Statements are logic in motion.
 A Type knows what it is.
 A Statement shows what it is.
 
