@@ -34,10 +34,10 @@ An application context consists of a Term and a Type, which is then compared to 
 These Term x Type relations form the basis of strict reasoning for LSTS.
 
 ```lsts
-forall @inc_odd x: Odd. Even = x + 1
-forall @dec_odd x: Odd. Even = x - 1
-forall @inc_even x: Even. Odd = x + 1
-forall @dec_even x: Even. Odd = x - 1
+forall @inc_odd x: Odd. Even = x + 1;
+forall @dec_odd x: Odd. Even = x - 1;
+forall @inc_even x: Even. Odd = x + 1;
+forall @dec_even x: Even. Odd = x - 1;
 
 ((x: Even) + 1) @inc_even : Odd
 ```
