@@ -192,6 +192,20 @@ Statements can be either logical theorems or axioms.</p>
 
 forall @reflexive_int a:Integer. [True] = a == a @reflexive;
 </code></pre>
+<h3><a class="header" href="#syntax" id="syntax">Syntax</a></h3>
+<p>A Statement is formed by constructing</p>
+<ul>
+<li>The keyword axiom or forall</li>
+<li>An optional label</li>
+<li>Optional parameters</li>
+<li>The concluding Type</li>
+<li>The Term definition</li>
+</ul>
+<h3><a class="header" href="#deduction" id="deduction">Deduction</a></h3>
+<p>In Strict Mode statements must be constructed only from axioms, definitions, or from other theorems rooted in axioms.
+Deduction is label-directed, so it takes near-constant time.
+Every statement is validated separately, so unfounded theorems will generate separate errors.
+Theorems resulting from unfounded theorems can be made to generate a warning with the compiler flag: --warn-unfounded.</p>
 
                     </main>
 
