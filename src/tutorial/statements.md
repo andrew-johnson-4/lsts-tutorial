@@ -2,7 +2,7 @@
 
 Statements apply logic to connect Terms and Types.
 LSTS Statements provide rich algebraic manipulation of Terms and Types.
-Statements can be either logical postulates or axioms.
+Statements can be either logical theorems or axioms.
 
 ```lsts
 axiom @reflexive a:A. [True] = a == a;

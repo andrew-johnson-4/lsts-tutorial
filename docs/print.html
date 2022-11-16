@@ -819,7 +819,7 @@ How each case is treated has an outsized effect on the rest of our codebases.</p
 <h2><a class="header" href="#statements" id="statements">Statements</a></h2>
 <p>Statements apply logic to connect Terms and Types.
 LSTS Statements provide rich algebraic manipulation of Terms and Types.
-Statements can be either logical postulates or axioms.</p>
+Statements can be either logical theorems or axioms.</p>
 <pre><code class="language-lsts">axiom @reflexive a:A. [True] = a == a;
 
 forall @reflexive_int a:Integer. [True] = a == a @reflexive;
@@ -838,7 +838,7 @@ Theorems and Axioms share the same syntax aside from the initial keyword: forall
 <h3><a class="header" href="#preludes" id="preludes">Preludes</a></h3>
 <p>Choosing axioms is one of the most important parts of defining a prelude.
 Not all axioms are appropriate for all preludes.
-For this reason some preludes are incompatible.</p>
+For this reason some preludes are incompatible with each other.</p>
 <h2><a class="header" href="#kinds" id="kinds">Kinds</a></h2>
 <p>Kinds are <em>types for types</em>.
 Kinds are simple, having a name and potentially some parameters.

@@ -12,4 +12,4 @@ Axioms can immediately be used to justify Theorems after definition.
 
 Choosing axioms is one of the most important parts of defining a prelude.
 Not all axioms are appropriate for all preludes.
-For this reason some preludes are incompatible.
+For this reason some preludes are incompatible with each other.
