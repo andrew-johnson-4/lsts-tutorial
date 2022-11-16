@@ -187,8 +187,15 @@
                         <h2><a class="header" href="#theorem-statements" id="theorem-statements">Theorem Statements</a></h2>
 <p>Theorems are Logical Arguments that can be proven.
 In Strict Mode theorems must be proven by deduction from axioms and definitions.</p>
-<h3><a class="header" href="#strict-mode" id="strict-mode">Strict Mode</a></h3>
-<p>Proof by Deduction of Theorems takes O(n) time, where n is the lexical size of the theorem.</p>
+<h3><a class="header" href="#hints" id="hints">Hints</a></h3>
+<p>Hints apply theorems to contexts inside of Terms.
+Hints attempt to match a Statement definition against the Term and its Type context.
+Statement labels can be overloaded to attempt to match multiple patterns in a single Hint.
+Successful application of a Hinted Statement will decorate the target Term with new Types.
+Failed application of a Hint will generate an Error.</p>
+<h3><a class="header" href="#time-complexity-of-strict-mode" id="time-complexity-of-strict-mode">Time Complexity of Strict Mode</a></h3>
+<p>Proof by Deduction of Theorems takes O(n) time, where n is the lexical size of the theorem.
+Enabling warnings of all theorems derived from unfounded theorems takes a little extra space and time.</p>
 
                     </main>
 
