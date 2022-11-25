@@ -15,5 +15,5 @@ Union types are instantiated in identical fashion to structured data.
 The only difference is that instead of the type name, the tag name is used to prefix the data.
 
 ```lsts
-Some { value:5 }
+Some { value=5 }
 ```

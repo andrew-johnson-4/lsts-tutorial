@@ -533,7 +533,7 @@ type Option&lt;A&gt; = None | Some { value:A };
 </code></pre>
 <p>Union types are instantiated in identical fashion to structured data.
 The only difference is that instead of the type name, the tag name is used to prefix the data.</p>
-<pre><code class="language-lsts">Some { value:5 }
+<pre><code class="language-lsts">Some { value=5 }
 </code></pre>
 <h2><a class="header" href="#parameterized-types" id="parameterized-types">Parameterized Types</a></h2>
 <p>Type parameters create generic types.
