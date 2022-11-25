@@ -16,7 +16,7 @@ Type parameters can also be added to any parameterized type in its constructor.
 This creates a very strict enforcement of the type's parameter bounds.
 
 ```lsts
-Ok<Odd,String> { ok: 1 }
+Ok<Odd,String> { ok=1 }
 ```
 
 ### Unification of Type Parameters

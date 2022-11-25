@@ -196,7 +196,7 @@ type Result&lt;OK,ERR&gt; = Ok { ok: OK }
 </code></pre>
 <p>Type parameters can also be added to any parameterized type in its constructor.
 This creates a very strict enforcement of the type's parameter bounds.</p>
-<pre><code class="language-lsts">Ok&lt;Odd,String&gt; { ok: 1 }
+<pre><code class="language-lsts">Ok&lt;Odd,String&gt; { ok=1 }
 </code></pre>
 <h3><a class="header" href="#unification-of-type-parameters" id="unification-of-type-parameters">Unification of Type Parameters</a></h3>
 <p>Unification of Type Parameters is broken into two logical steps: unification and substitution.
