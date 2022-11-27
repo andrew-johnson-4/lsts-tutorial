@@ -20,18 +20,19 @@ The iterator syntax and method call are all rewritten as a Lambda Calculus expre
 
 ### Types
 
-Types describe the properties of a Term.
+Type definitions define logical statements that are then attached to Terms.
+All valid Terms have at least one Type.
+Some Terms may have more than one Type.
+Types may define invariant properties.
+These invariant properties impose preconditions and postconditions on what values may occupy that Type.
+Values going into a Type must satisfy that Type's preconditions.
+Values coming out of a Term are then known to have satisfied each Type's invariants.
 
 ```lsts
 type Prime: Integer
    where self > 1
    and   a:Integer. 2>a || a>self-1 || self%a != 0
 ```
-
-Here we define a Prime number.
-Firstly, a Prime number is an Integer.
-Secondly, a Prime number is greater than 1.
-Thirdly, a Prime number is not evenly divisible by any other number greater than 1.
 
 ### Statements
 
