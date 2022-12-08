@@ -1,7 +1,7 @@
 ## Soundness Guarantees
 
-Surprisingly, or maybe not to some, LSTS does not provide the same level of soundness guarantees enjoyed by other systems.
-Hopefully this problem is temporary.
+Soundness is defined here as "only True statements can be proven".
+
 Currently there is no constructive proof of the logical soundness of the type system.
 Similarly there is currently no proof that the type system is strongly normalizing.
 

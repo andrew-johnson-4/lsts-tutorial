@@ -1460,9 +1460,8 @@ To find a list of available commands, type <em>lsts help</em>.</p>
      run   [filenames] -- execute provided files as a program
 </code></pre>
 <h2><a class="header" href="#soundness-guarantees" id="soundness-guarantees">Soundness Guarantees</a></h2>
-<p>Surprisingly, or maybe not to some, LSTS does not provide the same level of soundness guarantees enjoyed by other systems.
-Hopefully this problem is temporary.
-Currently there is no constructive proof of the logical soundness of the type system.
+<p>Soundness is defined here as &quot;only True statements can be proven&quot;.</p>
+<p>Currently there is no constructive proof of the logical soundness of the type system.
 Similarly there is currently no proof that the type system is strongly normalizing.</p>
 <p>While many of these things may improve with time, there are some unique challenges that LSTS faces.
 Most of these problems stem from the fact that the user is allowed to ascribe multiple types to terms.</p>
