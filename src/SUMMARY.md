@@ -36,6 +36,7 @@
     - [Right Triangles](examples/right_triangles.md)
     - [Jump Control Flow](examples/goto_statement_considered_harmful.md)
     - [Batteries Not Included](examples/batteries_not_included.md)
+    - [L1 Intermediate Representation](examples/l1ir.md)
 - [Proofs](proof/proofs.md)
     - [Rules Based Logic](proof/rules.md)
     - [Trivial Proofs](proof/trivial.md)
