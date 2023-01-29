@@ -1,7 +1,7 @@
 ## Terms
 
 Terms inhabit Types.
-Terms can be evaluated to produce Values.
+Terms [can be evaluated to produce Values](https://en.wikipedia.org/wiki/Computable_function).
 A Value [has a finite representation](https://en.wikipedia.org/wiki/Axiom_of_choice).
 When run as a program, these values will be represented as 1s and 0s.
 
