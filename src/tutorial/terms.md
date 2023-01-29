@@ -2,7 +2,7 @@
 
 Terms inhabit Types.
 Terms can be evaluated to produce Values.
-A Value has a finite representation.
+A Value [has a finite representation](https://en.wikipedia.org/wiki/Axiom_of_choice).
 When run as a program, these values will be represented as 1s and 0s.
 
 ```lsts
