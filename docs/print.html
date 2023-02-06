@@ -1519,9 +1519,17 @@ It is only within this normal form that we can discover that Speed * Time = Dist
 A compound Type <em>x: Real + Second</em> can be narrowed into a Unit with double colon syntax:
 <em>x :: Unit</em>. This will leave the term with only the type Second, stripping the variable of its other associated Types.</p>
 <h2><a class="header" href="#benchmark-statistics" id="benchmark-statistics">Benchmark Statistics</a></h2>
+<p>Here we benchmark the compiler on different stress tests.</p>
 <table><thead><tr><th>benchmark</th><th>time</th></tr></thead><tbody>
 <tr><td>big file 10k loc</td><td>22.937 ms</td></tr>
 </tbody></table>
+<p>Here we benchmark the default evaluation strategy (L1) on different stress tests.</p>
+<table><thead><tr><th>benchmark</th><th>language</th><th>time</th></tr></thead><tbody>
+<tr><td>1M 2^20</td><td>Rust</td><td>4.8860006</td></tr>
+<tr><td>1M 2^20</td><td>L1</td><td>3.8207040</td></tr>
+<tr><td>1M 2^20</td><td>Ocaml</td><td>2.5900000</td></tr>
+</tbody></table>
+<p>note: Rust is compiled without optimizations enabled because it constant folds the entire benchmark</p>
 <h1><a class="header" href="#contributors" id="contributors">Contributors</a></h1>
 <p>Here is a list of the contributors who have helped improving LSTS.</p>
 <ul>
