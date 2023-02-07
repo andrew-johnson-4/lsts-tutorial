@@ -1,9 +1,8 @@
 ## lsts run Documentation
 
 ```lsts
-lsts help
-     parse [filenames] -- parse files but nothing more
-     check [filenames] -- parse and typecheck files
-     build [filenames] -- compile provided files as a program
-     run   [filenames] -- execute provided files as a program
+lsts run [filenames]
 ```
+
+This command compiles the provided files with the JIT compiler and runs them.
+The warm up time for JIT compilation before execution should be reasonable, usually taking less than a second.

@@ -1468,12 +1468,10 @@ To find a list of available commands, type <em>lsts help</em>.</p>
      run   [filenames] -- execute provided files as a program
 </code></pre>
 <h2><a class="header" href="#lsts-run-documentation" id="lsts-run-documentation">lsts run Documentation</a></h2>
-<pre><code class="language-lsts">lsts help
-     parse [filenames] -- parse files but nothing more
-     check [filenames] -- parse and typecheck files
-     build [filenames] -- compile provided files as a program
-     run   [filenames] -- execute provided files as a program
+<pre><code class="language-lsts">lsts run [filenames]
 </code></pre>
+<p>This command compiles the provided files with the JIT compiler and runs them.
+The warm up time for JIT compilation before execution should be reasonable, usually taking less than a second.</p>
 <h2><a class="header" href="#soundness-guarantees" id="soundness-guarantees">Soundness Guarantees</a></h2>
 <p>Soundness is defined here as &quot;only True statements can be proven&quot;.</p>
 <p>Currently there is no constructive proof of the logical soundness of the type system.
