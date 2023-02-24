@@ -14,7 +14,7 @@ One argument for the Boolean branching condition.
 Two arguments for each conditional branch.
 The if statement returns the value of one of the branches.
 All branches and the return type are parameterized.
-The shared parameter will become the greatest-common-denominator of both branches.
+The shared parameter will become the most-general-unifier of both branches.
 
 ```lsts
 let $"if"(condition: Boolean, branch1: A, branch2: A): A;
@@ -22,8 +22,6 @@ let $"if"(condition: Boolean, branch1: A, branch2: A): A;
 
 The same lack of features applies to the type system as well.
 The Boolean type referenced above must be defined by the user.
-Boolean types are somewhat special in that they also have dependent types carried along with them.
-To denote this special relation, we mark the type as Constant by adding the *constant* keyword.
 
 ```lsts
 type constant Boolean = True | False;
@@ -33,6 +31,6 @@ Numbers are user defined as well.
 
 ```lsts
 type Number;
-type constant Integer: Number = /^[0-9][_0-9]*([eE][_0-9]+)?$/;
-type          Real   : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?$/;
+type Integer: Number = /^[0-9][_0-9]*([eE][_0-9]+)?$/;
+type Real   : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?$/;
 ```
