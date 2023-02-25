@@ -17,6 +17,17 @@ Tuple types are also introduced using parentheses and comma syntax.
 (1,'a',"bc",True) : (Number, Character, String, Boolean)
 ```
 
+### Homogenous Tuples
+
+Homogenous Tuples have multiple elements of the same type.
+In some languages this data structure is called an array or maybe a list or vector.
+In LSTS we use some syntax that is similar to these other languages,
+but in documentation we still call these homogenous tuples.
+
+```lsts
+(1,2,3,5,8) : Integer[5]
+```
+
 ### Named Tuples
 
 Tuples can be given names and type signatures in a type definition.

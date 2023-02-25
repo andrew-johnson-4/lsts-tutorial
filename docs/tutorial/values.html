@@ -190,10 +190,10 @@ The expression &quot;1 is an Integer&quot; proves that integers exist.
 We refer to this important relationship as <em>inhabitance</em>.
 Values inhabit Types. Types inhabit Kinds.
 A type with no values is said to be <em>vacuous</em>.</p>
-<h3><a class="header" href="#constant-values" id="constant-values">Constant Values</a></h3>
-<p>Constant values are assigned to a Type through a combination of inference and regex pattern matching.
-A Constant Type will define a regex that matches some value string.
-An example of a constant type is the traditional concept of an Integer.
+<h3><a class="header" href="#literal-values" id="literal-values">Literal Values</a></h3>
+<p>Literal values are assigned to a Type through a combination of inference and regex pattern matching.
+A Literal Type Definition will define a grammar that matches some value string.
+An example of a literal type is the traditional concept of an Integer.
 An Integer is denoted as a string of digits: [0-9]+.</p>
 <p>After creating a value, it can be passed around</p>
 <pre><code class="language-lsts">1 + 2
@@ -201,19 +201,6 @@ An Integer is denoted as a string of digits: [0-9]+.</p>
 <p>or assigned to a binding</p>
 <pre><code class="language-lsts">let x:Integer = 5
 </code></pre>
-<h3><a class="header" href="#infix-operators" id="infix-operators">Infix Operators</a></h3>
-<p>LSTS recognizes the special syntax of some common infix operators.
-The definition of what these operators do is left to the programmer or maybe a prelude.</p>
-<p>There are boolean operators</p>
-<pre><code class="language-lsts">a &amp;&amp; b || not(c)
-</code></pre>
-<p>There are arithmetic operators</p>
-<pre><code class="language-lsts">1^2 + 3 * 4 / 5 - 6 % 7
-</code></pre>
-<p>There are even comparison operators</p>
-<pre><code class="language-lsts">1 &lt; 2 &lt;= 3 == 4 != 5 &gt; 6 &gt;= 7
-</code></pre>
-<p>These operations form the basis of logical calculation in LSTS.</p>
 
                     </main>
 
