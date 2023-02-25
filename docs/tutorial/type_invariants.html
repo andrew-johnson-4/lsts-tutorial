@@ -186,17 +186,17 @@
                     <main>
                         <h2><a class="header" href="#type-invariants" id="type-invariants">Type Invariants</a></h2>
 <p>Type invariants carry a lot of the weight of proofs in practice.
-Type invariants are inherently dependently typed.
-A Dependent Type describes a subset of the values of a Total Type.</p>
+Type invariants are sometimes call refinement types.
+A Refinement Type describes a subset of the values of a Total Type.</p>
 <p>A Total Type describes <em>all values that can be represented</em>.
 UnsignedInteger32 would be a Total Type.
 UnsignedInteger32 can represent all 32-bit unsigned integers.</p>
-<p>By comparison, a dependent type, or implicitly any type with invariants, would not be Total.
+<p>By comparison, a refinement type, or implicitly any type with invariants, would not be Total.
 Odd numbers are a subset of all Integers.
 Odd numbers might be represented as Integers, but not all Integers are Odd.</p>
 <pre><code class="language-lsts">987654321 : Odd + Integer
 </code></pre>
-<p>Type Invariants are dependent properties that are attached to a type definition.
+<p>Type Invariants are properties that are attached to a type definition.
 The definition of Odd is as follows:</p>
 <pre><code class="language-lsts">type Odd: Integer
    where self%2 | 1
@@ -210,7 +210,7 @@ The definition of Odd is as follows:</p>
 The bar syntax indicates that the preceding expression produces the following expression.
 When a value is bound by a type that has invariants, each invariant is checked as a <em>precondition</em> to satisfy that type.
 If a bound value does not satisfy its type's preconditions, then an error will occur.</p>
-<p><em>Postconditions</em> are the dependent properties that we know about any given value.
+<p><em>Postconditions</em> are the properties that we know about any given value.
 We may not know the exact value of a term, however we may know some of its properties.
 When this happens, we can often use the postconditions of a type to complete a proof.</p>
 <p>In the above example of Factor23, we know that any value of that type will divide evenly into 2 and 3.

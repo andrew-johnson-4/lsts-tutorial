@@ -491,21 +491,21 @@ a : Aa      //                Aa + Aa =&gt; Bb
             //rewrite as just Aa + Bb
 a : Aa + Bb
 </code></pre>
-<h2><a class="header" href="#value-types" id="value-types">Value Types</a></h2>
-<p>Value types are defined by a regular expression that matches a subset of <em>value characters</em>.
-Value characters are defined in the LSTS lexer as character ranges associated with values.
-In this fashion LSTS does not really define any builtin value types.
-All value types are defined by the user or by a prelude that is loaded by the user.</p>
+<h2><a class="header" href="#literal-types" id="literal-types">Literal Types</a></h2>
+<p>Literal Types are defined by a grammar that matches a subset of <em>value characters</em>.
+LSTS does not really define any builtin literal types.
+These literal types are all left to preludes and the user to define.</p>
 <pre><code class="language-lsts">type Number;
 type Integer   : Number = /^[0-9][_0-9]*([eE][_0-9]+)?$/;
 type Real      : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?$/;
 type Complex   : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?([+][0-9][_.0-9]*([eE][-]?[_0-9]+)?[i])?$/;
 </code></pre>
-<p>As you can see in the above code section, numerical types can be associated with a definitive regular expression.
-If that regular expression matches with a value, then the type will be associated.
-One caveat is that only the first match will associate its type.
-Here the number 34 will be assigned only the type Integer because that is the first match.
-If you want for 34 to be a Real number then you should write it as 34.0 so that the Integer regular expression fails to match.</p>
+<p>As you can see in the above code section, numerical types can be associated with a definitive regular grammar.
+There are plans to support Context-Free Grammars and even Free Grammars but this feature is only in discussion.</p>
+<p>When the type checker sees a literal value it needs to associate a literal type with it.
+Here the first type definition that matches the longest possible literal will be assigned.
+In the above example 34 would be assigned to the type Integer.
+By contrast 34.0 would become a Real number because it matches a longer string than the Integer.</p>
 <h2><a class="header" href="#structured-types" id="structured-types">Structured Types</a></h2>
 <p>Structured types are also referred to as Named Tuples.
 A structured type is a named type with optional parameters.
@@ -570,17 +570,17 @@ MGU( [1], [2] ) = {}
 </code></pre>
 <h2><a class="header" href="#type-invariants" id="type-invariants">Type Invariants</a></h2>
 <p>Type invariants carry a lot of the weight of proofs in practice.
-Type invariants are inherently dependently typed.
-A Dependent Type describes a subset of the values of a Total Type.</p>
+Type invariants are sometimes call refinement types.
+A Refinement Type describes a subset of the values of a Total Type.</p>
 <p>A Total Type describes <em>all values that can be represented</em>.
 UnsignedInteger32 would be a Total Type.
 UnsignedInteger32 can represent all 32-bit unsigned integers.</p>
-<p>By comparison, a dependent type, or implicitly any type with invariants, would not be Total.
+<p>By comparison, a refinement type, or implicitly any type with invariants, would not be Total.
 Odd numbers are a subset of all Integers.
 Odd numbers might be represented as Integers, but not all Integers are Odd.</p>
 <pre><code class="language-lsts">987654321 : Odd + Integer
 </code></pre>
-<p>Type Invariants are dependent properties that are attached to a type definition.
+<p>Type Invariants are properties that are attached to a type definition.
 The definition of Odd is as follows:</p>
 <pre><code class="language-lsts">type Odd: Integer
    where self%2 | 1
@@ -594,7 +594,7 @@ The definition of Odd is as follows:</p>
 The bar syntax indicates that the preceding expression produces the following expression.
 When a value is bound by a type that has invariants, each invariant is checked as a <em>precondition</em> to satisfy that type.
 If a bound value does not satisfy its type's preconditions, then an error will occur.</p>
-<p><em>Postconditions</em> are the dependent properties that we know about any given value.
+<p><em>Postconditions</em> are the properties that we know about any given value.
 We may not know the exact value of a term, however we may know some of its properties.
 When this happens, we can often use the postconditions of a type to complete a proof.</p>
 <p>In the above example of Factor23, we know that any value of that type will divide evenly into 2 and 3.

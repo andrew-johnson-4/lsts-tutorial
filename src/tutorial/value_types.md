@@ -1,9 +1,8 @@
-## Value Types
+## Literal Types
 
-Value types are defined by a regular expression that matches a subset of *value characters*.
-Value characters are defined in the LSTS lexer as character ranges associated with values.
-In this fashion LSTS does not really define any builtin value types.
-All value types are defined by the user or by a prelude that is loaded by the user.
+Literal Types are defined by a grammar that matches a subset of *value characters*.
+LSTS does not really define any builtin literal types.
+These literal types are all left to preludes and the user to define.
 
 ```lsts
 type Number;
@@ -12,8 +11,10 @@ type Real      : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?$/;
 type Complex   : Number = /^[0-9][_.0-9]*([eE][-]?[_0-9]+)?([+][0-9][_.0-9]*([eE][-]?[_0-9]+)?[i])?$/;
 ```
 
-As you can see in the above code section, numerical types can be associated with a definitive regular expression.
-If that regular expression matches with a value, then the type will be associated.
-One caveat is that only the first match will associate its type.
-Here the number 34 will be assigned only the type Integer because that is the first match.
-If you want for 34 to be a Real number then you should write it as 34.0 so that the Integer regular expression fails to match.
+As you can see in the above code section, numerical types can be associated with a definitive regular grammar.
+There are plans to support Context-Free Grammars and even Free Grammars but this feature is only in discussion.
+
+When the type checker sees a literal value it needs to associate a literal type with it.
+Here the first type definition that matches the longest possible literal will be assigned.
+In the above example 34 would be assigned to the type Integer.
+By contrast 34.0 would become a Real number because it matches a longer string than the Integer.
