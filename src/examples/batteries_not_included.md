@@ -24,7 +24,7 @@ The same lack of features applies to the type system as well.
 The Boolean type referenced above must be defined by the user.
 
 ```lsts
-type constant Boolean = True | False;
+type Boolean = True | False;
 ```
 
 Numbers are user defined as well.
