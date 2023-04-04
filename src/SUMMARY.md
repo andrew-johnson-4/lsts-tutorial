@@ -47,6 +47,9 @@
     - [Skolemization](proof/skolemization.md)
     - [Most General Unifier](proof/most_general_unifier.md)
     - [Implication Unifier](proof/implication_unifier.md)
+- [Meta Programming](meta/meta.md)
+    - [Traversing the AST](meta/ast.md)
+    - [Types and Kinds](meta/types.md)
 
 # Reference Guide
 
