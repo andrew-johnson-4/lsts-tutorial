@@ -10,10 +10,9 @@ Terms are all desugared into Lambda Calculus expressions.
 
 ```lsts
 1;
-3.0;
 "abc";
 2 + 3;
-"[" + [for x in range(1,25) yield x^3].join(",") + "]";
+"[" + (for x in range(1,25) yield x^3).join(",") + "]";
 ```
 
 The iterator syntax and method call are all rewritten as a Lambda Calculus expression.
