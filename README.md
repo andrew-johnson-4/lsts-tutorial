@@ -1,4 +1,3 @@
 # Documentation for LSTS
 
-Alternative Languages:
-- [Español](https://andrew-johnson-4.github.io/lsts-tutorial-es/)
+Moves to [LSTS Language Reference](https://andrew-johnson-4.github.io/lsts-language-reference/)
